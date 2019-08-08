@@ -1,0 +1,93 @@
+{
+    "VALIDATIONS": {
+        "required": "campo requerido"
+    },
+
+    "GENERAL": {
+        "save":              "guardar",
+        "cancel":            "cancelar",
+        "new":               "nuevo",
+        "create":            "crear",
+        "delete":            "borrar",
+        "close":             "cerrar",
+        "exit":              "salir",
+        "next":              "siguiente",
+        "prev":              "atras",
+        "change":            "cambiar",
+        "warning":           "atencion",
+        "warningResponse":   "se lo que estoy haciendo",
+        "noUndo":            "Esta accion no se puede deshacer",
+        "noInfo":            "No se encontro informacion...",
+        "video":             "Video",
+        "shareCall":         "Comp. Pantalla",
+        "conference":        "Conferencia",
+        "savedData":         "Datos guardados con exito",
+        "errorFields":       "Debe completar los datos para continuar",
+        "errorWrongFile":    "Formato de archivo incorrecto"
+    },
+
+    "TOOLBAR": {
+        "appearance":          "Apariencia",
+        "selectAppearance":    "Seleccione la apariencia del portal",
+        "profile":             "Perfil",
+        "closeSession":        "Cerrar Sesion",
+        "newPassword":         "Nueva Contraseña",
+        "repitPassword":       "Repita la nueva contraseña",
+        "editPicture":         "Editar Imagen de Perfil",
+        "confirmExit":         "Esta seguro que desea salir?",
+        "passwordNotEquals":   "Las Contraseñas no coinciden"
+    },
+
+    "USER": {
+        "name"            : "nombre",
+        "type"            : "tipo",
+        "basics"          : "Basicos",
+        "advancedOptions" : "Opciones Avanzadas",
+        "email"           : "email",
+        "userName"        : "nombre de usuario",
+        "password"        : "cotraseña",
+        "deleteUsers"     : "¿Esta seguro que desea eliminar los usuarios seleccionados?",
+        "deleted"         : "usuario eliminado correctamente"
+    },
+
+    "EVENT": {
+        "search":            "Que evento esta buscando?",
+        "basics":            "Datos basicos",
+        "name":              "Nombre",
+        "date":              "Fecha",
+        "location":          "Ubicacion",
+        "email":             "Correo",
+        "phone":             "Telefono"
+    },
+
+    "LEFTSIDEMENU": {
+        "home":                 "inicio",
+        "find":                 "Que es lo que esta buscando?",
+        "configuration" :       "configuracion",
+            "users":            "usuarios",
+            "securityGroups":   "grupos de seguridad",
+            "providers":        "proveedores",
+            "campaigns":        "campañas",
+            "dialers":          "marcadores",
+            "holidays":         "vacaciones",
+            "blackList":        "lista negra",
+            "sounds":           "sonidos",
+            "gamification":     "gamification",
+            "tasks":            "tareas",
+            "settings":         "ajustes",
+            "wizard":           "asistente",
+        "realTime":             "tiempo real",
+            "dashboards":       "tableros",
+            "calls":            "llamadas",
+            "recordings":       "gravaciones",
+        "analitics" :           "analitica",
+            "reports":          "reportes",
+            "surveys":          "encuestas",
+            "dashboard":        "tablero",
+        "development":          "desarrollo",
+            "workflowDesigner": "diseñador de flujos",
+            "forms":            "formularios",
+            "filters":          "filtros",
+            "crm":              "crm"
+    }
+}
