@@ -2,15 +2,40 @@
   <transition name="slide-fade">
     <div id="my-events" class="page-content">
       <v-layout row wrap>
+        <!-- banner -->
         <v-flex xs12 sm12 md12 xl12>
-          <div class="barber-banner-info">
-            <img class="barber-banner-wallpaper" :src="barberShop.pictures.banner" />
-            <img class="barber-banner-logo" :src="barberShop.pictures.logo" />
-            <p class="barber-banner-name">{{ barberShop.name }}</p>
+          <div class="barbershop-banner">
+            <img class="barbershop-banner-wallpaper" :src="barberShop.pictures.banner" />
+            <img class="barbershop-banner-logo" :src="barberShop.pictures.logo" />
+            <p class="barbershop-banner-name">{{ barberShop.name }}</p>
           </div>
         </v-flex>
+        <!-- main container -->
         <v-flex xs12 sm12 md12 xl12>
-          <!-- <div class="content2"></div> -->
+          <div class="barbershop-content">
+            <!-- content presentation -->
+            <v-layout row wrap>
+              <v-flex xs4 xl4 sm4>
+                <!-- best pictures selected -->
+                <!-- <div class="barbershop-content-pictures"> -->
+                  <img class="barbershop-content-pictures" :src="barberShop.pictures.presentation[0]" />
+                <!-- </div> -->
+              </v-flex>
+              <v-flex xs8 xl8 sm8>
+                <!-- about the barbershop  -->
+                <div class="barbershop-content-presentation">
+                  <p>{{ barberShop.name }}</p>
+                  <p>{{ barberShop.direction }}</p>
+                </div>
+              </v-flex>
+            </v-layout>
+          </div>
+        </v-flex>
+        <!-- actions bar -->
+        <v-flex v-if="false" xs12 sm12 md12 xl12>
+          <div class="barbershop-actions">  
+            <v-btn small outline>reservar</v-btn>
+          </div>
         </v-flex>
       </v-layout>
 
@@ -56,7 +81,8 @@ import DeleteDialog from "@/components/dialogs/delete.vue";
     DeleteDialog
   }
 })
-export default class MyEvents extends XComponent {
+
+export default class BarberPage extends XComponent {
   private event: Event = new Event();
   private events: any[] = [];
   private selectedEvents: any[] = [];
@@ -108,9 +134,12 @@ export default class MyEvents extends XComponent {
       days: "luenes a viernes" //this will be a array
     },
     pictures: {
-      logo:
-        "https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/08/barber-shop-logo.jpg",
-      banner: "http://www.diarionorte.com/content/bucket/0/193030w440.jpg"
+      logo: "https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/08/barber-shop-logo.jpg",
+      banner: "https://newevolutiondesigns.com/images/freebies/black-wallpaper-30.jpg",
+      presentation: [
+        "http://www.radicihairstudio.com/images/IMG_1952.JPG",
+        "https://cdn.shopify.com/s/files/1/2081/8453/files/mens_haircut_87d8e723-d180-4a3f-8603-db44227bf15e_large.jpg?v=1553194768"
+      ]
     }
   };
 
@@ -463,43 +492,90 @@ export default class MyEvents extends XComponent {
   top: 60px;
   width: 100% !important;
   height: calc(100% - 60px) !important;
+  border-style: solid;
+  border-width: 1px;
 }
 
-.barber-banner-info {
-  position: absolute;
+.barbershop-banner {
+  position: relative;
   width: 100%;
-  height: 100px;
-  top: 0px;
-  background-color: gray;
-}
-
-.barber-banner-logo {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  margin-left: calc(50% - 35px);
-  top: 5px;
-  border-radius: 50%;
-  border-color: black;
-  border-style: unset;
+  height: 120px;//var responsivity - height
   background-color: black;
+  // border-top-style: solid;
+  // border-top-width: 1px;
+  // border-color: white;
+
+  .barbershop-banner-logo {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    bottom: 5px;
+    left: 5px;
+    // margin-left: calc(50% - 35px);
+    border-radius: 5px;
+    background-color: black;
+  }
+  
+  .barbershop-banner-wallpaper {
+    position: absolute;
+    width: 100%;
+  }
+
+  .barbershop-banner-name {
+    position: absolute;
+    bottom: -15px;
+    left: 80px;//find more about that
+    font-size: 16px;
+    color: white;
+    border-color: black;
+    text-shadow: black;
+    text-shadow: 1px 1px black;
+  }
 }
 
-.barber-banner-wallpaper {
-  position: absolute;
+.barbershop-actions {
+  position: relative;
   width: 100%;
-  height: 100px;
+  height: 50px;//var responsivity - height
+  background-color: white;
 }
 
-.barber-banner-name {
-  position: absolute;
-  bottom: -15px;
-  left: 35%;//find more about that
-  font-size: 18px;
-  color: white;
-  border-color: black;
-  text-shadow: black;
+
+.barbershop-content {
+  position: absolute; //absolute for get total height
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+  height:calc(100% - 150px);//var responsivity - height
+  background-color:white;
+
+  .barbershop-content-pictures {
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    
+  }
+
+  .barbershop-content-presentation {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding-left: 10px;
+  }
+
+
 }
+
+
+
+
+
+
+
+
+
+
 
 .content2 {
   position: relative;
