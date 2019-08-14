@@ -15,7 +15,8 @@
           :color="theme.colors.navIcons + '80'"
           class="custom-table__search"
           append-icon="search"
-        ></v-text-field>
+        >
+        </v-text-field>
 
         <v-btn
           v-if="pagination"

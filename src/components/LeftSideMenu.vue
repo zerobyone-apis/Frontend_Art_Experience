@@ -50,6 +50,7 @@ export default class LeftSideMenu extends Vue {
     configuration: [
       { name: "mis eventos", icon: "event", route: "MyEvents" },
       { name: "mis encuestas", icon: "edit", route: "MySurveys" },
+      { name: "barber page", icon: "home", route: "BarberPage" },
       
       // { name: "buscar eventos", icon: "playlist_add_check", route: "SecurityGroups" }
     ]

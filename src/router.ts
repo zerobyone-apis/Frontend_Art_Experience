@@ -19,6 +19,11 @@ export default new Router({
       path: "/MySurveys",
       name: "MySurveys",
       component: () => import('./views/MySurveys.vue'),
+    },
+    {
+      path: "/BarberPage",
+      name: "BarberPage",
+      component: () => import('./views/BarberPage.vue'),
     }
   ],
 });
