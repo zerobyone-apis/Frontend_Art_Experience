@@ -13,28 +13,53 @@
         <!-- main container -->
         <v-flex xs12 sm12 md12 xl12>
           <div class="barbershop-content">
-            <!-- content presentation -->
+            <!-- actions bar -->
             <v-layout row wrap>
-              <v-flex xs4 xl4 sm4>
-                <!-- best pictures selected -->
-                <!-- <div class="barbershop-content-pictures"> -->
-                  <img class="barbershop-content-pictures" :src="barberShop.pictures.presentation[0]" />
-                <!-- </div> -->
-              </v-flex>
-              <v-flex xs8 xl8 sm8>
-                <!-- about the barbershop  -->
-                <div class="barbershop-content-presentation">
-                  <p>{{ barberShop.name }}</p>
-                  <p>{{ barberShop.direction }}</p>
+              <v-flex v-if="true" xs12 sm12 md12 xl12>
+                <div class="barbershop-actions">  
+                  <v-btn small outline class="btn-reservation">reservar</v-btn>
+                  <v-img class="action-logo" :src="icons.instagram"></v-img>
+                  <v-img class="action-logo" :src="icons.facebook"></v-img>
                 </div>
               </v-flex>
             </v-layout>
-          </div>
-        </v-flex>
-        <!-- actions bar -->
-        <v-flex v-if="false" xs12 sm12 md12 xl12>
-          <div class="barbershop-actions">  
-            <v-btn small outline>reservar</v-btn>
+            <!-- content presentation -->
+            <div class="barbershop-content-presentation">
+              <v-layout v-if="true" row wrap>
+                <v-flex xs8 xl8 sm8>
+                  <!-- about the barbershop  -->
+                  <div class="barbershop-content-info">
+                    <p class="font-info">{{ "direccion: "+barberShop.direction }}</p>
+                    <p class="font-info">{{ "cel: "+barberShop.phone }}</p>
+                    <p class="font-info">{{ "email: "+barberShop.email }}</p>
+                    <p class="font-info">{{ "abierto: "+barberShop.time.days }}</p> 
+                    <p class="font-info">{{ "horario: "+barberShop.time.start + "hrs a " + barberShop.time.end + "hrs" }}</p>
+                  </div>
+                </v-flex>
+                <v-flex xs4 xl4 sm4>
+                  <!-- best pictures selected -->
+                    <v-img class="barbershop-content-pictures" :src="barberShop.pictures.presentation[0]" />
+                </v-flex>
+              </v-layout>
+             </div>
+            <!-- barbers  -->
+            <v-layout row wrap v-if="true">
+              <v-flex xs12 xl12 sm12>
+                <div class="barbershop-content-barbers">
+                  <div class="barbershop-content-barbers-profiles">
+                    <p>Barberos</p>
+                    <div class="barbershop-content-barbers-profile"
+                    v-for="(barber,index) in barberShop.barbers"
+                    :key="index"
+                    >
+                      <img class="barber-profile-picture" :src="barberShop.barbers[index].picture">
+                    </div>
+                  </div>
+                </div>
+              </v-flex>
+            </v-layout>
+
+            <!-- free for more  -->
           </div>
         </v-flex>
       </v-layout>
@@ -99,46 +124,64 @@ export default class BarberPage extends XComponent {
     sortBy: "code"
   };
 
+  private icons: any = {
+    instagram: "https://image.flaticon.com/icons/png/512/87/87390.png",
+    facebook: "https://image.flaticon.com/icons/png/512/33/33702.png"
+  }
+
   private barberShop: any = {
     name: "Art Experience",
     direction: "Bvar Artigas 2333",
-    barbers: [
-      {
-        name: "Alfonso Martinze",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo"
-      },
-      {
-        name: "Alfonso Martinze2",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo"
-      },
-      {
-        name: "Alfonso Martinze3",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo"
-      },
-      {
-        name: "Alfonso Martinze4",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo"
-      }
-    ],
+    email: "artexperience@gmail.com",
+    phone: "098345432",
     time: {
       start: "12:00",
       end: "22:00",
       days: "luenes a viernes" //this will be a array
     },
+    barbers: [
+      {
+        name: "Dwaine Jhonson",
+        job: "barber",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: "https://px.cdn.bigbangnews.com/bigbang/042016/1552082498873.jpg"
+      },
+      {
+        name: "Bruce asdsad Willis",
+        job: "barber",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: "https://dr-assets.tadevel-cloud.xyz/ae/media-photo_57f1a7b9d17589f27a541dae_320w.jpeg"
+      },
+      {
+        name: "Ee re loko ameo",
+        job: "barber",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: "https://ugc.kn3.net/i/760x/http://www.metarisa.com/wp-content/uploads/2009/12/cabello-pelado.jpg"
+      },
+      {
+        name: "Pelado comun",
+        job: "barber",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: "https://i.pinimg.com/736x/2a/45/7f/2a457f7efc3aafbb60d347ed55d7711e.jpg"
+      },
+      {
+        name: "Vin disel",
+        job: "barber",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2017/05/02/vindieselpelado.jpg?itok=Ert6Eky6"
+      }
+    ],
     pictures: {
       logo: "https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/08/barber-shop-logo.jpg",
       banner: "https://newevolutiondesigns.com/images/freebies/black-wallpaper-30.jpg",
       presentation: [
-        "http://www.radicihairstudio.com/images/IMG_1952.JPG",
-        "https://cdn.shopify.com/s/files/1/2081/8453/files/mens_haircut_87d8e723-d180-4a3f-8603-db44227bf15e_large.jpg?v=1553194768"
+        // "http://www.radicihairstudio.com/images/IMG_1952.JPG",
+        // "https://cdn.shopify.com/s/files/1/2081/8453/files/mens_haircut_87d8e723-d180-4a3f-8603-db44227bf15e_large.jpg?v=1553194768"
       ]
     }
   };
@@ -492,18 +535,16 @@ export default class BarberPage extends XComponent {
   top: 60px;
   width: 100% !important;
   height: calc(100% - 60px) !important;
-  border-style: solid;
+  background-color: black;
   border-width: 1px;
+  border-style: solid;
 }
 
 .barbershop-banner {
   position: relative;
   width: 100%;
   height: 120px;//var responsivity - height
-  background-color: black;
-  // border-top-style: solid;
-  // border-top-width: 1px;
-  // border-color: white;
+  background-color: rgb(167, 107, 107);
 
   .barbershop-banner-logo {
     position: absolute;
@@ -517,8 +558,9 @@ export default class BarberPage extends XComponent {
   }
   
   .barbershop-banner-wallpaper {
-    position: absolute;
+    position: relative;
     width: 100%;
+    // right: 1px;
   }
 
   .barbershop-banner-name {
@@ -538,37 +580,116 @@ export default class BarberPage extends XComponent {
   width: 100%;
   height: 50px;//var responsivity - height
   background-color: white;
-}
+  display:inline-block;
+  text-align: right;
+  overflow:scroll;
 
+  
+  .action-logo {
+    position: relative;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+  }
+
+  .btn-reservation {
+    position: relative;
+    margin-right: 20px;
+    bottom: 10px;
+  }
+}
 
 .barbershop-content {
   position: absolute; //absolute for get total height
   padding-left: 5px;
   padding-right: 5px;
+  padding-top: 5px;
   width: 100%;
-  height:calc(100% - 150px);//var responsivity - height
-  background-color:white;
+  // height: 100%;
+  height:calc(100% - 120px);//var responsivity - height
+  background-color:rgb(214, 214, 214);
 
-  .barbershop-content-pictures {
-    position: relative;
-    margin-top: 5px;
-    width: 100%;
-    border-radius: 5px;
-    
-  }
+ .barbershop-content-presentation {
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
-  .barbershop-content-presentation {
-    position: relative;
+    .barbershop-content-info {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      padding-left: 10px;
+    }
+
+    .barbershop-content-pictures {
+      position: relative;
+      //margin-top: 5px;
+      width: 100%;
+      border-radius: 5px;
+    }
+ }
+
+  
+  .barbershop-content-barbers {
+    position:relative;
     width: 100%;
     height: 200px;
-    padding-left: 10px;
+
+    .barbershop-content-barbers-profiles {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      background-color: #ffffff;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display:inline-block;
+      overflow:scroll;
+      overflow-y:hidden;
+
+      .barbershop-content-barbers-profile {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        
+        .barber-profile-picture {
+          position: relative;
+          width: 90px;
+          height: 100px;
+          border-radius: 5px;
+        }
+
+        .barber-profile-text {
+          position: relative;
+          font-size: 12px;
+          bottom: 5px;
+        }
+      }
+    }
   }
-
-
 }
 
 
+.font-info {
+  margin-bottom:-1px;
+  font-style: italic;
+}
 
+.facebook-logo {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+.instagram-logo {
+  position: absolute;  
+  
+}
 
 
 
