@@ -8,6 +8,9 @@
             <img class="barbershop-banner-wallpaper" :src="barberShop.pictures.banner" />
             <img class="barbershop-banner-logo" :src="barberShop.pictures.logo" />
             <p class="barbershop-banner-name">{{ barberShop.name }}</p>
+
+            <v-icon dark class="barbershop-banner-white-stars" small>star star star star star</v-icon>
+            <v-icon class="barbershop-banner-stars" small>{{ getStars() }}</v-icon>
           </div>
         </v-flex>
         <!-- main container -->
@@ -42,7 +45,6 @@
                     <p class="font-info">{{ "horario: "+barberShop.time.start + "hrs a " + barberShop.time.end + "hrs" }}</p>
                   </div>
                 </v-flex>
-                
               </v-layout>
              </div>
             <!-- barbers  -->
@@ -63,15 +65,18 @@
                 </div>
               </v-flex>
             </v-layout>
-            <!-- recomendations  -->
+
+            <!-- recomendations -->
             <v-layout row wrap v-if="true">
               <v-flex xs12 xl12 sm12>
                 <div class="barbershop-content-recomendation">
+                  <p class="font-info">algo</p>
+                  
                   
                 </div>
               </v-flex>
             </v-layout>
-
+  
             <!-- free for more  -->
           </div>
         </v-flex>
@@ -147,6 +152,7 @@ export default class BarberPage extends XComponent {
     direction: "Bvar Artigas 2333",
     email: "artexperience@gmail.com",
     phone: "098345432",
+    stars: 4,
     time: {
       start: "12:00",
       end: "22:00",
@@ -173,6 +179,20 @@ export default class BarberPage extends XComponent {
         email: "amartinez@gmail.com",
         info: "se especializa en algo",
         picture: "https://ugc.kn3.net/i/760x/http://www.metarisa.com/wp-content/uploads/2009/12/cabello-pelado.jpg"
+      },
+      {
+        name: "Pelado comun",
+        job: "barber",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: "https://i.pinimg.com/736x/2a/45/7f/2a457f7efc3aafbb60d347ed55d7711e.jpg"
+      },
+      {
+        name: "Pelado comun",
+        job: "barber",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: "https://i.pinimg.com/736x/2a/45/7f/2a457f7efc3aafbb60d347ed55d7711e.jpg"
       },
       {
         name: "Pelado comun",
@@ -539,6 +559,14 @@ export default class BarberPage extends XComponent {
       }
     });
   }
+
+  getStars() {
+    let stars: String = "";
+    for (let index = 0; index < this.barberShop.stars; index++) {
+      stars +="star ";
+    }
+    return stars;
+  }
 }
 </script>
 
@@ -547,10 +575,13 @@ export default class BarberPage extends XComponent {
   position: absolute;
   top: 60px;
   width: 100% !important;
-  height: calc(100% - 60px) !important;
-  background-color: black;
+  //height: calc(100% - 60px) !important;
+  height: 100%;
+    background-color: rgb(42, 42, 42);
   border-width: 1px;
   border-style: solid;
+  overflow:hidden;
+  overflow-y:scroll;
 }
 
 .barbershop-banner {
@@ -578,7 +609,7 @@ export default class BarberPage extends XComponent {
 
   .barbershop-banner-name {
     position: absolute;
-    bottom: -15px;
+    bottom: 0px;
     left: 80px;//find more about that
     font-size: 16px;
     color: white;
@@ -586,8 +617,21 @@ export default class BarberPage extends XComponent {
     text-shadow: black;
     text-shadow: 1px 1px black;
   }
-}
 
+  .barbershop-banner-white-stars {
+    position: absolute;
+    bottom: 5px;
+    left: 80px;//find more about that
+  }
+
+  .barbershop-banner-stars.v-icon {
+      position: absolute;
+      bottom: 5px;
+      left: 80px;//find more about that
+      color: yellow !important;
+  }
+    
+}
 
 .barbershop-content {
   position: absolute; //absolute for get total height
@@ -607,7 +651,6 @@ export default class BarberPage extends XComponent {
     background-color: rgb(42, 42, 42);
     display:inline-block;
     text-align: right;
-    overflow:scroll;
     padding-top: 10px;
     
     .action-logo {
@@ -621,6 +664,7 @@ export default class BarberPage extends XComponent {
       border-color: #d4d4d4;
       border-style: solid;
       border-width: 2px;
+      cursor: pointer;
     }
 
     .btn-reservation {
@@ -632,17 +676,16 @@ export default class BarberPage extends XComponent {
   }
 
  .barbershop-content-presentation {
-    // margin-bottom: 5px;
     background-color: rgb(42, 42, 42);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 200px;
 
     .barbershop-content-info {
       position: relative;
       width: 100%;
       height: 200px;
       text-align: center;
-      padding-left: 10px;
       padding-left: 10px;
     }
 
@@ -654,7 +697,6 @@ export default class BarberPage extends XComponent {
     }
  }
 
-
   .barbershop-content-barbers {
     position:relative;
     width: 100%;
@@ -662,7 +704,6 @@ export default class BarberPage extends XComponent {
     border-top-width: 10px;
     border-top-style: solid;
     border-top-color: rgb(50, 50, 50);
-    // border-top-color: red;
     
     .barbershop-content-barbers-profiles {
       position: relative;
@@ -706,11 +747,12 @@ export default class BarberPage extends XComponent {
   .barbershop-content-recomendation {
     position:relative;
     width: 100%;
-    height: 100px;
+    height: 400px;
+    margin-top: 10px;
     border-top-width: 10px;
     border-top-style: solid;
-    background-color: green;
-    // border-top-color: red;
+    background-color: rgb(42, 42, 42);
+    border-top-color: rgb(50, 50, 50);
   }
 }
 
