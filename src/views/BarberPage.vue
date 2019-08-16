@@ -17,15 +17,21 @@
             <v-layout row wrap>
               <v-flex v-if="true" xs12 sm12 md12 xl12>
                 <div class="barbershop-actions">  
-                  <v-btn small outline class="btn-reservation">reservar</v-btn>
-                  <v-img class="action-logo" :src="icons.instagram"></v-img>
                   <v-img class="action-logo" :src="icons.facebook"></v-img>
+                  <v-img class="action-logo" :src="icons.instagram"></v-img>
+                  <v-btn small class="btn-reservation">consultar</v-btn>
+                  <v-btn small class="btn-reservation">reservar</v-btn>
                 </div>
               </v-flex>
             </v-layout>
             <!-- content presentation -->
             <div class="barbershop-content-presentation">
               <v-layout v-if="true" row wrap>
+                <v-flex xs4 xl4 sm4>
+                  <!-- best pictures selected -->
+                    <v-img class="barbershop-content-pictures" :src="barberShop.pictures.presentation[0]" />
+                </v-flex>
+
                 <v-flex xs8 xl8 sm8>
                   <!-- about the barbershop  -->
                   <div class="barbershop-content-info">
@@ -36,10 +42,7 @@
                     <p class="font-info">{{ "horario: "+barberShop.time.start + "hrs a " + barberShop.time.end + "hrs" }}</p>
                   </div>
                 </v-flex>
-                <v-flex xs4 xl4 sm4>
-                  <!-- best pictures selected -->
-                    <v-img class="barbershop-content-pictures" :src="barberShop.pictures.presentation[0]" />
-                </v-flex>
+                
               </v-layout>
              </div>
             <!-- barbers  -->
@@ -47,14 +50,24 @@
               <v-flex xs12 xl12 sm12>
                 <div class="barbershop-content-barbers">
                   <div class="barbershop-content-barbers-profiles">
-                    <p>Barberos</p>
+                    <p class="font-info">Barberos</p>
                     <div class="barbershop-content-barbers-profile"
                     v-for="(barber,index) in barberShop.barbers"
                     :key="index"
                     >
+                      <p class="font-info-small">{{ barberShop.barbers[index].name }}</p>
                       <img class="barber-profile-picture" :src="barberShop.barbers[index].picture">
+                      <p class="font-info-small">{{ barberShop.barbers[index].job }}</p>
                     </div>
                   </div>
+                </div>
+              </v-flex>
+            </v-layout>
+            <!-- recomendations  -->
+            <v-layout row wrap v-if="true">
+              <v-flex xs12 xl12 sm12>
+                <div class="barbershop-content-recomendation">
+                  
                 </div>
               </v-flex>
             </v-layout>
@@ -142,21 +155,21 @@ export default class BarberPage extends XComponent {
     barbers: [
       {
         name: "Dwaine Jhonson",
-        job: "barber",
+        job: "cut-training",
         email: "amartinez@gmail.com",
         info: "se especializa en algo",
         picture: "https://px.cdn.bigbangnews.com/bigbang/042016/1552082498873.jpg"
       },
       {
-        name: "Bruce asdsad Willis",
-        job: "barber",
+        name: "Bruce Willis",
+        job: "barber - navaja",
         email: "amartinez@gmail.com",
         info: "se especializa en algo",
         picture: "https://dr-assets.tadevel-cloud.xyz/ae/media-photo_57f1a7b9d17589f27a541dae_320w.jpeg"
       },
       {
-        name: "Ee re loko ameo",
-        job: "barber",
+        name: "Kebin Limado",
+        job: "peluquero",
         email: "amartinez@gmail.com",
         info: "se especializa en algo",
         picture: "https://ugc.kn3.net/i/760x/http://www.metarisa.com/wp-content/uploads/2009/12/cabello-pelado.jpg"
@@ -178,9 +191,9 @@ export default class BarberPage extends XComponent {
     ],
     pictures: {
       logo: "https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/08/barber-shop-logo.jpg",
-      banner: "https://newevolutiondesigns.com/images/freebies/black-wallpaper-30.jpg",
+      banner: "https://media-cdn.tripadvisor.com/media/photo-s/0d/03/dc/a9/salon.jpg",
       presentation: [
-        // "http://www.radicihairstudio.com/images/IMG_1952.JPG",
+        "https://probeauty.org/collective/wp-content/uploads/2018/04/image2-1024x743.jpeg",
         // "https://cdn.shopify.com/s/files/1/2081/8453/files/mens_haircut_87d8e723-d180-4a3f-8603-db44227bf15e_large.jpg?v=1553194768"
       ]
     }
@@ -544,7 +557,7 @@ export default class BarberPage extends XComponent {
   position: relative;
   width: 100%;
   height: 120px;//var responsivity - height
-  background-color: rgb(167, 107, 107);
+  // background-color: rgb(167, 107, 107);
 
   .barbershop-banner-logo {
     position: absolute;
@@ -554,7 +567,7 @@ export default class BarberPage extends XComponent {
     left: 5px;
     // margin-left: calc(50% - 35px);
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(42, 42, 42);
   }
   
   .barbershop-banner-wallpaper {
@@ -575,30 +588,6 @@ export default class BarberPage extends XComponent {
   }
 }
 
-.barbershop-actions {
-  position: relative;
-  width: 100%;
-  height: 50px;//var responsivity - height
-  background-color: white;
-  display:inline-block;
-  text-align: right;
-  overflow:scroll;
-
-  
-  .action-logo {
-    position: relative;
-    margin-right: 20px;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-  }
-
-  .btn-reservation {
-    position: relative;
-    margin-right: 20px;
-    bottom: 10px;
-  }
-}
 
 .barbershop-content {
   position: absolute; //absolute for get total height
@@ -606,13 +595,45 @@ export default class BarberPage extends XComponent {
   padding-right: 5px;
   padding-top: 5px;
   width: 100%;
-  // height: 100%;
   height:calc(100% - 120px);//var responsivity - height
-  background-color:rgb(214, 214, 214);
+  background-color: rgb(42, 42, 42);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  .barbershop-actions {
+    position: relative;
+    width: 100%;
+    height: 50px;//var responsivity - height
+    background-color: rgb(42, 42, 42);
+    display:inline-block;
+    text-align: right;
+    overflow:scroll;
+    padding-top: 10px;
+    
+    .action-logo {
+      position: relative;
+      margin-right: 20px;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      background-color: #d4d4d4;
+      border-radius: 10px;
+      border-color: #d4d4d4;
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    .btn-reservation {
+      position: relative;
+      margin-right: 10px;
+      bottom: 10px;
+      background-color: #d4d4d4;
+    }
+  }
 
  .barbershop-content-presentation {
-    margin-bottom: 5px;
-    background-color: #ffffff;
+    // margin-bottom: 5px;
+    background-color: rgb(42, 42, 42);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
@@ -620,48 +641,57 @@ export default class BarberPage extends XComponent {
       position: relative;
       width: 100%;
       height: 200px;
+      text-align: center;
+      padding-left: 10px;
       padding-left: 10px;
     }
 
     .barbershop-content-pictures {
       position: relative;
-      //margin-top: 5px;
       width: 100%;
-      border-radius: 5px;
+      height: 200px;
+      border-top-right-radius: 10px;
     }
  }
 
-  
+
   .barbershop-content-barbers {
     position:relative;
     width: 100%;
-    height: 200px;
-
+    height: 300px;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-top-color: rgb(50, 50, 50);
+    // border-top-color: red;
+    
     .barbershop-content-barbers-profiles {
       position: relative;
       width: 100%;
+      height: 300px;
       text-align: center;
-      background-color: #ffffff;
+      background-color: rgb(42, 42, 42);
       padding-top: 5px;
       padding-bottom: 5px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       display:inline-block;
-      overflow:scroll;
-      overflow-y:hidden;
+      overflow:hidden;
+      overflow-y:scroll;
 
       .barbershop-content-barbers-profile {
         position: relative;
         display: inline-block;
         text-align: center;
+        padding-top: 20px;
         width: 120px;
         height: 120px;
         
         .barber-profile-picture {
           position: relative;
-          width: 90px;
-          height: 100px;
-          border-radius: 5px;
+          width: 60px;
+          height: 70px;
+          border-radius: 20px;
+          
         }
 
         .barber-profile-text {
@@ -672,25 +702,31 @@ export default class BarberPage extends XComponent {
       }
     }
   }
+
+  .barbershop-content-recomendation {
+    position:relative;
+    width: 100%;
+    height: 100px;
+    border-top-width: 10px;
+    border-top-style: solid;
+    background-color: green;
+    // border-top-color: red;
+  }
 }
 
 
 .font-info {
   margin-bottom:-1px;
   font-style: italic;
+  color: #d4d4d4;
 }
 
-.facebook-logo {
-  position: absolute;
-  right: 20px;
-  top: 5px;
+.font-info-small {
+  margin-bottom:-1px;
+  font-style: italic;
+  font-size: 11px;
+  color: #d4d4d4;
 }
-
-.instagram-logo {
-  position: absolute;  
-  
-}
-
 
 
 
