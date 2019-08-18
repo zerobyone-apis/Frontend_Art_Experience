@@ -24,6 +24,11 @@ export default new Router({
       path: "/BarberPage",
       name: "BarberPage",
       component: () => import('./views/BarberPage.vue'),
+    },
+    {
+      path: "/UserPage",
+      name: "UserPage",
+      component: () => import('./views/UserPage.vue'),
     }
   ],
 });

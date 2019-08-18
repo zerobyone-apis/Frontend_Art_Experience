@@ -48,10 +48,10 @@ export default class LeftSideMenu extends Vue {
   private search: string = "";
   private menu: object = {
     configuration: [
-      { name: "mis eventos", icon: "event", route: "MyEvents" },
-      { name: "mis encuestas", icon: "edit", route: "MySurveys" },
-      { name: "barber page", icon: "home", route: "BarberPage" },
-      
+      { name: "mi perfil", icon: "people", route: "UserPage" },
+      { name: "mi barberia", icon: "home", route: "BarberPage" }
+      // { name: "mis eventos", icon: "event", route: "MyEvents" },
+      // { name: "mis encuestas", icon: "edit", route: "MySurveys" },
       // { name: "buscar eventos", icon: "playlist_add_check", route: "SecurityGroups" }
     ]
   };
