@@ -16,7 +16,6 @@
           class="search-menu-left"                                                                         
         ></v-text-field>
       </v-list-tile> -->
-
       <v-list v-if="filteredConf.length > 0">
         <v-list-tile
           v-for="(item, index) in filteredConf"
@@ -48,6 +47,7 @@ export default class LeftSideMenu extends Vue {
   private search: string = "";
   private menu: object = {
     configuration: [
+      { name: "inicio", icon: "home", route: "MainPage" },
       { name: "mi perfil", icon: "people", route: "UserPage" },
       { name: "mi barberia", icon: "home", route: "BarberPage" }
       // { name: "mis eventos", icon: "event", route: "MyEvents" },

@@ -31,14 +31,15 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
+      <!-- <v-btn
         :dark="$store.state.theme.colors.nav != '#fff'"
         :light="$store.state.theme.colors.nav == '#fff'"
         outline
         @click.native="add"
         class="custom-table__add-button"
         :class="{'show-multiple' : showMultiple}"
-      >{{ $i18n.t('GENERAL.new') }}</v-btn>
+      >{{ $i18n.t('GENERAL.new') }}
+      </v-btn> -->
 
       <v-menu open-on-hover bottom left offset-y>
         <v-btn
@@ -495,7 +496,7 @@ export default class CustomTable extends Vue {
 }
 
 .custom-table__search {
-  width: 36%;
+  width: 100%;
 }
 
 .custom-table__overflow {

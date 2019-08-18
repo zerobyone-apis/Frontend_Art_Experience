@@ -11,6 +11,11 @@ export default new Router({
       component: () => import('./views/Home.vue'),
     },
     {
+      path: "/MainPage",
+      name: "MainPage",
+      component: () => import('./views/MainPage.vue'),
+    },
+    {
       path: "/MyEvents",
       name: "MyEvents",
       component: () => import('./views/MyEvents.vue'),
