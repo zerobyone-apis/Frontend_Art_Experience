@@ -5,10 +5,9 @@
         <!-- banner -->
         <v-flex xs12 sm12 md12 xl12>
           <div class="barbershop-banner">
-            <img class="barbershop-banner-wallpaper" :src="barberShop.pictures.banner" />
-            <img class="barbershop-banner-logo" :src="barberShop.pictures.logo" />
-            <p class="barbershop-banner-name">{{ barberShop.name }}</p>
-
+            <img class="barbershop-banner-wallpaper" :src="barberShop.pageDesign.banner.img" />
+            <img class="barbershop-banner-logo" :src="barberShop.pageDesign.logo.img" />
+            <p class="barbershop-banner-name">{{ barberShop.info.name }}</p>
             <v-icon dark class="barbershop-banner-white-stars" small>star star star star star</v-icon>
             <v-icon class="barbershop-banner-stars" small>{{ getStars() }}</v-icon>
           </div>
@@ -32,17 +31,25 @@
               <v-layout v-if="true" row wrap>
                 <v-flex xs4 xl4 sm4>
                   <!-- best pictures selected -->
-                    <v-img class="barbershop-content-pictures" :src="barberShop.pictures.presentation[0]" />
+                    <v-img class="barbershop-content-pictures" :src="barberShop.pageDesign.presentation.img" />
                 </v-flex>
-
                 <v-flex xs8 xl8 sm8>
-                  <!-- about the barbershop  -->
-                  <div class="barbershop-content-info">
-                    <p class="font-info">{{ "direccion: "+barberShop.direction }}</p>
-                    <p class="font-info">{{ "cel: "+barberShop.phone }}</p>
-                    <p class="font-info">{{ "email: "+barberShop.email }}</p>
-                    <p class="font-info">{{ "abierto: "+barberShop.time.days }}</p> 
-                    <p class="font-info">{{ "horario: "+barberShop.time.start + "hrs a " + barberShop.time.end + "hrs" }}</p>
+                  <!-- about the barbershop -->
+                  <div class="barbershop-content-info">             
+                    <p class="font-info-title">direccion:</p>
+                    <p class="font-info">{{ barberShop.info.direction }}</p>
+                    
+                    <p class="font-info-title">cel:</p>
+                    <p class="font-info">{{ barberShop.info.phone }}</p>
+                    
+                    <p class="font-info-title">email:</p>
+                    <p class="font-info">{{ barberShop.info.email }}</p>
+                    
+                    <p class="font-info-title">abierto:</p> 
+                    <p class="font-info">{{ barberShop.info.time.days }}</p> 
+                    
+                    <p class="font-info-title">horario:</p>
+                    <p class="font-info">{{ barberShop.info.time.start + "hrs a " + barberShop.info.time.end + "hrs" }}</p>           
                   </div>
                 </v-flex>
               </v-layout>
@@ -58,21 +65,10 @@
                     :key="index"
                     >
                       <p class="font-info-small">{{ barberShop.barbers[index].name }}</p>
-                      <img class="barber-profile-picture" :src="barberShop.barbers[index].picture">
+                      <img class="barber-profile-picture" :src="barberShop.barbers[index].picture.img">
                       <p class="font-info-small">{{ barberShop.barbers[index].job }}</p>
                     </div>
                   </div>
-                </div>
-              </v-flex>
-            </v-layout>
-
-            <!-- recomendations -->
-            <v-layout row wrap v-if="true">
-              <v-flex xs12 xl12 sm12>
-                <div class="barbershop-content-recomendation">
-                  <p class="font-info">algo</p>
-                  
-                  
                 </div>
               </v-flex>
             </v-layout>
@@ -132,6 +128,76 @@ export default class BarberPage extends XComponent {
 
   private user: User = new User();
 
+  private barberShop: any = {
+    /*
+      example of barberShop component:
+      info: {
+                //info of the barberShop    
+      },
+      pageDesign: {
+                //visual components of the page
+      },
+      barbers: [
+                //barbers list
+      ]
+    */
+    info: {
+      name: "Art Experience",
+      direction: "Bvar Artigas 2333",
+      email: "artexperience@gmail.com",
+      phone: "098345432",
+      stars: 4,
+      time: {
+        start: "12:00",
+        end: "22:00",
+        days: "luenes a viernes" //this will be a array
+      }
+    },
+    pageDesign: {
+      /*
+        example of pageDesign component:
+          name: {       //name of pageDesign component
+            img: "...", //route of the image
+            scala: 100, //percentaje 100%
+            x: 0,       //left position
+            y: 0        //top position
+          }
+      */
+      banner: {
+        img: "http://www.sclance.com/wallpapers/barber-shop-wallpaper/barber-shop-wallpaper_196967.jpg",
+        scala: 100,
+        x: 0,
+        y: 0
+      },
+      logo: {
+        img: "https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg",
+        scala: 100,
+        x: 0,
+        y: 0
+      },
+      presentation: {
+        img: "https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg",
+        scala: 100,
+        x: 0,
+        y: 0
+      },
+    },
+    barbers: [
+      {
+        name: "Mi perfil",
+        job: "",
+        email: "amartinez@gmail.com",
+        info: "se especializa en algo",
+        picture: {
+          img: "https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg",
+          scala: 100,
+          x: 0,
+          y: 0
+        } 
+      }
+    ]
+  };
+
   private snackbar: any = { state: false, timeout: 0 };
 
   private pagination: any = {
@@ -146,78 +212,6 @@ export default class BarberPage extends XComponent {
     instagram: "https://image.flaticon.com/icons/png/512/87/87390.png",
     facebook: "https://image.flaticon.com/icons/png/512/33/33702.png"
   }
-
-  private barberShop: any = {
-    name: "Art Experience",
-    direction: "Bvar Artigas 2333",
-    email: "artexperience@gmail.com",
-    phone: "098345432",
-    stars: 4,
-    time: {
-      start: "12:00",
-      end: "22:00",
-      days: "luenes a viernes" //this will be a array
-    },
-    barbers: [
-      {
-        name: "Dwaine Jhonson",
-        job: "cut-training",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: "https://px.cdn.bigbangnews.com/bigbang/042016/1552082498873.jpg"
-      },
-      {
-        name: "Bruce Willis",
-        job: "barber - navaja",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: "https://dr-assets.tadevel-cloud.xyz/ae/media-photo_57f1a7b9d17589f27a541dae_320w.jpeg"
-      },
-      {
-        name: "Kebin Limado",
-        job: "peluquero",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: "https://ugc.kn3.net/i/760x/http://www.metarisa.com/wp-content/uploads/2009/12/cabello-pelado.jpg"
-      },
-      {
-        name: "Pelado comun",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: "https://i.pinimg.com/736x/2a/45/7f/2a457f7efc3aafbb60d347ed55d7711e.jpg"
-      },
-      {
-        name: "Pelado comun",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: "https://i.pinimg.com/736x/2a/45/7f/2a457f7efc3aafbb60d347ed55d7711e.jpg"
-      },
-      {
-        name: "Pelado comun",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: "https://i.pinimg.com/736x/2a/45/7f/2a457f7efc3aafbb60d347ed55d7711e.jpg"
-      },
-      {
-        name: "Vin disel",
-        job: "barber",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2017/05/02/vindieselpelado.jpg?itok=Ert6Eky6"
-      }
-    ],
-    pictures: {
-      logo: "https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/08/barber-shop-logo.jpg",
-      banner: "https://media-cdn.tripadvisor.com/media/photo-s/0d/03/dc/a9/salon.jpg",
-      presentation: [
-        "https://probeauty.org/collective/wp-content/uploads/2018/04/image2-1024x743.jpeg",
-        // "https://cdn.shopify.com/s/files/1/2081/8453/files/mens_haircut_87d8e723-d180-4a3f-8603-db44227bf15e_large.jpg?v=1553194768"
-      ]
-    }
-  };
 
   private rules: any = {
     required: [(v: any) => !!v || this.translate("VALIDATIONS.required")],
@@ -562,7 +556,7 @@ export default class BarberPage extends XComponent {
 
   getStars() {
     let stars: String = "";
-    for (let index = 0; index < this.barberShop.stars; index++) {
+    for (let index = 0; index < this.barberShop.info.stars; index++) {
       stars +="star ";
     }
     return stars;
@@ -656,12 +650,12 @@ export default class BarberPage extends XComponent {
     .action-logo {
       position: relative;
       margin-right: 20px;
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       display: inline-block;
       background-color: #d4d4d4;
-      border-radius: 10px;
       border-color: #d4d4d4;
+      border-radius: 10px;
       border-style: solid;
       border-width: 2px;
       cursor: pointer;
@@ -670,6 +664,7 @@ export default class BarberPage extends XComponent {
     .btn-reservation {
       position: relative;
       margin-right: 10px;
+      height: 20px;
       bottom: 10px;
       background-color: #d4d4d4;
     }
@@ -685,7 +680,7 @@ export default class BarberPage extends XComponent {
       position: relative;
       width: 100%;
       height: 200px;
-      text-align: center;
+      text-align: left;
       padding-left: 10px;
     }
 
@@ -701,7 +696,7 @@ export default class BarberPage extends XComponent {
     position:relative;
     width: 100%;
     height: 300px;
-    border-top-width: 10px;
+    border-top-width: 2px;
     border-top-style: solid;
     border-top-color: rgb(50, 50, 50);
     
@@ -756,11 +751,21 @@ export default class BarberPage extends XComponent {
   }
 }
 
+.font-info-title {
+  margin-bottom:-1px;
+  font-style: italic;
+  color: #d4d4d4;
+  font-size: 11px;
+}
 
 .font-info {
   margin-bottom:-1px;
   font-style: italic;
   color: #d4d4d4;
+  font-size: 12px;
+  border-color: black;
+  text-shadow: black;
+  text-shadow: 1px 1px black;
 }
 
 .font-info-small {
