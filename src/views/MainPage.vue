@@ -10,16 +10,7 @@
         </v-flex>
         <!-- main container -->
         <v-flex xs12 sm12 md12 xl12>
-          <div class="barbershop-content">
-            <!-- actions bar -->
-            <v-layout row wrap>
-              <v-flex v-if="true" xs12 sm12 md12 xl12>
-                <div class="barbershop-actions">  
-                  <v-img class="action-logo" :src="icons.facebook"></v-img>
-                  <v-img class="action-logo" :src="icons.instagram"></v-img>
-                </div>
-              </v-flex>
-            </v-layout>                                                                    
+          <div class="barbershop-content">                                                                
             <!-- content presentation -->
             <div class="barbershop-content-presentation">
               <v-layout row wrap>
@@ -38,7 +29,15 @@
                 </v-flex>
               </v-layout>
              </div>
-            
+            <!-- actions bar
+            <v-layout row wrap>
+              <v-flex v-if="true" xs12 sm12 md12 xl12>
+                <div class="barbershop-actions">  
+                  <v-img class="action-logo" :src="icons.facebook"></v-img>
+                  <v-img class="action-logo" :src="icons.instagram"></v-img>
+                </div>
+              </v-flex>
+            </v-layout>     -->
             <!-- free for more  -->
           </div>
         </v-flex>
@@ -469,7 +468,7 @@ export default class BarberPage extends XComponent {
   width: 100% !important;
   //height: calc(100% - 60px) !important;
   height: 100%;
-    background-color: rgb(42, 42, 42);
+  background-color: rgb(42, 42, 42);
   border-width: 1px;
   border-style: solid;
   overflow:hidden;

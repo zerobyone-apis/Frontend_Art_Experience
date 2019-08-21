@@ -2,7 +2,6 @@
   <v-card class="cards-main">
     <div
       class="custom-table__header"
-      :style="{'background-color' : theme.colors.nav, 'color' : theme.colors.navIcons}"
     >
       <div>
         <v-text-field
@@ -12,7 +11,6 @@
           :loading="loading"
           @keyup.13="pSearch"
           :placeholder="$i18n.t(conf.search.text) || 'Que esta buscando?'"
-          :color="theme.colors.navIcons + '80'"
           class="custom-table__search"
           append-icon="search"
         >
@@ -30,16 +28,6 @@
       </div>
 
       <v-spacer></v-spacer>
-
-      <!-- <v-btn
-        :dark="$store.state.theme.colors.nav != '#fff'"
-        :light="$store.state.theme.colors.nav == '#fff'"
-        outline
-        @click.native="add"
-        class="custom-table__add-button"
-        :class="{'show-multiple' : showMultiple}"
-      >{{ $i18n.t('GENERAL.new') }}
-      </v-btn> -->
 
       <v-menu open-on-hover bottom left offset-y>
         <v-btn
@@ -124,20 +112,19 @@
       </div>
       
       <v-alert
-        style="margin: 27px;"
         v-show="!filtered.length && search"
-        :value="true"
-        color="red"
-        icon="new_releases"
-      >{{ $i18n.t('UCONTACTX_TABLE.noResultsSearch') }}</v-alert>
-      <v-alert
-        style="margin: 27px;"
-        v-show="!filtered.length && !search"
         :value="true"
         outline
         color="red"
-        icon="warning"
-      >No tienes eventos creados</v-alert>
+        icon="home"
+      >no se encontraron resultados</v-alert>
+      <v-alert
+        v-show="!filtered.length && !search"
+        :value="true"
+        outline
+        color="green"
+        icon="info"
+      >ingrese el nombre o la direccion de la barberia</v-alert>
     </div>
 
     <v-card
@@ -442,23 +429,6 @@ export default class CustomTable extends Vue {
   top: 0px;
 }
 
-.custom-table__search-button {
-  position: absolute;
-  left: calc(36% - 50px);
-  box-shadow: 0 0 0 0 !important;
-  top: 4px;
-  background-color: #de5656 !important;
-  width: 56px !important;
-  border-radius: 0 !important;
-  border-top-right-radius: 2px !important;
-  border-bottom-right-radius: 2px !important;
-  height: 48px;
-  min-width: 15px !important;
-  .v-icon {
-    color: #fff !important;
-  }
-}
-
 .show-multiple {
   position: absolute;
   right: 32px;
@@ -486,6 +456,7 @@ export default class CustomTable extends Vue {
   font-size: 12px;
   z-index: 1;
   border-bottom: 1px solid #7777772b;
+  background-color: rgb(42, 42, 42) !important;
   
   div {
     width: 24%;
@@ -499,12 +470,29 @@ export default class CustomTable extends Vue {
   width: 100%;
 }
 
+.custom-table__search-button {
+  position: absolute;
+  left: calc(36% - 50px);
+  box-shadow: 0 0 0 0 !important;
+  top: 4px;
+  background-color: #de5656 !important;
+  width: 56px !important;
+  border-radius: 0 !important;
+  border-top-right-radius: 2px !important;
+  border-bottom-right-radius: 2px !important;
+  height: 48px;
+  min-width: 15px !important;
+  .v-icon {
+    color: #fff !important;
+  }
+}
+
 .custom-table__overflow {
   height: calc(82vh - 5px) !important;
   overflow-y: auto;
   padding-bottom: 0px;
   padding-top: 67px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(42, 42, 42);
 }
 
 .custom-table__item {
@@ -571,7 +559,7 @@ export default class CustomTable extends Vue {
 .custom-table__header {
   padding-top: 10px !important;
   height: 67px !important;
-  padding-left: 20px;
+  background-color: rgb(42, 42, 42);
 }
 
 .custom-table__footer {
