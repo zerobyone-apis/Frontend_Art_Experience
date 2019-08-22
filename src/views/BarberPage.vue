@@ -21,7 +21,7 @@
                 <div class="barbershop-actions">  
                   <v-img class="action-logo" :src="icons.facebook"></v-img>
                   <v-img class="action-logo" :src="icons.instagram"></v-img>
-                  <v-btn small class="btn-reservation">consultar</v-btn>
+                  <v-btn small class="btn-reservation" @click="dialogs.imgSettings = true">consultar</v-btn>
                   <v-btn small class="btn-reservation">reservar</v-btn>
                 </div>
               </v-flex>
@@ -81,6 +81,13 @@
       <!--Dialogs-->
       <add-dialog v-model="dialogs.add" :steps="steps" @event="add" button-text="Crear"></add-dialog>
       <save-dialog v-model="dialogs.save" :steps="steps" :item="event" @event="save"></save-dialog>
+      <img-dialog 
+        v-model="dialogs.imgSettings" 
+        :steps="stepsImgSettings" 
+        @event="save" 
+        image="https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg"
+        button-text="guardar">
+      </img-dialog>
 
       <!--delete dialog-->
       <delete-dialog
@@ -111,13 +118,15 @@ import CustomTable from "@/components/CustomTable.vue";
 import AddDialog from "@/components/dialogs/add.vue";
 import SaveDialog from "@/components/dialogs/save.vue";
 import DeleteDialog from "@/components/dialogs/delete.vue";
+import ImgDialog from    "@/components/dialogs/imgDialog.vue";
 
 @Component({
   components: {
     CustomTable,
     AddDialog,
     SaveDialog,
-    DeleteDialog
+    DeleteDialog,
+    ImgDialog,
   }
 })
 
@@ -252,6 +261,14 @@ export default class BarberPage extends XComponent {
       text: "EVENT.search"
     }
   };
+
+   private stepsImgSettings: any = 
+   [
+    {
+      title: "Personalizacion de imagenes",
+      fields: []
+    }
+   ];
 
   private steps: any = [
     {
@@ -704,7 +721,6 @@ export default class BarberPage extends XComponent {
       position: relative;
       width: 100%;
       height: 300px;
-      text-align: center;
       background-color: rgb(42, 42, 42);
       padding-top: 5px;
       padding-bottom: 5px;
@@ -713,6 +729,7 @@ export default class BarberPage extends XComponent {
       display:inline-block;
       overflow:hidden;
       overflow-y:scroll;
+      text-align: center;
 
       .barbershop-content-barbers-profile {
         position: relative;
