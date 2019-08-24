@@ -1,0 +1,261 @@
+#my-events {
+  position: absolute;
+  top: 60px;
+  width: 100% !important;
+  //height: calc(100% - 60px) !important;
+  height: 100%;
+    background-color: rgb(42, 42, 42);
+  border-width: 1px;
+  border-style: solid;
+  overflow:hidden;
+  overflow-y:scroll;
+}
+
+.barbershop-banner {
+  position: relative;
+  width: 100%;
+  height: 120px;//var responsivity - height
+  // background-color: rgb(167, 107, 107);
+
+  .barbershop-banner-logo {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    bottom: 5px;
+    left: 5px;
+    // margin-left: calc(50% - 35px);
+    border-radius: 5px;
+    background-color: rgb(42, 42, 42);
+  }
+  
+  .barbershop-banner-wallpaper {
+    position: relative;
+    width: 100%;
+    // right: 1px;
+  }
+
+  .barbershop-banner-name {
+    position: absolute;
+    bottom: 0px;
+    left: 80px;//find more about that
+    font-size: 16px;
+    color: white;
+    border-color: black;
+    text-shadow: black;
+    text-shadow: 1px 1px black;
+  }
+
+  .barbershop-banner-white-stars {
+    position: absolute;
+    bottom: 5px;
+    left: 80px;//find more about that
+  }
+
+  .barbershop-banner-stars.v-icon {
+      position: absolute;
+      bottom: 5px;
+      left: 80px;//find more about that
+      color: yellow !important;
+  }
+    
+}
+
+.barbershop-content {
+  position: absolute; //absolute for get total height
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  width: 100%;
+  height:calc(100% - 120px);//var responsivity - height
+  background-color: rgb(42, 42, 42);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  .barbershop-actions {
+    position: relative;
+    width: 100%;
+    height: 50px;//var responsivity - height
+    background-color: rgb(42, 42, 42);
+    display:inline-block;
+    text-align: right;
+    padding-top: 10px;
+    
+    .action-logo {
+      position: relative;
+      margin-right: 20px;
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      background-color: #d4d4d4;
+      border-color: #d4d4d4;
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 2px;
+      cursor: pointer;
+    }
+
+    .btn-reservation {
+      position: relative;
+      margin-right: 10px;
+      height: 20px;
+      bottom: 10px;
+      background-color: #d4d4d4;
+    }
+  }
+
+ .barbershop-content-presentation {
+    background-color: rgb(42, 42, 42);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+
+    .barbershop-content-info {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .barbershop-content-pictures {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      border-top-right-radius: 10px;
+    }
+ }
+
+  .barbershop-content-barbers {
+    position:relative;
+    width: 100%;
+    height: 300px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: rgb(50, 50, 50);
+    
+    .barbershop-content-barbers-profiles {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      text-align: center;
+      background-color: rgb(42, 42, 42);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display:inline-block;
+      overflow:hidden;
+      overflow-y:scroll;
+
+      .barbershop-content-barbers-profile {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        padding-top: 20px;
+        width: 120px;
+        height: 120px;
+        
+        .barber-profile-picture {
+          position: relative;
+          width: 60px;
+          height: 70px;
+          border-radius: 20px;
+          
+        }
+
+        .barber-profile-text {
+          position: relative;
+          font-size: 12px;
+          bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .barbershop-content-recomendation {
+    position:relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    border-top-width: 10px;
+    border-top-style: solid;
+    background-color: rgb(42, 42, 42);
+    border-top-color: rgb(50, 50, 50);
+  }
+}
+
+.font-info-title {
+  margin-bottom:-1px;
+  font-style: italic;
+  color: #d4d4d4;
+  font-size: 11px;
+}
+
+.font-info {
+  margin-bottom:-1px;
+  font-style: italic;
+  color: #d4d4d4;
+  font-size: 12px;
+  border-color: black;
+  text-shadow: black;
+  text-shadow: 1px 1px black;
+}
+
+.font-info-small {
+  margin-bottom:-1px;
+  font-style: italic;
+  font-size: 11px;
+  color: #d4d4d4;
+}
+
+
+
+
+
+
+
+.content2 {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: green;
+}
+
+.custom-dialogs__footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #cecece4f;
+}
+
+.custom-stepper {
+  .v-stepper__header {
+    box-shadow: none;
+    border: 1px solid #d4d4d4;
+    border-radius: 80px;
+    margin: 31px;
+  }
+}
+
+.delete-snackbar {
+  height: 48px !important;
+
+  .v-snack__content {
+    padding: 0 !important;
+    align-items: initial !important;
+
+    .delete-snackbar-button {
+      width: 100% !important;
+      position: relative;
+      left: 0px;
+      margin-left: 0 !important;
+
+      i {
+        font-size: 29px !important;
+      }
+
+      .v-icon {
+        padding-left: 0px !important;
+      }
+    }
+  }
+}

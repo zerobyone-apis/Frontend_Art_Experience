@@ -8,7 +8,7 @@
       <router-view></router-view>
     </main>
     
-    <notifications width="100%" :duration="5000" position="bottom" group="foo"/>
+    <!-- <notifications width="100%" :duration="5000" position="bottom" group="foo"/> -->
 
   </v-app>
 </template>
