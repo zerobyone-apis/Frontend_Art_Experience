@@ -1,9 +1,9 @@
 import XComponent from "../../components/XComponent";
-import User from "../../controllers/User";
-import Event from "../../controllers/Event";
+import User from "../../models/User";
+// import Event from "../../models/Event";
 
-export default class CodePage extends XComponent {
-    private event: Event = new Event();
+export default class BarberPageCode extends XComponent {
+    // private event: Event = new Event();
     private events: any[] = [];
     private selectedEvents: any[] = [];
   

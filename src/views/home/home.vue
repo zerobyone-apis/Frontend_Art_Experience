@@ -47,9 +47,9 @@
 
 <script lang="ts">
 //code
-import CodePage from "./code";
+import HomeCode from "./homeCode";
 //style
-import "./style.scss";
+import "./homeStyle.scss";
 //components
 import { Component } from "vue-property-decorator";
 import AddDialog from "@/components/dialogs/add.vue";
@@ -59,5 +59,5 @@ import AddDialog from "@/components/dialogs/add.vue";
     AddDialog
   }
 })
-export default class Home extends CodePage {}
+export default class Home extends HomeCode {}
 </script>

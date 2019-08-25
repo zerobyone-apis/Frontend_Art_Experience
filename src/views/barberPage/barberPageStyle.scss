@@ -2,20 +2,18 @@
   position: absolute;
   top: 60px;
   width: 100% !important;
-  //height: calc(100% - 60px) !important;
   height: 100%;
-    background-color: rgb(42, 42, 42);
+  background-color: rgb(42, 42, 42);
   border-width: 1px;
   border-style: solid;
-  overflow:hidden;
-  overflow-y:scroll;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .barbershop-banner {
   position: relative;
   width: 100%;
-  height: 120px;//var responsivity - height
-  // background-color: rgb(167, 107, 107);
+  height: 120px; //var responsivity - height
 
   .barbershop-banner-logo {
     position: absolute;
@@ -23,21 +21,19 @@
     height: 70px;
     bottom: 5px;
     left: 5px;
-    // margin-left: calc(50% - 35px);
     border-radius: 5px;
     background-color: rgb(42, 42, 42);
   }
-  
+
   .barbershop-banner-wallpaper {
     position: relative;
     width: 100%;
-    // right: 1px;
   }
 
   .barbershop-banner-name {
     position: absolute;
     bottom: 0px;
-    left: 80px;//find more about that
+    left: 80px; //find more about that
     font-size: 16px;
     color: white;
     border-color: black;
@@ -48,16 +44,15 @@
   .barbershop-banner-white-stars {
     position: absolute;
     bottom: 5px;
-    left: 80px;//find more about that
+    left: 80px; //find more about that
   }
 
   .barbershop-banner-stars.v-icon {
-      position: absolute;
-      bottom: 5px;
-      left: 80px;//find more about that
-      color: yellow !important;
+    position: absolute;
+    bottom: 5px;
+    left: 80px; //find more about that
+    color: yellow !important;
   }
-    
 }
 
 .barbershop-content {
@@ -66,7 +61,7 @@
   padding-right: 5px;
   padding-top: 5px;
   width: 100%;
-  height:calc(100% - 120px);//var responsivity - height
+  height: calc(100% - 120px); //var responsivity - height
   background-color: rgb(42, 42, 42);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -74,12 +69,12 @@
   .barbershop-actions {
     position: relative;
     width: 100%;
-    height: 50px;//var responsivity - height
+    height: 50px; //var responsivity - height
     background-color: rgb(42, 42, 42);
-    display:inline-block;
+    display: inline-block;
     text-align: right;
     padding-top: 10px;
-    
+
     .action-logo {
       position: relative;
       margin-right: 20px;
@@ -103,7 +98,7 @@
     }
   }
 
- .barbershop-content-presentation {
+  .barbershop-content-presentation {
     background-color: rgb(42, 42, 42);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -123,16 +118,16 @@
       height: 200px;
       border-top-right-radius: 10px;
     }
- }
+  }
 
   .barbershop-content-barbers {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 300px;
     border-top-width: 2px;
     border-top-style: solid;
     border-top-color: rgb(50, 50, 50);
-    
+
     .barbershop-content-barbers-profiles {
       position: relative;
       width: 100%;
@@ -143,9 +138,9 @@
       padding-bottom: 5px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-      display:inline-block;
-      overflow:hidden;
-      overflow-y:scroll;
+      display: inline-block;
+      overflow: hidden;
+      overflow-y: scroll;
 
       .barbershop-content-barbers-profile {
         position: relative;
@@ -154,13 +149,12 @@
         padding-top: 20px;
         width: 120px;
         height: 120px;
-        
+
         .barber-profile-picture {
           position: relative;
           width: 60px;
           height: 70px;
           border-radius: 20px;
-          
         }
 
         .barber-profile-text {
@@ -173,7 +167,7 @@
   }
 
   .barbershop-content-recomendation {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 400px;
     margin-top: 10px;
@@ -185,14 +179,14 @@
 }
 
 .font-info-title {
-  margin-bottom:-1px;
+  margin-bottom: -1px;
   font-style: italic;
   color: #d4d4d4;
   font-size: 11px;
 }
 
 .font-info {
-  margin-bottom:-1px;
+  margin-bottom: -1px;
   font-style: italic;
   color: #d4d4d4;
   font-size: 12px;
@@ -202,7 +196,7 @@
 }
 
 .font-info-small {
-  margin-bottom:-1px;
+  margin-bottom: -1px;
   font-style: italic;
   font-size: 11px;
   color: #d4d4d4;

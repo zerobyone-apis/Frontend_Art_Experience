@@ -1,8 +1,8 @@
 
 import XComponent from "../../components/XComponent";
-import User from "../../controllers/User";
+import User from "../../models/User";
 
-export default class Home extends XComponent {
+export default class HomeCode extends XComponent {
     private user: User = new User();
 
     private rules: any = {

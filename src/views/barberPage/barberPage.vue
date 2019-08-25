@@ -113,25 +113,23 @@
 
 <script lang="ts">
 //code
-import CodePage from "./code";
+import BarberPageCode from './barberPageCode';
 //style
-import "./style.scss";
+import "./barberPageStyle.scss";
 //components
 import { Component } from "vue-property-decorator";
-import CustomTable from "@/components/CustomTable.vue";
 import AddDialog from "@/components/dialogs/add.vue";
 import SaveDialog from "@/components/dialogs/save.vue";
 import DeleteDialog from "@/components/dialogs/delete.vue";
 
 @Component({
   components: {
-    CustomTable,
     AddDialog,
     SaveDialog,
     DeleteDialog
   }
 })
 
-export default class BarberPage extends CodePage {
+export default class BarberPage extends BarberPageCode {
 }
 </script>

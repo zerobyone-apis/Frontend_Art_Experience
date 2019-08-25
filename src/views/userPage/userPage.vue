@@ -6,6 +6,8 @@
         <v-flex xs12 sm12 md12 xl12>
           <div class="barbershop-banner">
             <img class="barbershop-banner-wallpaper" :src="barberShop.pageDesign.banner.img" />
+            <img class="barbershop-banner-logo" :src="barberShop.pageDesign.logo.img" />
+            <p class="barbershop-banner-name">{{ barberShop.info.name }}</p>
           </div>
         </v-flex>
         <!-- main container -->
@@ -22,19 +24,20 @@
             </v-layout>                                                                    
             <!-- content presentation -->
             <div class="barbershop-content-presentation">
-              <v-layout row wrap>
-                <v-flex xs12 sm12 md12 xl12>
-                  <custom-table
-                    :conf="tableConf"
-                    v-model="selectedEvents"
-                    :items="false"
-                    itemIcon="event"
-                    @get="get"
-                    @value="updateSelected"
-                    @open="open"
-                    @edit="showSave"
-                    @new="showNew"
-                  ></custom-table>
+              <v-layout v-if="true" row wrap>
+                <v-flex xs4 xl4 sm4>
+                  <!-- best pictures selected -->
+                    <v-img class="barbershop-content-pictures" :src="barberShop.pageDesign.presentation.img" />
+                </v-flex>
+                <v-flex xs8 xl8 sm8>
+                  <!-- about the barbershop -->
+                  <div class="barbershop-content-info">             
+                    <p class="font-info-title">cel:</p>
+                    <p class="font-info">{{ barberShop.info.phone }}</p>
+                    
+                    <p class="font-info-title">email:</p>
+                    <p class="font-info">{{ barberShop.info.email }}</p>
+                  </div>
                 </v-flex>
               </v-layout>
              </div>
@@ -70,24 +73,23 @@
 
 <script lang="ts">
   //code 
-  import CodeMainPage from './code';
+  import UserPageCode from './userPageCode';
   //style
-  import './style.scss';
+  import './userPageStyle.scss';
   //components
   import { Component } from "vue-property-decorator";
-  import CustomTable from "@/components/CustomTable.vue";
   import AddDialog from "@/components/dialogs/add.vue";
   import SaveDialog from "@/components/dialogs/save.vue";
   import DeleteDialog from "@/components/dialogs/delete.vue";
-    @Component({
+
+  @Component({
     components: {
-      CustomTable,
       AddDialog,
       SaveDialog,
       DeleteDialog
     }
   })
 
-  export default class MainPage extends CodeMainPage {
-  }
+export default class UserPage extends UserPageCode {
+}
 </script>
