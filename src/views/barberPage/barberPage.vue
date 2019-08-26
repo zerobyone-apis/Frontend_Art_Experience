@@ -81,7 +81,6 @@
                 </div>
               </v-flex>
             </v-layout>
-
             <!-- free for more  -->
           </div>
         </v-flex>

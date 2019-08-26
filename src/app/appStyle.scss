@@ -1,0 +1,23 @@
+main {
+  padding: 0px 0px 0px 0px;
+}
+
+.ucontact-theme__background {
+  background-color: #de5656 !important;
+
+  .v-stepper__step {
+    background-color: #de5656 !important;
+  }
+}
+
+.ucontact-theme__color--text {
+  color: #de5656 !important;
+}
+
+.ucontact-theme__disabled {
+  color: #cecece !important;
+}
+
+.ucontact-dialogs {
+  border-radius: 8px !important;
+}
