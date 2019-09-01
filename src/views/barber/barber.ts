@@ -2,10 +2,11 @@ import XComponent from "../../components/XComponent";
 import User from "../../models/User";
 // import Event from "../../models/Event";
 
-export default class UserPageCode extends XComponent {
+export default class BarberCode extends XComponent {
   // private event: Event = new Event();
   private events: any[] = [];
   private selectedEvents: any[] = [];
+  private croppaModel: any = {};
 
   private user: User = new User();
 
@@ -133,37 +134,19 @@ export default class UserPageCode extends XComponent {
       fields: [
         {
           is: "input",
-          name: "name",
-          label: "nombre",
-          hint: "EVENT.hintName",
-          icon: "person",
-          rules: this.rules.required,
-          required: true
-        },
-        {
-          is: "input",
           name: "location",
-          label: "EVENT.location",
+          label: "Barberia",
           hint: "EVENT.hintLocation",
-          icon: "my_location",
+          icon: "home",
           rules: this.rules.required,
           required: true
         },
         {
           is: "input",
-          name: "invitedsNumber",
-          label: "cantidad de invitados",
-          hint: "EVENT.hintDate",
-          icon: "people",
-          rules: this.rules.required,
-          required: true
-        },
-        {
-          is: "input",
-          name: "description",
-          label: "descripcion",
-          hint: "EVENT.hintDate",
-          icon: "description",
+          name: "workType",
+          label: "Tipo de trabajo",
+          hint: "EVENT.hintLocation",
+          icon: "work",
           rules: this.rules.required,
           required: true
         }
@@ -182,35 +165,62 @@ export default class UserPageCode extends XComponent {
           required: true
         },
         {
-          is: "date",
-          name: "endDate",
-          label: "fin",
+          is: "hour",
+          workTime: 0.5,
+          name: "startHour",
+          label: "horarios",
           hint: "EVENT.hintDate",
           icon: "event",
-          rules: this.rules.required,
-          required: true
-        },
-        {
-          is: "hour",
-          name: "startHour",
-          label: "hora inicio",
-          hint: "EVENT.hintDate",
-          icon: "access_time",
-          rules: this.rules.required,
-          required: true
-        },
-        {
-          is: "hour",
-          name: "endHour",
-          label: "hora fin",
-          hint: "EVENT.hintDate",
-          icon: "access_time",
           rules: this.rules.required,
           required: true
         }
       ]
     }
+    ,
+    {
+      title: "Confirmacion de reserva",
+      fields: [
+        {
+          is: "input",
+          name: "location",
+          label: "Barberia",
+          hint: "EVENT.hintLocation",
+          icon: "home",
+          rules: this.rules.required,
+          required: false
+        },
+        {
+          is: "input",
+          name: "workType",
+          label: "Tipo de trabajo",
+          hint: "EVENT.hintLocation",
+          icon: "work",
+          rules: this.rules.required,
+          required: false
+        },
+        {
+          is: "input",
+          name: "startDate",
+          label: "fecha",
+          hint: "EVENT.hintDate",
+          icon: "event",
+          rules: this.rules.required,
+          required: false
+        },
+        {
+          is: "input",
+          workTime: 0.5,
+          name: "startDate",
+          label: "horario",
+          hint: "EVENT.hintDate",
+          icon: "event",
+          rules: this.rules.required,
+          required: false
+        }
+      ]
+    }
   ];
+
 
   // {
   //       title: "Creacion de Encuesta",
@@ -263,6 +273,18 @@ export default class UserPageCode extends XComponent {
     }
   }
 
+
+  uploadCroppedImage() {
+    this.croppaModel.generateBlob(
+      blob => {
+        // write code to upload the cropped image file (a file is a blob)
+      },
+      'image/jpeg',
+      0.8
+    ); // 80% compressed jpeg file
+  }
+
+
   /**
    * @name GET
    * @description gets items with filters of pagination
@@ -291,20 +313,21 @@ export default class UserPageCode extends XComponent {
    * @name ADD
    * @description add item
    */
-  async add(event) {
-    try {
-      this.event = Object.assign(this.event, event);
-      await this.event.add(this.user.id);
-      this.events.push(this.event);
-      this.dialogs.add = false;
-    } catch (error) {
-      this.$notify({
-        group: "foo",
-        type: "warn",
-        title: "Error",
-        text: error.data.message
-      });
-    }
+  async add(reservation) {
+    console.log(reservation);
+    // try {
+    //   this.event = Object.assign(this.event, event);
+    //   await this.event.add(this.user.id);
+    //   this.events.push(this.event);
+    //   this.dialogs.add = false;
+    // } catch (error) {
+    //   this.$notify({
+    //     group: "foo",
+    //     type: "warn",
+    //     title: "Error",
+    //     text: error.data.message
+    //   });
+    // }
   }
 
   /**
