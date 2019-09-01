@@ -1,33 +1,6 @@
+import { Vue } from "vue-property-decorator";
+
 export default class AddDialog extends Vue {
-    @Prop({ default: "Crear" }) buttonText: any;
-    @Prop({ default: false }) value!: boolean;
-
-    @Prop({
-        default: () => [
-            {
-                title: "Step 1",
-                fields: [
-                    {
-                        type: "input",
-                        name: "first",
-                        label: "My first input"
-                    }
-                ]
-            },
-            {
-                title: "Step 2",
-                fields: [
-                    {
-                        type: "input",
-                        name: "second",
-                        label: "My second input"
-                    }
-                ]
-            }
-        ]
-    })
-    steps: any;
-
     private item: any = {};
     private modals: any = {};
     private date: string = new Date().toISOString().substr(0, 10);
@@ -122,5 +95,12 @@ export default class AddDialog extends Vue {
     saveDate(date: any) {
         this.$refs["dialog1"][0].save(date.toString());
         this.modal = false;
+    }
+
+    //start: open the barberShop
+    //end: close the barberShop
+    //workTime: val of division of the time
+    getHours(workTime: number) {
+        return ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"];
     }
 }

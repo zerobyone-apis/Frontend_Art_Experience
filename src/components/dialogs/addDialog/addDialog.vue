@@ -35,7 +35,6 @@
                       lg12
                       class="pb-3 px-4"
                     >
-                      <!-- :hint="$i18n.t(field.hint)" -->
                       <component
                         v-if="field.is != 'date' && field.is != 'hour'"
                         v-model="item[field.name]"
@@ -50,7 +49,31 @@
                         :prepend-icon="field.icon"
                         :selectable="field.selectable"
                         color="x-theme__color"
-                      ></component>
+                      >
+                      </component>
+
+                      <!-- Hours BOX  -->
+                      <div v-if="field.is == 'hour'">
+                        <p>Manana</p>
+                        <div class="hours-box">
+                          <v-btn
+                            small
+                            class="hour-item"
+                            v-for="(hour,i) in getHours(field.workTime).slice(0,5)"
+                            :key="i"
+                          >{{ hour }}</v-btn>
+                        </div>
+                        <p>Tarde</p>
+                        <div class="hours-box">
+                          <v-btn
+                            small
+                            class="hour-item"
+                            v-for="(hour,i) in getHours(field.workTime).slice(5)"
+                            :key="i"
+                          >{{ hour }}</v-btn>
+                        </div>
+                      </div>
+
 
                       <!-- Date Field  -->
                       <v-dialog
@@ -81,36 +104,6 @@
                             modals['dialog'+(index+1)] = false"
                           >OK</v-btn>
                         </v-date-picker>
-                      </v-dialog>
-
-                      <!-- Hour Field  -->
-                      <v-dialog
-                        v-if="field.is == 'hour'"
-                        :ref="'dialog'+(index+1)"
-                        v-model="modals['dialog'+(index+1)]"
-                        :return-value.sync="time"
-                        lazy
-                        full-width
-                        width="290px"
-                      >
-                        <template v-slot:activator="{ on }">
-                          <v-text-field
-                            v-model="item[field.name]"
-                            :label="field.label"
-                            :prepend-icon="field.icon"
-                            readonly
-                            v-on="on"
-                          ></v-text-field>
-                        </template>
-                        <v-time-picker v-model="time" full-width>
-                          <v-spacer></v-spacer>
-                          <!-- <v-btn flat color="primary" @click="modals['dialog'+(index+1)] = false">Cancel</v-btn> -->
-                          <v-btn
-                            flat
-                            color="primary"
-                            @click="item[field.name] = time;modals['dialog'+(index+1)] = false"
-                          >OK</v-btn>
-                        </v-time-picker>
                       </v-dialog>
                     </v-flex>
 
@@ -151,6 +144,40 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop, Watch } from "vue-property-decorator";
+import { Prop, Watch, Component } from "vue-property-decorator";
 import { VSelect, VTextField, VCheckbox } from "vuetify/lib";
+
+import AddDialogCode from "./addDialogCode";
+import "./addDialogStyle.scss";
+
+@Component({})
+export default class AddDialog extends AddDialogCode {
+  @Prop({ default: "Crear" }) buttonText: any;
+  @Prop({ default: false }) value!: boolean;
+  @Prop({
+    default: () => [
+      {
+        title: "Step 1",
+        fields: [
+          {
+            type: "input",
+            name: "first",
+            label: "My first input"
+          }
+        ]
+      },
+      {
+        title: "Step 2",
+        fields: [
+          {
+            type: "input",
+            name: "second",
+            label: "My second input"
+          }
+        ]
+      }
+    ]
+  })
+  steps: any;
+}
 </script>
