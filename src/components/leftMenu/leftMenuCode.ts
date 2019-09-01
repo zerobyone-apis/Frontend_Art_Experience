@@ -6,8 +6,8 @@ export default class LeftMenuCode extends Vue {
     private menu: any = {
         configuration: [
             { name: "inicio", icon: "home", route: "MainPage" },
-            { name: "mi perfil", icon: "people", route: "UserPage" },
-            { name: "mi barberia", icon: "home", route: "BarberPage" }
+            { name: "mi perfil", icon: "people", route: "Barber" },
+            { name: "mi barberia", icon: "home", route: "BarberShop" }
         ]
     };
 

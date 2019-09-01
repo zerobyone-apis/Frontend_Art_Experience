@@ -16,14 +16,14 @@ export default new Router({
       component: () => import('./views/mainPage/mainPage.vue')
     },
     {
-      path: "/BarberPage",
-      name: "BarberPage",
-      component: () => import('./views/barberPage/barberPage.vue')
+      path: "/BarberShop",
+      name: "BarberShop",
+      component: () => import('./views/barberShop/barberShopPage.vue')
     },
     {
-      path: "/UserPage",
-      name: "UserPage",
-      component: () => import('./views/userPage/userPage.vue')
+      path: "/Barber",
+      name: "Barber",
+      component: () => import('./views/barber/barberPage.vue')
     }
   ],
 });

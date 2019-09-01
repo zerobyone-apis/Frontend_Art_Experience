@@ -5,7 +5,9 @@ import router from "./router";
 import store from "./store";
 import VueI18n from "vue-i18n";
 import Locale from "./locale";
-
+import Croppa from 'vue-croppa';
+import 'vue-croppa/dist/vue-croppa.css';
+Vue.use(Croppa);
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
