@@ -150,6 +150,10 @@
         width: 120px;
         height: 120px;
 
+        .barber-profile-picture:hover {
+          border-style: inset;
+        }
+
         .barber-profile-picture {
           position: relative;
           width: 60px;

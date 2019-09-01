@@ -1,8 +1,10 @@
+
+
 import XComponent from "../../components/XComponent";
 import User from "../../models/User";
 // import Event from "../../models/Event";
 
-export default class BarberPageCode extends XComponent {
+export default class BarberShopCode extends XComponent {
     // private event: Event = new Event();
     private events: any[] = [];
     private selectedEvents: any[] = [];
@@ -141,37 +143,19 @@ export default class BarberPageCode extends XComponent {
         fields: [
           {
             is: "input",
-            name: "name",
-            label: "nombre",
-            hint: "EVENT.hintName",
-            icon: "person",
+            name: "location",
+            label: "Barberia",
+            hint: "EVENT.hintLocation",
+            icon: "home",
             rules: this.rules.required,
             required: true
           },
           {
             is: "input",
             name: "location",
-            label: "EVENT.location",
+            label: "Tipo de trabajo",
             hint: "EVENT.hintLocation",
-            icon: "my_location",
-            rules: this.rules.required,
-            required: true
-          },
-          {
-            is: "input",
-            name: "invitedsNumber",
-            label: "cantidad de invitados",
-            hint: "EVENT.hintDate",
-            icon: "people",
-            rules: this.rules.required,
-            required: true
-          },
-          {
-            is: "input",
-            name: "description",
-            label: "descripcion",
-            hint: "EVENT.hintDate",
-            icon: "description",
+            icon: "work",
             rules: this.rules.required,
             required: true
           }
@@ -180,6 +164,24 @@ export default class BarberPageCode extends XComponent {
       {
         title: "Fecha de inicio y fin",
         fields: [
+          {
+            is: "input",
+            name: "location",
+            label: "Barberia",
+            hint: "EVENT.hintLocation",
+            icon: "home",
+            rules: this.rules.required,
+            required: false
+          },
+          {
+            is: "input",
+            name: "location",
+            label: "Tipo de trabajo",
+            hint: "EVENT.hintLocation",
+            icon: "work",
+            rules: this.rules.required,
+            required: false
+          },
           {
             is: "date",
             name: "startDate",
@@ -190,35 +192,35 @@ export default class BarberPageCode extends XComponent {
             required: true
           },
           {
-            is: "date",
-            name: "endDate",
-            label: "fin",
+            is: "hour",
+            workTime: 0.5,
+            name: "startDate",
+            label: "horarios",
             hint: "EVENT.hintDate",
             icon: "event",
-            rules: this.rules.required,
-            required: true
-          },
-          {
-            is: "hour",
-            name: "startHour",
-            label: "hora inicio",
-            hint: "EVENT.hintDate",
-            icon: "access_time",
-            rules: this.rules.required,
-            required: true
-          },
-          {
-            is: "hour",
-            name: "endHour",
-            label: "hora fin",
-            hint: "EVENT.hintDate",
-            icon: "access_time",
             rules: this.rules.required,
             required: true
           }
         ]
       }
-    ];
+  ];
+  
+
+
+  goToBarberProfile() { 
+    this.$router.push("Barber");
+  }
+
+
+
+
+
+
+
+
+
+
+
   
     // {
     //       title: "Creacion de Encuesta",
@@ -295,25 +297,23 @@ export default class BarberPageCode extends XComponent {
     //   }
     // }
   
-    // /**
-    //  * @name ADD
-    //  * @description add item
-    //  */
-    // async add(event) {
-    //   try {
-    //     this.event = Object.assign(this.event, event);
-    //     await this.event.add(this.user.id);
-    //     this.events.push(this.event);
-    //     this.dialogs.add = false;
-    //   } catch (error) {
-    //     this.$notify({
-    //       group: "foo",
-    //       type: "warn",
-    //       title: "Error",
-    //       text: error.data.message
-    //     });
-    //   }
-    // }
+
+  
+  // try {
+  //   this.event = Object.assign(this.event, event);
+  //   await this.event.add(this.user.id);
+  //   this.events.push(this.event);
+  //   this.dialogs.add = false;
+  // } catch (error) {
+  //   this.$notify({
+  //     group: "foo",
+  //     type: "warn",
+  //     title: "Error",
+  //     text: error.data.message
+  //   });
+  // }
+
+
   
     // /**
     //  * @name SAVE
