@@ -1,77 +1,40 @@
 import XComponent from "../../components/XComponent";
 import User from "../../models/User";
-// import Event from "../../models/Event";
 
 export default class BarberCode extends XComponent {
-  // private event: Event = new Event();
   private events: any[] = [];
   private selectedEvents: any[] = [];
   private croppaModel: any = {};
 
   private user: User = new User();
 
-  private barberShop: any = {
-    /*
-      example of barberShop component:
-      info: {
-                //info of the barberShop    
-      },
-      pageDesign: {
-                //visual components of the page
-      },
-      barbers: [
-                //barbers list
-      ]
-    */
-    info: {
-      name: "Damian Rodriguez",
-      email: "artexperience@gmail.com",
-      phone: "098345432"
-    },
-    pageDesign: {
-      /*
-        example of pageDesign component:
-          name: {       //name of pageDesign component
-            img: "...", //route of the image
-            scala: 100, //percentaje 100%
-            x: 0,       //left position
-            y: 0        //top position
-          }
-      */
-      banner: {
-        img: "https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images-medium-5/barbershop-clippers-in-black-and-white-paul-ward.jpg",
-        scala: 100,
-        x: 0,
-        y: 0
-      },
-      logo: {
-        img: "https://banner2.kisspng.com/20180716/lra/kisspng-logo-person-user-person-icon-5b4d2bd2236ca6.6010202115317841461451.jpg",
-        scala: 100,
-        x: 0,
-        y: 0
-      },
-      presentation: {
-        img: "https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg",
-        scala: 100,
-        x: 0,
-        y: 0
-      },
-    },
-    barbers: [
-      {
-        name: "Mi perfil",
-        job: "",
-        email: "amartinez@gmail.com",
-        info: "se especializa en algo",
-        picture: {
-          img: "https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg",
-          scala: 100,
-          x: 0,
-          y: 0
-        }
-      }
-    ]
-  };
+  // private barberShop: any = {
+  //   info: {
+  //     name: "Damian Rodriguez",
+  //     email: "artexperience@gmail.com",
+  //     phone: "098345432"
+  //   },
+  //   pageDesign: {
+  //     banner: {
+  //       img: "https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images-medium-5/barbershop-clippers-in-black-and-white-paul-ward.jpg",
+  //       scala: 100,
+  //       x: 0,
+  //       y: 0
+  //     },
+  //     logo: {
+  //       img: "https://banner2.kisspng.com/20180716/lra/kisspng-logo-person-user-person-icon-5b4d2bd2236ca6.6010202115317841461451.jpg",
+  //       scala: 100,
+  //       x: 0,
+  //       y: 0
+  //     },
+  //     presentation: {
+  //       img: "https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg",
+  //       scala: 100,
+  //       x: 0,
+  //       y: 0
+  //     },
+  //   }
+  // };
 
   private snackbar: any = { state: false, timeout: 0 };
 
@@ -187,7 +150,8 @@ export default class BarberCode extends XComponent {
           hint: "EVENT.hintLocation",
           icon: "home",
           rules: this.rules.required,
-          required: false
+          required: false,
+          readOnly: true
         },
         {
           is: "input",
@@ -196,7 +160,8 @@ export default class BarberCode extends XComponent {
           hint: "EVENT.hintLocation",
           icon: "work",
           rules: this.rules.required,
-          required: false
+          required: false,
+          readOnly: true
         },
         {
           is: "input",
@@ -205,7 +170,8 @@ export default class BarberCode extends XComponent {
           hint: "EVENT.hintDate",
           icon: "event",
           rules: this.rules.required,
-          required: false
+          required: false,
+          readOnly: true
         },
         {
           is: "input",
@@ -215,7 +181,8 @@ export default class BarberCode extends XComponent {
           hint: "EVENT.hintDate",
           icon: "event",
           rules: this.rules.required,
-          required: false
+          required: false,
+          readOnly: true
         }
       ]
     }
@@ -273,16 +240,19 @@ export default class BarberCode extends XComponent {
     }
   }
 
-
-  uploadCroppedImage() {
-    this.croppaModel.generateBlob(
-      blob => {
-        // write code to upload the cropped image file (a file is a blob)
-      },
-      'image/jpeg',
-      0.8
-    ); // 80% compressed jpeg file
+  goToBarberShop() {
+    this.$router.push("BarberShop");
   }
+
+  // uploadCroppedImage() {
+  //   this.croppaModel.generateBlob(
+  //     blob => {
+  //       // write code to upload the cropped image file (a file is a blob)
+  //     },
+  //     'image/jpeg',
+  //     0.8
+  //   ); // 80% compressed jpeg file
+  // }
 
 
   /**
@@ -457,5 +427,18 @@ export default class BarberCode extends XComponent {
       stars += "star ";
     }
     return stars;
+  }
+
+  
+  /**
+ * @name MODEL
+ * @description emits the input method to the parent for define visibility of the dialog
+ */
+  get model(): boolean {
+    return this.value;
+  }
+
+  set model(model: boolean) {
+    this.$emit("input", model);
   }
 }

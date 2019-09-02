@@ -1,16 +1,28 @@
 <template>
-  <transition name="slide-fade">
-    <div id="my-events" class="page-content">
+  <!-- <transition name="slide-y-reverse-transition"> -->
+  <v-dialog v-model="model" fullscreen scrollable transition="slide-y-reverse-transition">
+    <div id="barberProfile" class="page-content">
+      <div class="black" style="position: relative; width: 100%; height: 60px;">
+        <v-layout row wrap class="text-xs-center">
+          <v-flex xs4 xl4 sm4 class="text-xs-left pt-3 pl-1">
+            <v-icon @click="model=false" dark fab>arrow_back</v-icon>
+          </v-flex>
+          <v-flex xs4 xl4 sm4 class="pt-3">
+            <span class="white--text">{{ $i18n.t("Perfil del barbero") }}</span>
+          </v-flex>
+          <v-flex xs4 xl4 sm4></v-flex>
+        </v-layout>
+      </div>
+
       <v-layout row wrap>
         <!-- banner -->
         <v-flex xs12 sm12 md12 xl12>
           <div class="barbershop-banner">
-            <img class="barbershop-banner-wallpaper" :src="barberShop.pageDesign.banner.img" />
-            <img class="barbershop-banner-logo" :src="barberShop.pageDesign.logo.img" />
-
-            <!-- <croppa :v-model="true"></croppa> -->
-
-            <p class="barbershop-banner-name">{{ barberShop.info.name }}</p>
+            <img class="barbershop-banner-wallpaper" :src="barber['banner']['img']"/>
+            <!-- barber.banner.img -->
+            <img class="barbershop-banner-logo" :src="barber['picture']['img']" />
+            <!-- barber.picture.img -->
+            <p class="barbershop-banner-name">{{ barber.name }}</p>
           </div>
         </v-flex>
         <!-- main container -->
@@ -32,18 +44,15 @@
               <v-layout v-if="true" row wrap>
                 <v-flex xs4 xl4 sm4>
                   <!-- best pictures selected -->
-                  <v-img
-                    class="barbershop-content-pictures"
-                    :src="barberShop.pageDesign.presentation.img"
-                  />
+                  <v-img class="barbershop-content-pictures" src="" />
                 </v-flex>
                 <v-flex xs8 xl8 sm8>
                   <!-- about the barbershop -->
                   <div class="barbershop-content-info">
                     <p class="font-info-title">cel:</p>
-                    <p class="font-info">{{ barberShop.info.phone }}</p>
-                    <p class="font-info-title">email:</p>
-                    <p class="font-info">{{ barberShop.info.email }}</p>
+                    <p class="font-info">{{ barber.job }}</p>
+                    <p class="font-info-title">{{ barber.email }}</p>
+                    <p class="font-info">{{ barber.info }}</p>
                   </div>
                 </v-flex>
               </v-layout>
@@ -56,26 +65,9 @@
 
       <!--Dialogs-->
       <add-dialog v-model="dialogs.add" :steps="steps" @event="add" button-text="Crear"></add-dialog>
-      <!-- <save-dialog v-model="dialogs.save" :steps="steps" :item="event" @event="save"></save-dialog> -->
-
-      <!--delete dialog-->
-      <!-- <delete-dialog
-        v-model="dialogs.delete"
-        message="EVENTS.deleteEvemts"
-        @close="dialogs.delete = false"
-      ></delete-dialog>
-      <v-snackbar
-        class="delete-snackbar"
-        v-model="snackbar.state"
-        :timeout="snackbar.timeout"
-        color="red"
-      >
-        <v-btn @click.native="dialogs.delete = true" class="delete-snackbar-button" dark flat block>
-          <v-icon>delete_forever</v-icon>
-        </v-btn>
-      </v-snackbar>-->
     </div>
-  </transition>
+  </v-dialog>
+  <!-- </transition> -->
 </template>
 
 <script lang="ts">
@@ -84,7 +76,7 @@ import BarberCode from "./barber";
 //style
 import "./barber.scss";
 //components
-import { Component } from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 import AddDialog from "@/components/dialogs/addDialog/addDialog.vue";
 import SaveDialog from "@/components/dialogs/save.vue";
 import DeleteDialog from "@/components/dialogs/delete.vue";
@@ -96,5 +88,29 @@ import DeleteDialog from "@/components/dialogs/delete.vue";
     // DeleteDialog
   }
 })
-export default class Barber extends BarberCode {}
+export default class Barber extends BarberCode {
+  @Prop({ default: false }) value!: boolean;
+  @Prop({
+    default: {
+      name: "ZeroByOne",
+      job: "barber",
+      email: "zerobyone@gmail.com",
+      info: "se especializa en algo",
+      picture: {
+        img: "https://avatars2.githubusercontent.com/u/37275050?s=460&v=4",
+        scala: 100,
+        x: 0,
+        y: 0
+      },
+      banner: {
+        img:
+          "https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images-medium-5/barbershop-clippers-in-black-and-white-paul-ward.jpg",
+        scala: 100,
+        x: 0,
+        y: 0
+      }
+    }
+  })
+  barber!: any;
+}
 </script>

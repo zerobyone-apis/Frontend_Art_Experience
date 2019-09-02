@@ -1,6 +1,6 @@
-#my-events {
+#barberProfile {
   position: absolute;
-  top: 60px;
+  top: 0px; //hide the toolbar
   width: 100% !important;
   //height: calc(100% - 60px) !important;
   height: 100%;
@@ -57,7 +57,14 @@
       left: 80px;//find more about that
       color: yellow !important;
   }
-    
+
+  .btn-arrow-back {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    opacity: 0.7;
+  }
 }
 
 .barbershop-content {
