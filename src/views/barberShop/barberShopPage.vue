@@ -1,6 +1,6 @@
 <template>
   <transition name="slide-fade">
-    <div id="my-events" class="page-content">
+    <div id="barberShopPage" class="page-content">
       <v-layout row wrap>
         <!-- banner -->
         <v-flex xs12 sm12 md12 xl12>
@@ -21,8 +21,16 @@
                 <div class="barbershop-actions">
                   <v-img class="action-logo" :src="icons.facebook"></v-img>
                   <v-img class="action-logo" :src="icons.instagram"></v-img>
-                  <v-btn small class="btn-reservation" >favorita<v-icon>star</v-icon></v-btn>
-                  <v-btn small class="btn-reservation" v-if="false" @click="dialogs.add = true">consultar</v-btn>
+                  <v-btn small class="btn-reservation">
+                    favorita
+                    <v-icon>star</v-icon>
+                  </v-btn>
+                  <v-btn
+                    small
+                    class="btn-reservation"
+                    v-if="false"
+                    @click="dialogs.add = true"
+                  >consultar</v-btn>
                   <v-btn small class="btn-reservation" v-if="false">reservar</v-btn>
                 </div>
               </v-flex>
@@ -70,7 +78,7 @@
                       class="barbershop-content-barbers-profile"
                       v-for="(barber,index) in barberShop.barbers"
                       :key="index"
-                      @click="goToBarberProfile()"
+                      @click="showBarberProfile(barberShop.barbers[index])"
                     >
                       <p class="font-info-small">{{ barberShop.barbers[index].name }}</p>
                       <img
@@ -89,25 +97,7 @@
       </v-layout>
 
       <!--Dialogs-->
-      <!-- <add-dialog v-model="dialogs.add" :steps="steps" @event="add" button-text="Crear"></add-dialog> -->
-      <!-- <save-dialog v-model="dialogs.save" :steps="steps" :item="event" @event="save"></save-dialog> -->
-
-      <!--delete dialog-->
-      <!-- <delete-dialog
-        v-model="dialogs.delete"
-        message="EVENTS.deleteEvemts"
-        @close="dialogs.delete = false"
-      ></delete-dialog>
-      <v-snackbar
-        class="delete-snackbar"
-        v-model="snackbar.state"
-        :timeout="snackbar.timeout"
-        color="red"
-      >
-        <v-btn @click.native="dialogs.delete = true" class="delete-snackbar-button" dark flat block>
-          <v-icon>delete_forever</v-icon>
-        </v-btn>
-      </v-snackbar>-->
+      <barber-dialog v-model="barberDialog" :barber="selectedBarber"></barber-dialog>
     </div>
   </transition>
 </template>
@@ -119,13 +109,15 @@ import BarberShopCode from "./barberShop";
 import "./barberShop.scss";
 //components
 import { Component } from "vue-property-decorator";
-import AddDialog from "../../components/dialogs/addDialog/addDialog.vue";
+import BarberDialog from "../../views/barber/barberPage.vue";
+// import AddDialog from "../../components/dialogs/addDialog/addDialog.vue";
 // import SaveDialog from "@/components/dialogs/save.vue";
 // import DeleteDialog from "@/components/dialogs/delete.vue";
 
 @Component({
   components: {
-    AddDialog
+    BarberDialog
+    //AddDialog
     // SaveDialog,
     // DeleteDialog
   }
