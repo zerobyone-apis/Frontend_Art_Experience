@@ -33,7 +33,7 @@
                       xs12
                       sm12
                       lg12
-                      class="pb-3 px-4"
+                      class="pb-3"
                     >
                       <component
                         v-if="field.is != 'date' && field.is != 'hour'"
@@ -48,24 +48,26 @@
                         :label="$i18n.t(field.label)"
                         :prepend-icon="field.icon"
                         :selectable="field.selectable"
+                        :readonly="field.readOnly"
                         color="x-theme__color"
-                      >
-                      </component>
+                      ></component>
 
                       <!-- Hours BOX  -->
                       <div v-if="field.is == 'hour'">
-                        <p>Manana</p>
+                        <p class="text-xs-center">Manana</p>
                         <div class="hours-box">
                           <v-btn
+                            outline
                             small
                             class="hour-item"
                             v-for="(hour,i) in getHours(field.workTime).slice(0,5)"
                             :key="i"
                           >{{ hour }}</v-btn>
                         </div>
-                        <p>Tarde</p>
+                        <p class="text-xs-center">Tarde</p>
                         <div class="hours-box">
                           <v-btn
+                            outline
                             small
                             class="hour-item"
                             v-for="(hour,i) in getHours(field.workTime).slice(5)"
@@ -73,7 +75,6 @@
                           >{{ hour }}</v-btn>
                         </div>
                       </div>
-
 
                       <!-- Date Field  -->
                       <v-dialog
@@ -113,6 +114,7 @@
                         v-if="steps.length == index+1"
                         color="x-theme__color"
                         flat
+                        small
                         outline
                         style="float: right;"
                         @click.native="event"
@@ -121,6 +123,7 @@
                         v-if="wizard != steps.length"
                         style="float: right;"
                         flat
+                        small
                         color="x-theme__color"
                         @click.native="wizard += 1"
                       >{{ $i18n.t('GENERAL.next') }}</v-btn>
@@ -129,7 +132,8 @@
                         color="grey"
                         style="float: right;"
                         flat
-                        @click.native="wizard -= 1"
+                        small
+                        @click.native="wizard-=1"
                       >{{ $i18n.t('GENERAL.prev') }}</v-btn>
                     </v-flex>
                   </v-layout>
