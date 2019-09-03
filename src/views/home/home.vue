@@ -35,13 +35,13 @@
       </div>
     </v-img>
 
-    <add-dialog v-model="dialogs.login" :steps="stepsLogin" @event="login" button-text="Acceder"></add-dialog>
+    <!-- <add-dialog v-model="dialogs.login" :steps="stepsLogin" @event="login" button-text="Acceder"></add-dialog>
     <add-dialog
       v-model="dialogs.register"
       :steps="stepsRegistration"
       @event="register"
       button-text="Registrarse"
-    ></add-dialog>
+    ></add-dialog> -->
   </div>
 </template>
 
@@ -52,11 +52,10 @@ import HomeCode from "./homeCode";
 import "./homeStyle.scss";
 //components
 import { Component } from "vue-property-decorator";
-import AddDialog from "@/components/dialogs/add.vue";
+
 
 @Component({
   components: {
-    AddDialog
   }
 })
 export default class Home extends HomeCode {}

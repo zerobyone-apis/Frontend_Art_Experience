@@ -45,11 +45,11 @@
       </v-layout>
 
       <!--Dialogs-->
-      <add-dialog v-model="dialogs.add" :steps="steps" @event="add" button-text="Crear"></add-dialog>
-      <save-dialog v-model="dialogs.save" :steps="steps" :item="event" @event="save"></save-dialog>
+      <!-- <add-dialog v-model="dialogs.add" :steps="steps" @event="add" button-text="Crear"></add-dialog>
+      <save-dialog v-model="dialogs.save" :steps="steps" :item="event" @event="save"></save-dialog> -->
 
       <!--delete dialog-->
-      <delete-dialog
+      <!-- <delete-dialog
         v-model="dialogs.delete"
         message="EVENTS.deleteEvemts"
         @close="dialogs.delete = false"
@@ -63,7 +63,7 @@
         <v-btn @click.native="dialogs.delete = true" class="delete-snackbar-button" dark flat block>
           <v-icon>delete_forever</v-icon>
         </v-btn>
-      </v-snackbar>
+      </v-snackbar> -->
     </div>
   </transition>
 </template>
@@ -76,15 +76,9 @@
   //components
   import { Component } from "vue-property-decorator";
   import CustomTable from "@/components/customTable/customTable.vue";
-  import AddDialog from "@/components/dialogs/add.vue";
-  import SaveDialog from "@/components/dialogs/save.vue";
-  import DeleteDialog from "@/components/dialogs/delete.vue";
     @Component({
     components: {
-      CustomTable,
-      AddDialog,
-      SaveDialog,
-      DeleteDialog
+      CustomTable
     }
   })
 
