@@ -1,61 +1,11 @@
 #drawer-left {
   top: 60px;
-  width: 200px !important;
+  width: 250px !important;
   height: calc(100% - 60px) !important;
 }
 
-.search-menu-left {
-  padding-top: 10px;
-  height: 100%;
-
-  input {
-    text-align: center;
-    padding-bottom: 20px;
-    height: 100%;
-  }
-
-  :after {
-    visibility: hidden;
-  }
-
-  :before {
-    top: 30px !important;
-  }
-
-  .v-input__control {
-    margin-left: -16px !important;
-    margin-right: -16px !important;
-    height: 100%;
-  }
-
-  .v-input__icon {
-    padding-right: 30px !important;
-    padding-bottom: 12px;
-  }
-}
-
-.search-menu-left {
-  input {
-    color: #676767 !important;
-  }
-
-  input::placeholder {
-    color: #676767 !important;
-    font-family: cursive;
-    font-style: italic;
-  }
-
-  ::before {
-    color: #67676788 !important;
-  }
-
-  .v-messages__wrapper {
-    color: #ff5e00b9 !important;
-  }
-
-  .v-input__icon {
-    .v-icon {
-      color: #df9a41 !important;
-    }
-  }
+.settings {
+  position: absolute !important;
+  bottom: 5px !important;
+  right: 5px !important;
 }
