@@ -3,6 +3,28 @@ import XComponent from "../../components/XComponent";
 import User from "../../models/User";
 
 export default class HomeCode extends XComponent {
+
+    private fields: any = { 
+        login: [
+            { text: "username", icon: "account_circle", value: "" },
+            { text: "password", icon: "vpn_key", value: "" },
+            { text: "email", icon: "email", value: "" },
+        ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //old
     private user: User = new User();
 
     private rules: any = {
