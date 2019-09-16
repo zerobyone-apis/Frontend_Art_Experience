@@ -5,13 +5,37 @@
         <!-- banner -->
         <v-flex xs12 sm12 md12 xl12>
           <div class="barbershop-banner">
-            <img class="barbershop-banner-wallpaper" :src="barberShop.pageDesign.banner.img" />
-            <img class="barbershop-banner-logo" :src="barberShop.pageDesign.logo.img" />
+            <v-img
+              :src="barberShop.pageDesign.banner.img"
+              aspect-ratio="1"
+              class="barbershop-banner-wallpaper grey lighten-2"
+            >
+              <template v-slot:placeholder>
+                <v-row class="progress fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
+
+            <v-img
+              :src="barberShop.pageDesign.logo.img"
+              aspect-ratio="1"
+              class="barbershop-banner-logo grey lighten-2"
+            >
+              <template v-slot:placeholder>
+                <v-row class="progress fill-height">
+                  <v-progress-circular indeterminate color="grey lighten-0"></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
+
             <p class="barbershop-banner-name">{{ barberShop.info.name }}</p>
             <v-icon dark class="barbershop-banner-white-stars" small>star star star star star</v-icon>
             <v-icon class="barbershop-banner-stars" small>{{ getStars() }}</v-icon>
           </div>
         </v-flex>
+
+
         <!-- main container -->
         <v-flex xs12 sm12 md12 xl12>
           <div class="barbershop-content">
@@ -81,10 +105,18 @@
                       @click="showBarberProfile(barberShop.barbers[index])"
                     >
                       <p class="font-info-small">{{ barberShop.barbers[index].name }}</p>
-                      <img
-                        class="barber-profile-picture"
+
+                      <v-img
                         :src="barberShop.barbers[index].picture.img"
-                      />
+                        class="barber-profile-picture grey lighten-2"
+                      >
+                        <template v-slot:placeholder>
+                          <v-row class="progress fill-height" align="center" justify="center">
+                            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                          </v-row>
+                        </template>
+                      </v-img>
+
                       <p class="font-info-small">{{ barberShop.barbers[index].job }}</p>
                     </div>
                   </div>

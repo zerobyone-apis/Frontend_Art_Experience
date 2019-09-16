@@ -57,7 +57,7 @@ export default class BarberShopCode extends XComponent {
         y: 0
       },
       logo: {
-        img: "https://image.shutterstock.com/image-vector/barber-shopface-modern-designvector-illustrationhipster-260nw-764435734.jpg",
+        img: "https://i.etsystatic.com/13221305/r/il/ab6ed6/1210022632/il_794xN.1210022632_eygv.jpg",
         scala: 100,
         x: 0,
         y: 0
