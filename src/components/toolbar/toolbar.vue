@@ -9,6 +9,18 @@
 
     <v-spacer></v-spacer>
 
+    <v-avatar v-if="false" size="40px" style="cursor: pointer">
+      <img src="@/assets/user.jpg" alt="Avatar" />
+    </v-avatar>
+
+    <div class="menuItems hidden-xs-only hidden-sm-only">
+      <!--list items menu-->
+      <v-btn v-for="(item, index) in filteredConf" :key="index" @click="pageRouter(item.route)">
+        <v-icon color="#DDDDDD">{{ item.icon }}</v-icon>
+        <span>{{ $i18n.t(item.name) }}</span>
+      </v-btn>
+    </div>
+
     <!--NOTIFICATIONS-->
     <v-menu avatar nudge-top="-53px" right>
       <v-btn icon slot="activator" light>
@@ -25,14 +37,11 @@
         </v-list-tile>
       </v-list>
     </v-menu>
-
-    <v-avatar v-if="false" size="40px" style="cursor: pointer">
-      <img src="@/assets/user.jpg" alt="Avatar" />
-    </v-avatar>
   </v-toolbar>
 </template>
 
 <script lang="ts">
+import Vuetify from "vuetify/lib";
 import ToolbarCode from "./toolbarCode";
 import "./toolbarStyle.scss";
 

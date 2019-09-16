@@ -1,8 +1,9 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import MenuItems from '../menuItems';
 
 @Component({})
+export default class ToolbarCode extends MenuItems {
 
-export default class ToolbarCode extends Vue {
   private langs: object[] = [
     { key: "es", value: "Español" },
     { key: "en", value: "English" }

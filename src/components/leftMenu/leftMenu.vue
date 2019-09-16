@@ -28,6 +28,7 @@
 </template>
 
 <script lang="ts">
+import Vuetify from 'vuetify/lib'
 import LeftMenuCode from "./leftMenuCode";
 import "./leftMenuStyle.scss";
 
