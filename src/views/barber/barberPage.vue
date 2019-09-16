@@ -1,7 +1,7 @@
 <template>
   <!-- <transition name="slide-y-reverse-transition"> -->
   <v-dialog v-model="model" fullscreen scrollable transition="slide-y-reverse-transition">
-    <div id="barberProfile" class="page-content">
+    <div id="barberProfile" class="page-content white">
       <div class="black" style="position: relative; width: 100%; height: 60px;">
         <v-layout row wrap class="text-xs-center">
           <v-flex xs4 xl4 sm4 class="text-xs-left pt-3 pl-1">
@@ -18,9 +18,31 @@
         <!-- banner -->
         <v-flex xs12 sm12 md12 xl12>
           <div class="barbershop-banner">
-            <img class="barbershop-banner-wallpaper" :src="barber['banner']['img']"/>
+            <v-img
+              :src="barber['banner']['img']"
+              aspect-ratio="1"
+              class="barbershop-banner-wallpaper grey lighten-2"
+            >
+              <template v-slot:placeholder>
+                <v-row class="progress fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
+
             <!-- barber.banner.img -->
-            <img class="barbershop-banner-logo" :src="barber['picture']['img']" />
+            <v-img
+              :src="barber['picture']['img']"
+              aspect-ratio="1"
+              class="barbershop-banner-logo grey lighten-2"
+            >
+              <template v-slot:placeholder>
+                <v-row class="progress fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
+
             <!-- barber.picture.img -->
             <p class="barbershop-banner-name">{{ barber.name }}</p>
           </div>
@@ -42,10 +64,10 @@
             <!-- content presentation -->
             <div class="barbershop-content-presentation">
               <v-layout v-if="true" row wrap>
-                <v-flex xs4 xl4 sm4>
-                  <!-- best pictures selected -->
-                  <v-img class="barbershop-content-pictures" src="" />
-                </v-flex>
+                <!-- <v-flex xs4 xl4 sm4>
+                  
+                  <v-img class="barbershop-content-something" src />
+                </v-flex> -->
                 <v-flex xs8 xl8 sm8>
                   <!-- about the barbershop -->
                   <div class="barbershop-content-info">
@@ -59,6 +81,13 @@
             </div>
 
             <!-- free for more  -->
+          </div>
+        </v-flex>
+
+        <!-- pictures and other  -->
+        <v-flex xs12 sm12 md12 xl12>
+          <div class="barbershop-pictures">
+
           </div>
         </v-flex>
       </v-layout>
