@@ -1,27 +1,30 @@
-<template>
+<template transition="slide-x-transition">
   <div id="homePage">
-    
-    <!-- login -->
-    
-    <div class="login-box ml-3 mt-3">
-      <div class="fields-box mx-auto">
-        <p>Login here if you have a account</p>
-        <v-text-field
-          v-for="(field,index) in fields.login"
-          :key="index"
-          :label="field.text"
-          :prepend-icon="field.icon"
-          v-model="field.value"
-        ></v-text-field>
-        <v-btn flat small>login</v-btn>
+    <v-img class="img-back" :src="require('../../assets/home/1.jpg')">
+      <!-- login -->
+      <div class="login-box">
+        <div class="fields-box mx-auto">
+          <p>Accede si ya tienes tu cuenta</p>
+          <v-text-field
+            dark
+            v-for="(field,index) in fields.login"
+            :key="index"
+            :label="field.text"
+            :prepend-icon="field.icon"
+            v-model="field.value"
+          ></v-text-field>
+          <v-btn flat small dark>acceder</v-btn>
+        </div>
       </div>
-    </div>
 
+       <!-- <p
+        class="text-presentation"
+      >Encuentre sus barberias favoritas y administre sus reservas de forma unica</p> -->
 
+    </v-img>
 
-
-
-    <div class="info-box"></div>
+    <!-- <div class="info-box">    
+    </div> -->
   </div>
 </template>
 
