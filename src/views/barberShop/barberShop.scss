@@ -1,24 +1,14 @@
 #barberShopPage {
   position: absolute;
-  top: 60px;
-  width: 100% !important;
   height: 100%;
-  background-color: rgb(42, 42, 42);
-  border-width: 1px;
-  border-style: solid;
-  overflow: hidden;
-  overflow-y: scroll;
+  width: 60%;
+  margin-left: 20%;
 
-  .progress {
-    position: relative;
-    left: calc(50% - 15px);
-    top: calc(50% - 15px);
-  }
-
-  .barbershop-banner {
+  .banner {
     position: relative;
     width: 100%;
-    height: 120px; //var responsivity - height
+    height: 30%; //var responsivity - height
+    background-color: gray;
 
     .barbershop-banner-logo {
       position: absolute;
@@ -33,46 +23,118 @@
     .barbershop-banner-wallpaper {
       position: relative;
       width: 100%;
-      height: 120px;
+      height: 100%;
     }
 
-    .barbershop-banner-name {
+    .darkBox {
       position: absolute;
-      bottom: 5px;
-      left: 80px; //find more about that
-      font-size: 16px;
-      color: white;
-      border-color: black;
-      text-shadow: black;
-      text-shadow: 1px 1px black;
       background-color: rgba(0, 0, 0, 0.699);
+      left: 80px;
+      bottom: 35px;
+
+      .barbershop-banner-name {
+        position: relative;
+        font-size: 16px;
+        color: white;
+        border-color: black;
+        text-shadow: black;
+        text-shadow: 1px 1px black;
+      }
+
+      .barbershop-banner-white-stars {
+        position: absolute;
+        bottom: 5px;
+      }
+
+      .barbershop-banner-stars.v-icon {
+        position: absolute;
+        bottom: 5px;
+        color: yellow !important;
+      }
+    }
+  }
+
+  .info-content {
+    position: relative;
+    width: 100%;
+    // height: 400px;
+
+    .stepper {
+      .v-stepper__content {
+        padding: 0 !important;
+      }
     }
 
-    .barbershop-banner-white-stars {
-      position: absolute;
-      bottom: 5px;
-      left: 80px; //find more about that
-      background-color: rgba(0, 0, 0, 0.699);
-    }
+    .info-content-box {
+      width: 200px; 
+      height: 250px;
+      background-color: white;
 
-    .barbershop-banner-stars.v-icon {
-      position: absolute;
-      bottom: 5px;
-      left: 80px; //find more about that
-      color: yellow !important;
+      .info-box {
+        position: absolute;
+        width: 30%;
+        height: 100%;
+      }
+      .map-box {
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        top: 10px;
+        right: 10px;
+        background-color: aqua;
+      }
     }
   }
 
   .barbershop-content {
-    position: absolute; //absolute for get total height
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
+    position: relative; //absolute for get total height
     width: 100%;
-    height: calc(100% - 120px); //var responsivity - height
-    background-color: rgb(42, 42, 42);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 200px;
+    background-color: white;
+
+    .barbershop-content-barbers {
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      border-top-width: 2px;
+
+      .barbershop-content-barbers-profiles {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        .barbershop-content-barbers-profile {
+          position: relative;
+          width: 120px;
+          height: 120px;
+          display: inline-block;
+          text-align: center;
+
+          .barber-profile-picture:hover {
+            border-style: solid;
+          }
+
+          .barber-profile-picture {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 50%;
+          }
+
+          .barber-profile-text {
+            position: relative;
+            font-size: 12px;
+            bottom: 5px;
+          }
+        }
+      }
+    }
 
     .barbershop-actions {
       position: relative;
@@ -107,9 +169,6 @@
     }
 
     .barbershop-content-presentation {
-      background-color: rgb(42, 42, 42);
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
       height: 200px;
 
       .barbershop-content-info {
@@ -124,57 +183,6 @@
         position: relative;
         width: 100%;
         height: 200px;
-        border-top-right-radius: 10px;
-      }
-    }
-
-    .barbershop-content-barbers {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      border-top-width: 2px;
-      border-top-style: solid;
-      border-top-color: rgb(50, 50, 50);
-
-      .barbershop-content-barbers-profiles {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        text-align: center;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        display: inline-block;
-        overflow: hidden;
-        overflow-y: scroll;
-
-        .barbershop-content-barbers-profile {
-          position: relative;
-          display: inline-block;
-          text-align: center;
-          padding-top: 20px;
-          width: 120px;
-          height: 120px;
-
-          .barber-profile-picture:hover {
-            border-style: inset;
-          }
-
-          .barber-profile-picture {
-            position: relative;
-            text-align: center;
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-          }
-
-          .barber-profile-text {
-            position: relative;
-            font-size: 12px;
-            bottom: 5px;
-          }
-        }
       }
     }
 
@@ -193,25 +201,18 @@
   .font-info-title {
     margin-bottom: -1px;
     font-style: italic;
-    color: #d4d4d4;
     font-size: 11px;
   }
 
   .font-info {
-    margin-bottom: -1px;
     font-style: italic;
-    color: #d4d4d4;
     font-size: 12px;
-    border-color: black;
-    text-shadow: black;
-    text-shadow: 1px 1px black;
   }
 
   .font-info-small {
     margin-bottom: -1px;
     font-style: italic;
     font-size: 11px;
-    color: #d4d4d4;
   }
 
   .content2 {

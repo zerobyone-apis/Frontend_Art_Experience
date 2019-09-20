@@ -5,6 +5,7 @@ import User from "../../models/User";
 // import Event from "../../models/Event";
 
 export default class BarberShopCode extends XComponent {
+  private stepsBarberShop: any = [{}, {}]
   // private event: Event = new Event();
   private events: any[] = [];
   private selectedEvents: any[] = [];
