@@ -1,5 +1,5 @@
 <template v-cloak>
-  <v-toolbar fixed flat dark height="60px">
+  <v-toolbar fixed flat dark height="60px" id="toolbar">
     <img class="logo" src="@/assets/logo.png" @click.stop="pageRouter('/')" alt="Avatar" />
 
     <v-toolbar-side-icon
@@ -15,7 +15,7 @@
 
     <div class="menuItems hidden-xs-only hidden-sm-only">
       <!--list items menu-->
-      <v-btn v-for="(item, index) in filteredConf" :key="index" @click="pageRouter(item.route)">
+      <v-btn flat class="toolbar-button" v-for="(item, index) in filteredConf" :key="index" @click="pageRouter(item.route)">
         <v-icon color="#DDDDDD">{{ item.icon }}</v-icon>
         <span>{{ $i18n.t(item.name) }}</span>
       </v-btn>
@@ -27,7 +27,7 @@
         <v-icon :color="theme.colors.navIcons">notifications</v-icon>
       </v-btn>
 
-      <v-list class="custom-list">
+      <v-list>
         <v-list-tile @click v-for="item in notifications" :key="item.name">
           <v-list-tile-action class="pl-3">
             <v-list-tile-title>
