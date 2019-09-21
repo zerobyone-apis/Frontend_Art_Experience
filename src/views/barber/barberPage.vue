@@ -1,5 +1,4 @@
 <template>
-  <!-- <transition name="slide-y-reverse-transition"> -->
   <v-dialog v-model="model" fullscreen scrollable transition="slide-y-reverse-transition">
     <div id="barberProfile" class="page-content white">
       <div class="black" style="position: relative; width: 100%; height: 60px;">
