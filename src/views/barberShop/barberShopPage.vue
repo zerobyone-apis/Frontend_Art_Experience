@@ -34,7 +34,7 @@
     </div>
 
     <!-- INFO -->
-    <div class="info-content">      
+    <div class="info-content">
       <v-stepper v-model="wizard" vertical>
         <v-stepper-header>
           <v-stepper-step step="1" @click="wizard=1">informacion</v-stepper-step>
@@ -45,45 +45,43 @@
         </v-stepper-header>
         <v-stepper-items>
           <v-stepper-content step="1">
-            <div class="info-content-box">
-              <!-- about the barbershop -->
-              <div class="barbershop-content-info">
-                <div class="info-box">
-                  <p class="font-info-title">direccion:</p>
-                  <p class="font-info">{{ barberShop.info.direction }}</p>
-                  <p class="font-info-title">cel:</p>
-                  <p class="font-info">{{ barberShop.info.phone }}</p>
-                  <p class="font-info-title">email:</p>
-                  <p class="font-info">{{ barberShop.info.email }}</p>
-                  <p class="font-info-title">abierto:</p>
-                  <p class="font-info">{{ barberShop.info.time.days }}</p>
-                  <p class="font-info-title">horario:</p>
-                  <p
-                    class="font-info"
-                  >{{ barberShop.info.time.start + "hrs a " + barberShop.info.time.end + "hrs" }}</p>
-                </div>
+            <v-card>
+              <div class="info-content-box">
+                <!-- about the barbershop -->
+                <div class="barbershop-content-info">
+                  <div class="info-box">
+                    <p class="font-info-title">direccion:</p>
+                    <p class="font-info">{{ barberShop.info.direction }}</p>
+                    <p class="font-info-title">cel:</p>
+                    <p class="font-info">{{ barberShop.info.phone }}</p>
+                    <p class="font-info-title">email:</p>
+                    <p class="font-info">{{ barberShop.info.email }}</p>
+                    <p class="font-info-title">abierto:</p>
+                    <p class="font-info">{{ barberShop.info.time.days }}</p>
+                    <p class="font-info-title">horario:</p>
+                    <p
+                      class="font-info"
+                    >{{ barberShop.info.time.start + "hrs a " + barberShop.info.time.end + "hrs" }}</p>
+                  </div>
 
-                <div class="map-box">
-                  <!-- <v-img
+                  <div class="map-box">
+                    <!-- <v-img
                     width="100%"
                     height="100%"
                     src="https://icdn7.digitaltrends.com/image/digitaltrends/google_maps_share_location_1-500x300-c.jpg"
-                  ></v-img> -->
+                    ></v-img>-->
+                  </div>
                 </div>
               </div>
-            </div>
+            </v-card>
           </v-stepper-content>
 
           <v-stepper-content step="2">
-              <v-card
-            class="mb-12"
-            color="grey lighten-1"
-            height="200px"
-          ></v-card>
+            <v-card><v-btn>free for more</v-btn></v-card>
+          </v-stepper-content>
 
-            <!-- <div class="info-content-box-2">
-              
-            </div> -->
+          <v-stepper-content step="3">
+            <v-card><v-btn>free for more</v-btn></v-card>
           </v-stepper-content>
         </v-stepper-items>
       </v-stepper>
