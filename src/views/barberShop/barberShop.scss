@@ -1,8 +1,20 @@
+.xs-format {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+//this will change
+.sm-format,.md-format,.lg-format,.xl-format {
+  width: 60%;
+  margin-left: 20%;
+}
+
 #barberShopPage {
   position: absolute;
   height: 100%;
+  ////////////
   width: 60%;
   margin-left: 20%;
+  ////////////
 
   .banner {
     position: relative;
@@ -57,18 +69,62 @@
   .info-content {
     position: relative;
     width: 100%;
-    // height: 400px;
 
-    .stepper {
+    .v-stepper {
+      box-shadow: none !important;
+
       .v-stepper__content {
-        padding: 0 !important;
+        border-left: none !important;
+      }
+
+      .v-stepper__header {
+        height: 40px;
+        box-shadow: none !important;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #cecece4f;
+        // padding-bottom: 20px;
+
+        .v-divider {
+          visibility: hidden !important;
+        }
+
+        .v-stepper__step {
+          text-align: center !important;
+          font-size: 11px;
+          padding-top: 10px;
+          cursor: pointer;
+          height: 40px;
+          border-radius: 10px;
+
+          .v-stepper__label {
+            padding-top: auto;
+          }
+
+          .v-divider {
+            flex: none !important;
+          }
+          .v-stepper__step__step {
+            width: 0px !important;
+            min-width: 0px !important;
+            visibility: hidden !important;
+          }
+        }
       }
     }
 
+    .info-content-box-2 {
+      width: 200px;
+      height: 250px;
+      background-color: red;
+      padding-top: 10px;
+    }
+
     .info-content-box {
-      width: 200px; 
+      width: 200px;
       height: 250px;
       background-color: white;
+      padding-top: 10px;
 
       .info-box {
         position: absolute;
@@ -78,10 +134,10 @@
       .map-box {
         position: absolute;
         width: 40%;
-        height: 100%;
-        top: 10px;
+        height: 80%;
+        top: 20px;
         right: 10px;
-        background-color: aqua;
+        background-color: rgba(97, 97, 97, 0.096);
       }
     }
   }

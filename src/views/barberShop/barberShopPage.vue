@@ -1,5 +1,5 @@
 <template>
-  <div id="barberShopPage">
+  <div id="barberShopPage" :class="$vuetify.breakpoint.name+'-format'">
     <!-- BANNER  -->
     <div class="banner">
       <v-img
@@ -34,7 +34,7 @@
     </div>
 
     <!-- INFO -->
-    <div class="info-content">
+    <div class="info-content">      
       <v-stepper v-model="wizard" vertical>
         <v-stepper-header>
           <v-stepper-step step="1" @click="wizard=1">informacion</v-stepper-step>
@@ -51,16 +51,12 @@
                 <div class="info-box">
                   <p class="font-info-title">direccion:</p>
                   <p class="font-info">{{ barberShop.info.direction }}</p>
-
                   <p class="font-info-title">cel:</p>
                   <p class="font-info">{{ barberShop.info.phone }}</p>
-
                   <p class="font-info-title">email:</p>
                   <p class="font-info">{{ barberShop.info.email }}</p>
-
                   <p class="font-info-title">abierto:</p>
                   <p class="font-info">{{ barberShop.info.time.days }}</p>
-
                   <p class="font-info-title">horario:</p>
                   <p
                     class="font-info"
@@ -68,19 +64,26 @@
                 </div>
 
                 <div class="map-box">
-                  <v-img
+                  <!-- <v-img
                     width="100%"
                     height="100%"
                     src="https://icdn7.digitaltrends.com/image/digitaltrends/google_maps_share_location_1-500x300-c.jpg"
-                  ></v-img>
+                  ></v-img> -->
                 </div>
               </div>
             </div>
           </v-stepper-content>
+
           <v-stepper-content step="2">
-            <div class="info-content-box black">
-              <!-- <v-btn color="primary" @click.native="step = 2">Continue</v-btn> -->
-            </div>
+              <v-card
+            class="mb-12"
+            color="grey lighten-1"
+            height="200px"
+          ></v-card>
+
+            <!-- <div class="info-content-box-2">
+              
+            </div> -->
           </v-stepper-content>
         </v-stepper-items>
       </v-stepper>
