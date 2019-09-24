@@ -1,95 +1,94 @@
-#barberProfile {
-  position: absolute;
-  top: 0px; //hide the toolbar
+.xs-format {
   width: 100% !important;
-  //height: calc(100% - 60px) !important;
-  height: 100%;
-  // background-color: rgb(42, 42, 42);
-  border-width: 1px;
-  border-style: solid;
-  overflow: hidden;
-  overflow-y: scroll;
+  margin-left: 0 !important;
+}
 
-  .progress {
-    position: relative;
-    left: calc(50% - 15px);
-    top: calc(50% - 15px);
+.sm-format,
+.md-format,
+.lg-format,
+.xl-format {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.background-dialog {
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  .toolbar-dialog {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.685);
   }
 
-  .barbershop-banner {
-    position: relative;
-    width: 100%;
-    height: 120px; //var responsivity - height
-    // background-color: rgb(167, 107, 107);
+  .barber-profile-page {
+    position: absolute;
+    height: 100%;
+    background-color: white;
 
-    .barbershop-banner-logo {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      bottom: 5px;
-      left: 5px;
-      // margin-left: calc(50% - 35px);
-      border-radius: 5px;
-      background-color: rgb(42, 42, 42);
-    }
-
-    .barbershop-banner-wallpaper {
+    .banner {
       position: relative;
       width: 100%;
-      height: 100%;
-      // right: 10px;
+      height: 30%;
+
+      .banner-logo {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 5px;
+        left: 5px;
+        border-radius: 5px;
+        background-color: rgb(42, 42, 42);
+      }
+
+      .banner-wallpaper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .darkbox {
+        position: absolute;
+        left: 150px;
+        height: 60px;
+        bottom: 15px;
+        // background-color: rgba(0, 0, 0, 0.699);
+
+        .darkbox-name {
+          position: relative;
+          font-size: 18px;
+          color: white;
+          border-color: black;
+          text-shadow: black;
+          text-shadow: 1px 2px rgb(14, 14, 14);
+        }
+
+        .darkbox-white-stars {
+          position: relative;
+          bottom: 10px;
+          border-color: black;
+          text-shadow: black;
+          text-shadow: 1px 2px rgb(14, 14, 14);
+        }
+
+        .darkbox-stars.v-icon {
+          position: absolute;
+          left: 0px;
+          bottom: 8px;
+          color: yellow !important;
+        }
+      }
     }
 
-    .barbershop-banner-name {
-      position: absolute;
-      bottom: 0px;
-      left: 110px; //find more about that
-      font-size: 16px;
-      color: white;
-      border-color: black;
-      text-shadow: black;
-      text-shadow: 1px 1px black;
-      background-color: rgba(0, 0, 0, 0.699);
-    }
-
-    .barbershop-banner-white-stars {
-      position: absolute;
-      bottom: 5px;
-      left: 80px; //find more about that
-    }
-
-    .barbershop-banner-stars.v-icon {
-      position: absolute;
-      bottom: 5px;
-      left: 80px; //find more about that
-      color: yellow !important;
-    }
-
-    .btn-arrow-back {
-      position: absolute;
-      z-index: 1;
-      top: 0px;
-      left: 0px;
-      opacity: 0.7;
-    }
-  }
-
-  .barbershop-content {
-    position: relative; //absolute for get total height
-    padding-left: 5px;
-    padding-right: 5px;
-    // padding-top: 5px;
-    width: 100%;
-    height: calc(100% - 120px); //var responsivity - height
-    // background-color: rgb(42, 42, 42);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-
-    .barbershop-actions {
+    .actions-box {
       position: relative;
       width: 100%;
       height: 10px; //var responsivity - height
-      background-color: white;//////////
+      background-color: white; //////////
       display: inline-block;
       text-align: right;
       padding-top: 10px;
@@ -100,8 +99,8 @@
         width: 25px;
         height: 25px;
         display: inline-block;
-        background-color: #d4d4d4;
-        border-color: #d4d4d4;
+        background-color: white;
+        border-color: white;
         border-radius: 10px;
         border-style: solid;
         border-width: 2px;
@@ -113,54 +112,95 @@
         margin-right: 10px;
         height: 20px;
         bottom: 10px;
-        background-color: #d4d4d4;
+        background-color: white;
       }
     }
 
-    .barbershop-content-presentation {
-      background-color: white;
-      border-top-style: solid;
-      border-top-width: 1px;
-      height: 200px;
+    .info-content {
+      position: relative;
+      width: 100%;
 
-      .barbershop-content-info {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        text-align: left;
-        padding-left: 10px;
+      .v-stepper {
+        box-shadow: none !important;
+
+        .v-stepper__content {
+          border-left: none !important;
+        }
+
+        .v-stepper__header {
+          height: 40px;
+          box-shadow: none !important;
+          border-bottom-style: solid;
+          border-width: 1px;
+          border-color: #cecece4f;
+          // padding-bottom: 20px;
+
+          .v-divider {
+            visibility: hidden !important;
+          }
+
+          .v-stepper__step {
+            text-align: center !important;
+            font-size: 11px;
+            padding-top: 10px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 10px;
+
+            .v-stepper__label {
+              padding-top: auto;
+            }
+
+            .v-divider {
+              flex: none !important;
+            }
+            .v-stepper__step__step {
+              width: 0px !important;
+              min-width: 0px !important;
+              visibility: hidden !important;
+            }
+          }
+        }
       }
-                                                             
-      .barbershop-content-something {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        border-top-right-radius: 10px;
-        background-color: gray;
+
+      .info-content-box-2 {
+        width: 200px;
+        height: 250px;
+        background-color: red;
+        padding-top: 10px;
+      }
+
+      .info-content-box {
+        width: 200px;
+        height: 250px;
+        background-color: white;
+        padding-top: 10px;
+
+        .info-box {
+          position: absolute;
+          width: 30%;
+          height: 100%;
+        }
+        .map-box {
+          position: absolute;
+          width: 40%;
+          height: 80%;
+          top: 20px;
+          right: 10px;
+          background-color: rgba(97, 97, 97, 0.096);
+        }
       }
     }
-  }
-
-  .barbershop-pictures {
-    position: relative;
-    background-color: white;
-    border-top-style: solid;
-    border-top-width: 1px;
-    width: 100%;
-    height: 100px;
   }
 
   .font-info-title {
     margin-bottom: -1px;
     font-style: italic;
-    color: black;
     font-size: 11px;
   }
 
   .font-info {
-    margin-bottom: -1px;
     font-style: italic;
-    color: black;
     font-size: 12px;
   }
 
@@ -168,52 +208,5 @@
     margin-bottom: -1px;
     font-style: italic;
     font-size: 11px;
-    color: black;
-  }
-
-  .content2 {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    background-color: green;
-  }
-
-  .custom-dialogs__footer {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-top: 1px solid #cecece4f;
-  }
-
-  .custom-stepper {
-    .v-stepper__header {
-      box-shadow: none;
-      border: 1px solid #d4d4d4;
-      border-radius: 80px;
-      margin: 31px;
-    }
-  }
-
-  .delete-snackbar {
-    height: 48px !important;
-
-    .v-snack__content {
-      padding: 0 !important;
-      align-items: initial !important;
-
-      .delete-snackbar-button {
-        width: 100% !important;
-        position: relative;
-        left: 0px;
-        margin-left: 0 !important;
-
-        i {
-          font-size: 29px !important;
-        }
-
-        .v-icon {
-          padding-left: 0px !important;
-        }
-      }
-    }
   }
 }
