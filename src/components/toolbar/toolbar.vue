@@ -1,22 +1,24 @@
 <template v-cloak>
-  <v-toolbar fixed flat dark height="60px" id="toolbar">
-    <img class="logo" src="@/assets/logo.png" @click.stop="pageRouter('/')" alt="Avatar" />
-
+  <v-toolbar id="toolbar" :class="$vuetify.breakpoint.name+'-format'" fixed flat height="60px" color="rgba(0, 0, 0, 0.685)">
+    <!-- LEFT MENU BUTTON  -->
     <v-toolbar-side-icon
       :style="{'color' : theme.colors.navIcons}"
       @click.native.stop="leftDrawer = true"
     ></v-toolbar-side-icon>
 
+    <!-- LOGO  -->
+    <img class="logo" src="@/assets/logo.png" @click.stop="pageRouter('/')" alt="Avatar" />
+
     <v-spacer></v-spacer>
 
-    <v-avatar v-if="false" size="40px" style="cursor: pointer">
+    <!-- <v-avatar v-if="false" size="40px" style="cursor: pointer">
       <img src="@/assets/user.jpg" alt="Avatar" />
-    </v-avatar>
+    </v-avatar> -->
 
     <div class="menuItems hidden-xs-only hidden-sm-only">
       <!--list items menu-->
-      <v-btn flat class="toolbar-button" v-for="(item, index) in filteredConf" :key="index" @click="pageRouter(item.route)">
-        <v-icon color="#DDDDDD">{{ item.icon }}</v-icon>
+      <v-btn dark flat small class="toolbar-button" v-for="(item, index) in filteredConf" :key="index" @click="pageRouter(item.route)">
+        <v-icon>{{ item.icon }}</v-icon>
         <span>{{ $i18n.t(item.name) }}</span>
       </v-btn>
     </div>
