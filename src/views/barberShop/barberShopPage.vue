@@ -5,31 +5,21 @@
       <v-img
         :src="barberShop.pageDesign.banner.img"
         aspect-ratio="1"
-        class="barbershop-banner-wallpaper grey lighten-2"
+        class="banner-wallpaper grey lighten-2"
       >
-        <template v-slot:placeholder>
-          <!-- <v-row class="progress fill-height ma-0" align="center" justify="center">
-            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-          </v-row>-->
-        </template>
       </v-img>
 
       <v-img
         :src="barberShop.pageDesign.logo.img"
         aspect-ratio="1"
-        class="barbershop-banner-logo grey lighten-2"
+        class="banner-logo grey lighten-2"
       >
-        <template v-slot:placeholder>
-          <!-- <v-row class="progress fill-height">
-            <v-progress-circular indeterminate color="grey lighten-0"></v-progress-circular>
-          </v-row>-->
-        </template>
       </v-img>
 
-      <div class="darkBox">
-        <p class="barbershop-banner-name">{{ barberShop.info.name }}</p>
-        <v-icon dark class="barbershop-banner-white-stars" small>star star star star star</v-icon>
-        <v-icon class="barbershop-banner-stars" small>{{ getStars() }}</v-icon>
+      <div class="darkbox">
+        <p class="darkbox-name">{{ barberShop.info.name }}</p>
+        <v-icon dark class="darkbox-white-stars" small>star star star star star</v-icon>
+        <v-icon class="darkbox-stars" small>{{ getStars() }}</v-icon>
       </div>
     </div>
 
@@ -98,27 +88,22 @@
             :key="index"
             @click="showBarberProfile(barberShop.barbers[index])"
           >
-            <p class="font-info-small">{{ barberShop.barbers[index].name }}</p>
+            <p class="font-info-small">{{ barberShop.barbers[index].info.name }}</p>
 
             <v-img
               :src="barberShop.barbers[index].picture.img"
               class="barber-profile-picture grey lighten-2"
             >
-              <template v-slot:placeholder>
-                <v-row class="progress fill-height" align="center" justify="center">
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-row>
-              </template>
             </v-img>
 
-            <p class="font-info-small">{{ barberShop.barbers[index].job }}</p>
+            <p class="font-info-small">{{ barberShop.barbers[index].info.job }}</p>
           </div>
         </div>
       </div>
     </div>
 
     <!--Dialogs-->
-    <barber-dialog v-model="barberDialog" :barber="selectedBarber"></barber-dialog>
+    <barber-dialog v-model="barberDialog" :barber-data="selectedBarber"></barber-dialog>
   </div>
 </template>
 

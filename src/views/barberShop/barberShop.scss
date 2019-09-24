@@ -12,8 +12,8 @@
   position: absolute;
   height: 100%;
   ////////////
-  width: 60%;
-  margin-left: 20%;
+  // width: 60%;
+  // margin-left: 20%;
   ////////////
 
   .banner {
@@ -22,45 +22,50 @@
     height: 30%; //var responsivity - height
     background-color: gray;
 
-    .barbershop-banner-logo {
+    .banner-logo {
       position: absolute;
-      width: 70px;
-      height: 70px;
+      width: 140px;
+      height: 140px;
       bottom: 5px;
       left: 5px;
       border-radius: 5px;
       background-color: rgb(42, 42, 42);
     }
 
-    .barbershop-banner-wallpaper {
+    .banner-wallpaper {
       position: relative;
       width: 100%;
       height: 100%;
     }
 
-    .darkBox {
+    .darkbox {
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.699);
-      left: 80px;
-      bottom: 35px;
+      left: 150px;
+      height: 60px;
+      bottom: 15px;
+      // background-color: rgba(0, 0, 0, 0.699);
 
-      .barbershop-banner-name {
+      .darkbox-name {
         position: relative;
-        font-size: 16px;
+        font-size: 18px;
         color: white;
         border-color: black;
         text-shadow: black;
-        text-shadow: 1px 1px black;
+        text-shadow: 1px 2px rgb(14, 14, 14);
       }
 
-      .barbershop-banner-white-stars {
-        position: absolute;
-        bottom: 5px;
+      .darkbox-white-stars {
+        position: relative;
+        bottom: 10px;
+        border-color: black;
+        text-shadow: black;
+        text-shadow: 1px 2px rgb(14, 14, 14);
       }
 
-      .barbershop-banner-stars.v-icon {
+      .darkbox-stars.v-icon {
         position: absolute;
-        bottom: 5px;
+        left: 0px;
+        bottom: 8px;
         color: yellow !important;
       }
     }

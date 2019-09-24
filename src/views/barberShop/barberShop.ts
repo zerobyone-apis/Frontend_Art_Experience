@@ -71,21 +71,23 @@ export default class BarberShopCode extends XComponent {
       },
     },
 
-
     barbers: [
       {
-        name: "ZeroByOne",
-        job: "barber",
-        email: "zerobyone@gmail.com",
-        info: "se especializa en algo",
+        info: {
+          name: "ZeroByOne",
+          job: "barber",
+          email: "zerobyone@gmail.com",
+          phone: "099 999 999",
+          stars: 5
+        },
         picture: {
-          img: "https://avatars2.githubusercontent.com/u/37275050?s=460&v=4",
+          img: "https://instagram.fmvd2-1.fna.fbcdn.net/vp/91d4eebf04d3ed1cf45782c248ba1a8d/5E3B612F/t51.2885-15/e35/12716759_170054476706442_726000112_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_cat=106",
           scala: 100,
           x: 0,
           y: 0
         },
         banner: {
-          img: "https://render.fineartamerica.com/images/rendered/default/poster/10/8/break/images-medium-5/barbershop-clippers-in-black-and-white-paul-ward.jpg",
+          img: "https://instagram.fmvd2-1.fna.fbcdn.net/vp/241d56c00ec14f67793c5f407fa2b6e1/5E1E5A43/t51.2885-15/e35/13557007_1742984725990432_444365328_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_cat=104",
           scala: 100,
           x: 0,
           y: 0
@@ -93,10 +95,13 @@ export default class BarberShopCode extends XComponent {
       },
 
       {
-        name: "Damian Rodriguez",
-        job: "peluquero",
-        email: "damianezretirl1@gmail.com",
-        info: "se especializa en algo",
+        info: {
+          name: "Damian Rodriguez",
+          job: "peluquero",
+          email: "damianezretirl1@gmail.com",
+          phone: "099 999 999",
+          stars: 4
+        },
         picture: {
           img: "https://avatars2.githubusercontent.com/u/34650339?s=460&v=4",
           scala: 100,
@@ -104,7 +109,7 @@ export default class BarberShopCode extends XComponent {
           y: 0
         },
         banner: {
-          img: "https://i.blogs.es/191fd7/bastien-grivet-on-my-way/450_1000.jpg",
+          img: "https://instagram.fmvd2-1.fna.fbcdn.net/vp/751b6ad677336a190c3c3b04594a6993/5E1FC9BC/t51.2885-15/e15/10723906_806443149419264_1410281799_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_cat=108",
           scala: 100,
           x: 0,
           y: 0
@@ -129,45 +134,7 @@ export default class BarberShopCode extends XComponent {
   }
 
   private rules: any = {
-    //   required: [(v: any) => !!v || this.translate("VALIDATIONS.required")],
-    //   email: [
-    //     (v: any) => !!v || this.translate("VALIDATIONS.required"),
-    //     (v: any) => /.+@.+/.test(v) || this.translate("VALIDATIONS.email")
-    //   ],
-    //   password: [
-    //     (v: any) => !!v || this.translate("VALIDATIONS.required"),
-    //     (v: any) => (v || "").length > 8 || this.translate("VALIDATIONS.password")
-    //   ],
-    //   phone: []
   };
-
-  //Extends XComponent
-  // tableConf = {
-  //   headers: [
-  //     {
-  //       name: "EVENT.name",
-  //       type: "string",
-  //       value: "name",
-  //       align: "left"
-  //     },
-  //     {
-  //       name: "EVENT.location",
-  //       type: "string",
-  //       value: "location",
-  //       align: "center"
-  //     },
-  //     {
-  //       name: "EVENT.date",
-  //       type: "string",
-  //       value: "date",
-  //       align: "center"
-  //     }
-  //   ],
-  //   search: {
-  //     show: false,
-  //     text: "EVENT.search"
-  //   }
-  // };
 
   private steps: any = [
     {
@@ -242,6 +209,7 @@ export default class BarberShopCode extends XComponent {
   showBarberProfile(selectedBarber: any) {
     this.selectedBarber = selectedBarber;
     this.barberDialog = true;
+    console.log(selectedBarber);
   }
 
 
@@ -251,18 +219,6 @@ export default class BarberShopCode extends XComponent {
   //   this.showBarberProfile = true;
   //   // this.$router.push("Barber");
   // }
-
-
-
-
-
-
-
-
-
-
-
-
   // {
   //       title: "Creacion de Encuesta",
   //       Addbutton: {text:"Crear"},
