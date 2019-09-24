@@ -5,9 +5,9 @@ export default class MenuItems extends Vue {
   private menu: any = {
     options: [
       { name: "Mi perfil", icon: "account_circle", route: "Barber" },
-      { name: "Buscar barberia", icon: "search", route: "MainPage" },
-      { name: "Barberias favoritas", icon: "home", route: "BarberShop" },
-      { name: "Mis reservas", icon: "event", route: "BarberShop" }
+      { name: "Mis reservas", icon: "event", route: "BarberShop" },
+      { name: "Buscar", icon: "search", route: "MainPage" }
+      // { name: "Barberia", icon: "home", route: "BarberShop" },
     ]
   };
 

@@ -1,16 +1,17 @@
 import { Component, Vue } from "vue-property-decorator";
+import MenuItems from '../menuItems';
 
 @Component({})
-export default class LeftMenuCode extends Vue {
+export default class LeftMenuCode extends MenuItems {
     private search: string = "";
-    private menu: any = {
-        options: [
-            { name: "Mi perfil", icon: "account_circle", route: "Barber" },
-            { name: "Buscar barberia", icon: "search", route: "MainPage" },
-            { name: "Barberias favoritas", icon: "home", route: "BarberShop" },
-            { name: "Mis reservas", icon: "event", route: "BarberShop" }
-        ]
-    };
+    // private menu: any = {
+    //     options: [
+    //         { name: "Mi perfil", icon: "account_circle", route: "Barber" },
+    //         { name: "Buscar barberia", icon: "search", route: "MainPage" },
+    //         { name: "Barberias favoritas", icon: "home", route: "BarberShop" },
+    //         { name: "Mis reservas", icon: "event", route: "BarberShop" }
+    //     ]
+    // };
 
     //show and hide the leftsidemenu
     get drawer() {

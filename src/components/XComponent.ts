@@ -19,6 +19,10 @@ export default class XComponent extends Vue {
       text: ''
     }
   };
+  protected  icons: any = {
+    instagram: "https://image.flaticon.com/icons/png/512/87/87390.png",
+    facebook: "https://image.flaticon.com/icons/png/512/33/33702.png"
+  }
 
   translate(text: string) {
     return this.$i18n.t(text);
