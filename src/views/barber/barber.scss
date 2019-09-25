@@ -43,6 +43,7 @@
         left: 5px;
         border-radius: 5px;
         background-color: rgb(42, 42, 42);
+        box-shadow: 2px 2px 2px 2px rgba(14, 14, 14, 0.322);
       }
 
       .banner-wallpaper {
@@ -87,6 +88,7 @@
         position: absolute;
         top: 0px;
         height: 60px;
+        left: 5px;
 
         .darkbox-name {
           position: relative;
@@ -98,18 +100,19 @@
         }
 
         .darkbox-white-stars {
-          position: relative;
-          left: 5px;
+          position: absolute;
+          left: 0px;
+          color: black;
           bottom: 10px;
           border-color: black;
           text-shadow: black;
-          text-shadow: 1px 2px rgb(14, 14, 14);
+          text-shadow: 1px 1px rgb(14, 14, 14);
         }
 
         .darkbox-stars.v-icon {
           position: absolute;
-          left: 5px;
-          bottom: 8px;
+          left: 0px;
+          bottom: 10px;
           color: yellow !important;
         }
       }

@@ -81,13 +81,13 @@ export default class BarberShopCode extends XComponent {
           stars: 5
         },
         picture: {
-          img: "https://instagram.fmvd2-1.fna.fbcdn.net/vp/91d4eebf04d3ed1cf45782c248ba1a8d/5E3B612F/t51.2885-15/e35/12716759_170054476706442_726000112_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_cat=106",
+          img: "http://es.web.img3.acsta.net/r_640_360/newsv7/16/04/15/12/49/422146.jpg",
           scala: 100,
           x: 0,
           y: 0
         },
         banner: {
-          img: "https://instagram.fmvd2-1.fna.fbcdn.net/vp/241d56c00ec14f67793c5f407fa2b6e1/5E1E5A43/t51.2885-15/e35/13557007_1742984725990432_444365328_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_cat=104",
+          img: "https://s.yimg.com/ny/api/res/1.2/OoBy44.dLtaLgobVIO7fNA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NzQ0O2g9Mzcy/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d4345e2367382e3b40a1e43f5016972b",
           scala: 100,
           x: 0,
           y: 0
@@ -103,13 +103,13 @@ export default class BarberShopCode extends XComponent {
           stars: 4
         },
         picture: {
-          img: "https://avatars2.githubusercontent.com/u/34650339?s=460&v=4",
+          img: "https://i.ytimg.com/vi/9aFVSkncq00/maxresdefault.jpg",
           scala: 100,
           x: 0,
           y: 0
         },
         banner: {
-          img: "https://instagram.fmvd2-1.fna.fbcdn.net/vp/751b6ad677336a190c3c3b04594a6993/5E1FC9BC/t51.2885-15/e15/10723906_806443149419264_1410281799_n.jpg?_nc_ht=instagram.fmvd2-1.fna.fbcdn.net&_nc_cat=108",
+          img: "https://diarioavance.com/wp-content/uploads/2017/03/matrix.jpg",
           scala: 100,
           x: 0,
           y: 0

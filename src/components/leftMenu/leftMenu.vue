@@ -1,5 +1,5 @@
 <template v-cloak>
-  <v-navigation-drawer id="drawer-left" temporary dark fixed left v-model="drawer">
+  <v-navigation-drawer id="drawer-left" dark temporary fixed left v-model="drawer" color="rgba(0, 0, 0, 0.685)">
     <v-list subheader>
       <v-list v-if="filteredConf.length > 0">
         <v-list-tile
