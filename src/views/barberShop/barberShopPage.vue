@@ -6,20 +6,26 @@
         :src="barberShop.pageDesign.banner.img"
         aspect-ratio="1"
         class="banner-wallpaper grey lighten-2"
-      >
-      </v-img>
+      ></v-img>
 
       <v-img
         :src="barberShop.pageDesign.logo.img"
         aspect-ratio="1"
         class="banner-logo grey lighten-2"
-      >
-      </v-img>
+      ></v-img>
 
-      <div class="darkbox">
-        <p class="darkbox-name">{{ barberShop.info.name }}</p>
-        <v-icon dark class="darkbox-white-stars" small>star star star star star</v-icon>
-        <v-icon class="darkbox-stars" small>{{ getStars() }}</v-icon>
+      <div class="actions-box">
+        <v-img class="action-logo" :src="icons.facebook"></v-img>
+        <v-img class="action-logo" :src="icons.instagram"></v-img>
+        <v-btn small class="btn-reservation">consultar</v-btn>
+
+        <div class="darkbox">
+          <p class="darkbox-name">{{ barberShop.info.name }}</p>
+          <v-icon dark class="darkbox-white-stars" small>star star star star star</v-icon>
+          <v-icon class="darkbox-stars" small>{{ getStars() }}</v-icon>
+        </div>
+
+        <!-- <v-btn small class="btn-reservation" @click="dialogs.add = true">reservar</v-btn> -->
       </div>
     </div>
 
@@ -67,11 +73,15 @@
           </v-stepper-content>
 
           <v-stepper-content step="2">
-            <v-card><v-btn>free for more</v-btn></v-card>
+            <v-card>
+              <v-btn>free for more</v-btn>
+            </v-card>
           </v-stepper-content>
 
           <v-stepper-content step="3">
-            <v-card><v-btn>free for more</v-btn></v-card>
+            <v-card>
+              <v-btn>free for more</v-btn>
+            </v-card>
           </v-stepper-content>
         </v-stepper-items>
       </v-stepper>
@@ -80,23 +90,31 @@
     <!-- BARBER -->
     <div class="barbershop-content">
       <div class="barbershop-content-barbers">
+        <!-- containter  -->
         <div class="barbershop-content-barbers-profiles">
           <p class="font-info">Barberos</p>
           <div
-            class="barbershop-content-barbers-profile"
+            transition="scroll-x-transition"
+            class="profile-box"
             v-for="(barber,index) in barberShop.barbers"
             :key="index"
             @click="showBarberProfile(barberShop.barbers[index])"
           >
-            <p class="font-info-small">{{ barberShop.barbers[index].info.name }}</p>
-
-            <v-img
-              :src="barberShop.barbers[index].picture.img"
-              class="barber-profile-picture grey lighten-2"
-            >
-            </v-img>
-
-            <p class="font-info-small">{{ barberShop.barbers[index].info.job }}</p>
+            <div class="picture-background">
+              <v-img
+                :src="barberShop.barbers[index].banner.img"
+                aspect-ratio="1"
+                class="banner-wallpaper grey lighten-2"
+              ></v-img>
+            </div>
+            <div class="info-box">
+              <v-img
+                :src="barberShop.barbers[index].picture.img"
+                class="barber-profile-picture grey lighten-2"
+              ></v-img>
+              <p class="font-info-small">{{ barberShop.barbers[index].info.name }}</p>
+              <p class="font-info-small">{{ barberShop.barbers[index].info.job }}</p>
+            </div>
           </div>
         </div>
       </div>

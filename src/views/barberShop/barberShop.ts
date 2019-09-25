@@ -52,7 +52,7 @@ export default class BarberShopCode extends XComponent {
           }
       */
       banner: {
-        img: "http://www.sclance.com/wallpapers/barber-shop-wallpaper/barber-shop-wallpaper_196967.jpg",
+        img: "https://static.vecteezy.com/system/resources/previews/000/539/084/non_2x/barbershop-logo-design-vector.jpg",
         scala: 100,
         x: 0,
         y: 0

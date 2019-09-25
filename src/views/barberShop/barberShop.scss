@@ -3,7 +3,10 @@
   margin-left: 0 !important;
 }
 //this will change
-.sm-format,.md-format,.lg-format,.xl-format {
+.sm-format,
+.md-format,
+.lg-format,
+.xl-format {
   width: 60%;
   margin-left: 20%;
 }
@@ -38,41 +41,73 @@
       height: 100%;
     }
 
-    .darkbox {
-      position: absolute;
-      left: 150px;
-      height: 60px;
-      bottom: 15px;
-      // background-color: rgba(0, 0, 0, 0.699);
+    .actions-box {
+      position: relative;
+      width: 100%;
+      height: 10px; //var responsivity - height
+      background-color: white; //////////
+      display: inline-block;
+      text-align: right;
+      padding-top: 10px;
 
-      .darkbox-name {
+      .action-logo {
         position: relative;
-        font-size: 18px;
-        color: white;
-        border-color: black;
-        text-shadow: black;
-        text-shadow: 1px 2px rgb(14, 14, 14);
+        margin-right: 20px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        background-color: white;
+        border-color: white;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 2px;
+        cursor: pointer;
       }
 
-      .darkbox-white-stars {
+      .btn-reservation {
         position: relative;
+        margin-right: 10px;
+        height: 20px;
         bottom: 10px;
-        border-color: black;
-        text-shadow: black;
-        text-shadow: 1px 2px rgb(14, 14, 14);
+        background-color: white;
       }
 
-      .darkbox-stars.v-icon {
+      .darkbox {
         position: absolute;
-        left: 0px;
-        bottom: 8px;
-        color: yellow !important;
+        top: 0px;
+        height: 60px;
+  
+        .darkbox-name {
+          position: relative;
+          font-size: 18px;
+          color: black;
+          border-color: black;
+          text-shadow: black;
+          text-shadow: 1px 1px rgba(151, 151, 151, 0.425);
+        }
+
+        .darkbox-white-stars {
+          position: relative;
+          right: 20px;
+          bottom: 10px;
+          border-color: black;
+          text-shadow: black;
+          text-shadow: 1px 2px rgb(14, 14, 14);
+        }
+
+        .darkbox-stars.v-icon {
+          position: absolute;
+          left: 0px;
+          bottom: 8px;
+          color: yellow !important;
+        }
       }
     }
   }
 
   .info-content {
     position: relative;
+    top: 60px;
     width: 100%;
 
     .v-stepper {
@@ -156,42 +191,65 @@
     .barbershop-content-barbers {
       position: absolute;
       width: 100%;
-      height: 200px;
+      height: 290px;
       border-top-width: 2px;
 
       .barbershop-content-barbers-profiles {
         position: relative;
         width: 100%;
-        height: 200px;
+        height: 290px;
         text-align: center;
         display: inline-block;
         overflow: hidden;
         overflow-y: scroll;
 
-        .barbershop-content-barbers-profile {
+        .profile-box:hover {
+          box-shadow: 1px 1px 1px 1px rgba(116, 115, 115, 0.63);
+        }
+
+        .profile-box {
           position: relative;
-          width: 120px;
-          height: 120px;
+          width: 200px;
+          height: 250px;
           display: inline-block;
           text-align: center;
+          margin-left: 10px;
+          background-color: white;
 
-          .barber-profile-picture:hover {
-            border-style: solid;
+          .picture-background {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            background-color: white;
           }
 
-          .barber-profile-picture {
+          .info-box {
             position: relative;
-            width: 60px;
-            height: 60px;
+            width: 100%;
+            height: 50%;
+            background-color: white;
             text-align: center;
-            display: inline-block;
-            border-radius: 50%;
-          }
 
-          .barber-profile-text {
-            position: relative;
-            font-size: 12px;
-            bottom: 5px;
+            .barber-profile-picture:hover {
+              border-style: solid;
+            }
+
+            .barber-profile-picture {
+              // position: absolute;
+              top: -30px;
+              margin: auto;
+              width: 60px;
+              height: 60px;
+              border-style: solid;
+              border-color: white;
+              border-radius: 50%;
+            }
+
+            .barber-profile-text {
+              position: relative;
+              font-size: 12px;
+              // bottom: 5px;
+            }
           }
         }
       }
