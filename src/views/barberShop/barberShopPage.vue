@@ -109,6 +109,7 @@
             </div>
             <div class="info-box">
               <v-img
+                aspect-ratio="1"
                 :src="barberShop.barbers[index].picture.img"
                 class="barber-profile-picture grey lighten-2"
               ></v-img>

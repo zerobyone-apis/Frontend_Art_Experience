@@ -37,9 +37,9 @@
             <v-stepper-header>
               <v-stepper-step step="1" @click="wizard=1">informacion</v-stepper-step>
               <v-divider></v-divider>
-              <v-stepper-step step="2" @click="wizard=2">productos</v-stepper-step>
+              <v-stepper-step step="2" @click="wizard=2">trabajos</v-stepper-step>
               <v-divider></v-divider>
-              <v-stepper-step step="3" @click="wizard=3">promociones</v-stepper-step>
+              <v-stepper-step step="3" @click="wizard=3">opiniones</v-stepper-step>
             </v-stepper-header>
             <v-stepper-items>
               <v-stepper-content step="1">
@@ -73,6 +73,18 @@
               </v-stepper-content>
             </v-stepper-items>
           </v-stepper>
+        </div>
+        
+        <!-- best pictures  -->
+        <div class="pictures-box">
+           <div
+            class="picture-box"
+            v-for="(pic,index) in pictures"
+            :key="index"
+          >
+            <v-img :src="pic" aspect-ratio="1" class="picture">
+            </v-img>
+          </div>
         </div>
       </div>
       <!--Dialogs-->
