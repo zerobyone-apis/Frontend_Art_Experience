@@ -50,38 +50,6 @@
         width: 100%;
         height: 100%;
       }
-
-      .darkbox {
-        position: absolute;
-        left: 150px;
-        height: 60px;
-        bottom: 15px;
-        // background-color: rgba(0, 0, 0, 0.699);
-
-        .darkbox-name {
-          position: relative;
-          font-size: 18px;
-          color: white;
-          border-color: black;
-          text-shadow: black;
-          text-shadow: 1px 2px rgb(14, 14, 14);
-        }
-
-        .darkbox-white-stars {
-          position: relative;
-          bottom: 10px;
-          border-color: black;
-          text-shadow: black;
-          text-shadow: 1px 2px rgb(14, 14, 14);
-        }
-
-        .darkbox-stars.v-icon {
-          position: absolute;
-          left: 0px;
-          bottom: 8px;
-          color: yellow !important;
-        }
-      }
     }
 
     .actions-box {
@@ -114,10 +82,42 @@
         bottom: 10px;
         background-color: white;
       }
+
+      .darkbox {
+        position: absolute;
+        top: 0px;
+        height: 60px;
+
+        .darkbox-name {
+          position: relative;
+          font-size: 18px;
+          color: black;
+          border-color: black;
+          text-shadow: black;
+          text-shadow: 1px 1px rgba(151, 151, 151, 0.425);
+        }
+
+        .darkbox-white-stars {
+          position: relative;
+          left: 5px;
+          bottom: 10px;
+          border-color: black;
+          text-shadow: black;
+          text-shadow: 1px 2px rgb(14, 14, 14);
+        }
+
+        .darkbox-stars.v-icon {
+          position: absolute;
+          left: 5px;
+          bottom: 8px;
+          color: yellow !important;
+        }
+      }
     }
 
     .info-content {
       position: relative;
+      top: 60px;
       width: 100%;
 
       .v-stepper {

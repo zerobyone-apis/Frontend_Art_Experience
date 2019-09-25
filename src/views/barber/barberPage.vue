@@ -3,12 +3,6 @@
     <div class="background-dialog">
       <div class="toolbar-dialog" :class="$vuetify.breakpoint.name+'-format'">
         <v-icon class="pt-3 pl-1" @click="model=false" dark fab>arrow_back</v-icon>
-        <!-- <div class="barbershop-actions">
-          <v-img class="action-logo" :src="icons.facebook"></v-img>
-          <v-img class="action-logo" :src="icons.instagram"></v-img>
-          <v-btn small class="btn-reservation" v-if="false">consultar</v-btn>
-          <v-btn small class="btn-reservation" @click="dialogs.add = true">reservar</v-btn>
-        </div>-->
       </div>
 
       <div class="barber-profile-page" :class="$vuetify.breakpoint.name+'-format'">
@@ -23,19 +17,18 @@
           <v-img :src="barberData.picture.img" aspect-ratio="1" class="banner-logo grey lighten-2">
             <template v-slot:placeholder></template>
           </v-img>
+        </div>
+
+        <div class="actions-box">
+          <v-img class="action-logo" :src="icons.facebook"></v-img>
+          <v-img class="action-logo" :src="icons.instagram"></v-img>
+          <v-btn small class="btn-reservation" @click="dialogs.add = true">reservar</v-btn>
 
           <div class="darkbox">
             <p class="darkbox-name">{{ barberData.info.name }}</p>
             <v-icon dark class="darkbox-white-stars" small>star star star star star</v-icon>
             <v-icon class="darkbox-stars" small>{{ getStars() }}</v-icon>
           </div>
-        </div>
-
-        <div class="actions-box">
-          <v-img class="action-logo" :src="icons.facebook"></v-img>
-          <v-img class="action-logo" :src="icons.instagram"></v-img>
-          <v-btn small class="btn-reservation" v-if="false">consultar</v-btn>
-          <v-btn small class="btn-reservation" @click="dialogs.add = true">reservar</v-btn>
         </div>
 
         <!-- INFO -->
@@ -82,7 +75,7 @@
           </v-stepper>
         </div>
       </div>
-       <!--Dialogs-->
+      <!--Dialogs-->
       <add-dialog v-model="dialogs.add" :steps="steps" @event="add" button-text="Crear"></add-dialog>
     </div>
   </v-dialog>
