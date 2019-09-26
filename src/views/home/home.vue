@@ -1,30 +1,35 @@
 <template transition="slide-x-transition">
-  <div id="homePage">
-    <v-img class="img-back" :src="require('../../assets/home/1.jpg')">
-      <!-- login -->
-      <div class="login-box">
-        <div class="fields-box mx-auto">
-          <p>Accede si ya tienes tu cuenta</p>
-          <v-text-field
-            dark
-            v-for="(field,index) in fields.login"
-            :key="index"
-            :label="field.text"
-            :prepend-icon="field.icon"
-            v-model="field.value"
-          ></v-text-field>
-          <v-btn flat small dark>acceder</v-btn>
-        </div>
+  <div id="homePage" :class="$vuetify.breakpoint.name+'-format'">
+    <!-- BANNER  -->
+    <div class="banner">
+      <h2 class="title font-title">Art Experience</h2>
+      <p class="sub-title font-title">gestion de Barbershops</p>
+      
+      <v-parallax
+        src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/02/10093256/barba-la-moda-que-no-se-va-1920-2.jpg"
+      ></v-parallax>
+    </div>
+
+    <!-- INFO -->
+    <div class="info-content">
+
+      <h2 class="font-title">Quienes somos?</h2>
+      <p class="font-text">
+        Art Experience es una empresa que se destaca en el mercado por brindar servicios de calidad dedicados
+        a gestion de barberias y administracion de reservas para clientes.
+      </p>
+
+
+      <div class="services">
+        <h2 class="font-title">Servicios</h2>
+        <p
+          class="font-text"
+        >Art Experience brinda servicios de administracion de barberia, reservas, productos y promociones</p>
       </div>
-
-       <!-- <p
-        class="text-presentation"
-      >Encuentre sus barberias favoritas y administre sus reservas de forma unica</p> -->
-
-    </v-img>
-
-    <!-- <div class="info-box">    
-    </div> -->
+      <!-- <v-carousel>
+        <v-carousel-item v-for="(pic,index) in pictures" :key="index" :src="pic"></v-carousel-item>
+      </v-carousel>-->
+    </div>
   </div>
 </template>
 
@@ -33,6 +38,9 @@
 import HomeCode from "./homeCode";
 //style
 import "./homeStyle.scss";
+import "../../styles/fonts.scss";
+
+
 //components
 import { Component } from "vue-property-decorator";
 

@@ -4,7 +4,7 @@ import User from "../../models/User";
 
 export default class HomeCode extends XComponent {
 
-    private fields: any = { 
+    private fields: any = {
         login: [
             { text: "username", icon: "account_circle", value: "" },
             { text: "password", icon: "vpn_key", value: "" }
@@ -16,6 +16,76 @@ export default class HomeCode extends XComponent {
         ]
     }
 
+    public pictures: any = [
+        "https://stylesatlife.com/wp-content/uploads/2018/09/Mexican-Haircuts-For-Guys-and-Girls.jpg",
+        "https://root.coreylittle.com/williamsonsource/2017/10/pompadour.jpg",
+        "https://blogocosa.com/wp-content/uploads/2019/05/pompadour-undercut-newest-30-tren-st-undercut-hairstyles-for-men-collection.jpg",
+        "https://media.haircutinspiration.com/photos/20181204005057/Fade-beard-buzzcut-%40patty_cuts.jpg"
+    ];
+
+    public customers: any = [
+        {
+            info: {
+              name: "ZeroByOne",
+              job: "barber",
+              email: "zerobyone@gmail.com",
+              phone: "099 999 999",
+              stars: 5
+            },
+            picture: {
+              img: "http://es.web.img3.acsta.net/r_640_360/newsv7/16/04/15/12/49/422146.jpg",
+              scala: 100,
+              x: 0,
+              y: 0
+            },
+            banner: {
+              img: "https://s.yimg.com/ny/api/res/1.2/OoBy44.dLtaLgobVIO7fNA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NzQ0O2g9Mzcy/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d4345e2367382e3b40a1e43f5016972b",
+              scala: 100,
+              x: 0,
+              y: 0
+            }
+          },
+    
+          {
+            info: {
+              name: "Damian Rodriguez",
+              job: "peluquero",
+              email: "damianezretirl1@gmail.com",
+              phone: "099 999 999",
+              stars: 4
+            },
+            picture: {
+              img: "https://i.ytimg.com/vi/9aFVSkncq00/maxresdefault.jpg",
+              scala: 100,
+              x: 0,
+              y: 0
+            },
+            banner: {
+              img: "https://diarioavance.com/wp-content/uploads/2017/03/matrix.jpg",
+              scala: 100,
+              x: 0,
+              y: 0
+            }
+          }
+    ];
+
+    public home: any = {
+        pageDesign: {
+            banner: {
+                img: "https://static.vecteezy.com/system/resources/previews/000/539/084/non_2x/barbershop-logo-design-vector.jpg",
+                scala: 100,
+                x: 0,
+                y: 0
+            },
+
+            logo: {
+                img: "https://i.etsystatic.com/13221305/r/il/ab6ed6/1210022632/il_794xN.1210022632_eygv.jpg",
+                scala: 100,
+                x: 0,
+                y: 0
+            }
+        }
+    }
 
 
 

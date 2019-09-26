@@ -1,43 +1,218 @@
+.xs-format {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+//this will change
+.sm-format,
+.md-format,
+.lg-format,
+.xl-format {
+  width: 60%;
+  margin-left: 20%;
+}
+
 #homePage {
-  position: relative;
-  top: 60px;
-  
-  .img-back {
-    height: 100%;
-  }
+  position: absolute;
+  height: 100%;
+  background-color: white;
 
-  .login-box {
+  .banner {
     position: relative;
-    width: 250px;
-    height: 300px;
-    padding-top: 20px;
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.637);
-    color: white;
-    border-radius: 15px;
+    width: 100%;
+    height: 40%;
 
-    .fields-box {
-      position: relative;
-      text-align: center;
-      width: 200px;
-      height: 100%;
+    .title {
+      position: absolute;
+      top: 60%;
+      left: 5%;
+      z-index: 1;
+    }
+    .sub-title {
+      position: absolute;
+      top: 65%;
+      left: 5%;
+      z-index: 1;
     }
   }
 
-  
-  // .text-presentation {
-  //   text-align: center;
-  //   font-size: 20px;
-  //   color: white;
+  .info-content {
+    position: relative;
+    top: 200px;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+
+    .customers-box {
+      position: relative;
+      top: 50px;
+
+      .customers-content {
+        position: relative;
+        width: 100%;
+        height: 240px;
+       
+        .customers {
+          top: 20px;
+          position: absolute;
+          width: 100%;
+          height: 220px;
+          border-top-width: 2px;
+
+          .customers-profiles {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            text-align: center;
+            display: inline-block;
+            overflow: hidden;
+            // overflow-y: scroll;
+
+
+            .profile-box {
+              position: relative;
+              width: 200px;
+              height: 50px;
+              display: inline-block;
+              text-align: center;
+              margin-left: 10px;
+              background-color: white;
+
+              .picture-background {
+                position: relative;
+                width: 100%;
+                height: 50%;
+                background-color: white;
+              }
+
+              .info-box {
+                position: relative;
+                width: 100%;
+                height: 50%;
+                background-color: white;
+                text-align: center;
+
+                .profile-picture:hover {
+                  border-style: solid;
+                }
+
+                .profile-picture {
+                  // position: absolute;
+                  top: -30px;
+                  margin: auto;
+                  width: 100px;
+                  height: 100px;
+                  border-style: solid;
+                  border-color: white;
+                  border-radius: 50%;
+                }
+
+                .barber-profile-text {
+                  position: relative;
+                  font-size: 12px;
+                  // bottom: 5px;
+                }
+              }
+            }
+          }
+        }
+
+        .barbershop-actions {
+          position: relative;
+          width: 100%;
+          height: 50px; //var responsivity - height
+          background-color: rgb(42, 42, 42);
+          display: inline-block;
+          text-align: right;
+          padding-top: 10px;
+
+          .action-logo {
+            position: relative;
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            background-color: #d4d4d4;
+            border-color: #d4d4d4;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: 2px;
+            cursor: pointer;
+          }
+
+          .btn-reservation {
+            position: relative;
+            margin-right: 10px;
+            height: 20px;
+            bottom: 10px;
+            background-color: #d4d4d4;
+          }
+        }
+
+        .barbershop-content-presentation {
+          height: 200px;
+
+          .barbershop-content-info {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            text-align: left;
+            padding-left: 10px;
+          }
+
+          .barbershop-content-pictures {
+            position: relative;
+            width: 100%;
+            height: 200px;
+          }
+        }
+
+        .barbershop-content-recomendation {
+          position: relative;
+          width: 100%;
+          height: 400px;
+          margin-top: 10px;
+          border-top-width: 10px;
+          border-top-style: solid;
+          background-color: rgb(42, 42, 42);
+          border-top-color: rgb(50, 50, 50);
+        }
+      }
+    }
+
+    .services {
+      position: relative;
+      top: 50px;
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  // .font-info-title {
+  //   color: #1817177a;
+  //   // border-bottom: 2px solid #cecece4f;
+  //   padding-bottom: 10px;
+  //   line-height: 120%;
+  //   font-size: 26px !important;
+  //   font-family: Oswald !important;
+  //   font-style: normal;
+  //   letter-spacing: 2px;
   // }
 
-  .info-box {
-    position: relative;
-    width: 100%;
-    height: 400px;
+  // .font-info {
+  //   color: #1817177a;
+  //   // border-bottom: 2px solid #cecece4f;
+  //   padding-bottom: 10px;
+  //   line-height: 120%;
+  //   font-size: 16px !important;
+  //   font-family: Oswald !important;
+  //   font-style: normal;
+  //   letter-spacing: 2px;
+  //   text-shadow: 1px 1px 1px rgb(221, 221, 221);
+  // }
 
-    // background-color: grey;
-  }
+  // .font-info-small {
+  //   margin-bottom: -1px;
+  //   font-style: italic;
+  //   font-size: 11px;
+  // }
 }
