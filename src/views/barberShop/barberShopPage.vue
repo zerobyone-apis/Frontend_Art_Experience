@@ -20,12 +20,10 @@
         <v-btn small class="btn-reservation">consultar</v-btn>
 
         <div class="darkbox">
-          <p class="darkbox-name">{{ barberShop.info.name }}</p>
+          <h2 class="font-title">{{ barberShop.info.name }}</h2>
           <v-icon dark class="darkbox-white-stars" small>star star star star star</v-icon>
           <v-icon class="darkbox-stars" small>{{ getStars() }}</v-icon>
         </div>
-
-        <!-- <v-btn small class="btn-reservation" @click="dialogs.add = true">reservar</v-btn> -->
       </div>
     </div>
 
@@ -43,31 +41,12 @@
           <v-stepper-content step="1">
             <v-card>
               <div class="info-content-box">
-                <!-- about the barbershop -->
-                <div class="barbershop-content-info">
-                  <div class="info-box">
-                    <p class="font-info-title">direccion:</p>
-                    <p class="font-info">{{ barberShop.info.direction }}</p>
-                    <p class="font-info-title">cel:</p>
-                    <p class="font-info">{{ barberShop.info.phone }}</p>
-                    <p class="font-info-title">email:</p>
-                    <p class="font-info">{{ barberShop.info.email }}</p>
-                    <p class="font-info-title">abierto:</p>
-                    <p class="font-info">{{ barberShop.info.time.days }}</p>
-                    <p class="font-info-title">horario:</p>
-                    <p
-                      class="font-info"
-                    >{{ barberShop.info.time.start + "hrs a " + barberShop.info.time.end + "hrs" }}</p>
-                  </div>
-
-                  <div class="map-box">
-                    <!-- <v-img
-                    width="100%"
-                    height="100%"
-                    src="https://icdn7.digitaltrends.com/image/digitaltrends/google_maps_share_location_1-500x300-c.jpg"
-                    ></v-img>-->
-                  </div>
-                </div>
+                <p class="font-title">Direccion</p>
+                <p class="font-text">{{ barberShop.info.direction }}</p>
+                <p class="font-title">Cel</p>
+                <p class="font-text">{{ barberShop.info.phone }}</p>
+                <p class="font-title">Email</p>
+                <p class="font-text">{{ barberShop.info.email }}</p>
               </div>
             </v-card>
           </v-stepper-content>
@@ -92,7 +71,7 @@
       <div class="barbershop-content-barbers">
         <!-- containter  -->
         <div class="barbershop-content-barbers-profiles">
-          <p class="font-info">Barberos</p>
+          <h2 class="font-title">Barberos</h2>
           <div
             transition="scroll-x-transition"
             class="profile-box"
@@ -113,8 +92,8 @@
                 :src="barberShop.barbers[index].picture.img"
                 class="barber-profile-picture grey lighten-2"
               ></v-img>
-              <p class="font-info-small">{{ barberShop.barbers[index].info.name }}</p>
-              <p class="font-info-small">{{ barberShop.barbers[index].info.job }}</p>
+              <p class="font-text">{{ barberShop.barbers[index].info.name }}</p>
+              <p class="font-text">{{ barberShop.barbers[index].info.job }}</p>
             </div>
           </div>
         </div>
@@ -131,6 +110,8 @@
 import BarberShopCode from "./barberShop";
 //style
 import "./barberShop.scss";
+import "../../styles/fonts.scss";
+
 //components
 import { Component } from "vue-property-decorator";
 import BarberDialog from "../../views/barber/barberPage.vue";

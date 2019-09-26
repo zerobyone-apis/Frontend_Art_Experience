@@ -22,14 +22,14 @@
   .banner {
     position: relative;
     width: 100%;
-    height: 30%; //var responsivity - height
-    background-color: gray;
+    height: 35%;
+    background-color: #252525b0;
 
     .banner-logo {
       position: absolute;
       width: 140px;
       height: 140px;
-      bottom: 5px;
+      bottom: 65px;
       left: 5px;
       border-radius: 5px;
       background-color: rgb(42, 42, 42);
@@ -39,17 +39,17 @@
     .banner-wallpaper {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: calc(100% - 60px);
     }
 
     .actions-box {
       position: relative;
       width: 100%;
-      height: 10px; //var responsivity - height
-      background-color: white; //////////
+      height: 60px;
       display: inline-block;
       text-align: right;
       padding-top: 10px;
+      background-color: white;
 
       .action-logo {
         position: relative;
@@ -78,15 +78,6 @@
         top: 0px;
         height: 60px;
         left: 5px;
-        
-        .darkbox-name {
-          position: relative;
-          font-size: 18px;
-          color: black;
-          border-color: black;
-          text-shadow: black;
-          text-shadow: 1px 1px rgba(151, 151, 151, 0.425);
-        }
 
         .darkbox-white-stars {
           position: absolute;
@@ -110,9 +101,9 @@
 
   .info-content {
     position: relative;
-    top: 60px;
+    // top: 60px;
     width: 100%;
-
+    
     .v-stepper {
       box-shadow: none !important;
 
@@ -126,7 +117,10 @@
         border-bottom-style: solid;
         border-width: 1px;
         border-color: #cecece4f;
-        // padding-bottom: 20px;
+
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #252525b0;
+        box-shadow: 4px, 3px #ffffff4f;
 
         .v-divider {
           visibility: hidden !important;
@@ -134,7 +128,7 @@
 
         .v-stepper__step {
           text-align: center !important;
-          font-size: 11px;
+          // font-size: 11px;
           padding-top: 10px;
           cursor: pointer;
           height: 40px;
@@ -167,7 +161,7 @@
       width: 200px;
       height: 250px;
       background-color: white;
-      padding-top: 10px;
+      // padding-top: 10px;
 
       .info-box {
         position: absolute;
@@ -178,7 +172,7 @@
         position: absolute;
         width: 40%;
         height: 80%;
-        top: 20px;
+        // top: 20px;
         right: 10px;
         background-color: rgba(97, 97, 97, 0.753);
       }
@@ -320,22 +314,22 @@
     }
   }
 
-  .font-info-title {
-    margin-bottom: -1px;
-    font-style: italic;
-    font-size: 11px;
-  }
+  // .font-info-title {
+  //   margin-bottom: -1px;
+  //   font-style: italic;
+  //   font-size: 11px;
+  // }
 
-  .font-info {
-    font-style: italic;
-    font-size: 12px;
-  }
+  // .font-info {
+  //   font-style: italic;
+  //   font-size: 12px;
+  // }
 
-  .font-info-small {
-    margin-bottom: -1px;
-    font-style: italic;
-    font-size: 11px;
-  }
+  // .font-info-small {
+  //   margin-bottom: -1px;
+  //   font-style: italic;
+  //   font-size: 11px;
+  // }
 
   .content2 {
     position: relative;

@@ -17,18 +17,6 @@ export default class BarberShopCode extends XComponent {
   private user: User = new User();
 
   public barberShop: any = {
-    /*
-      example of barberShop component:
-      info: {
-                //info of the barberShop    
-      },
-      pageDesign: {
-                //visual components of the page
-      },
-      barbers: [
-                //barbers list
-      ]
-    */
     info: {
       name: "Art Experience",
       direction: "Bvar Artigas 2333",
@@ -42,15 +30,6 @@ export default class BarberShopCode extends XComponent {
       }
     },
     pageDesign: {
-      /*
-        example of pageDesign component:
-          name: {       //name of pageDesign component
-            img: "...", //route of the image
-            scala: 100, //percentaje 100%
-            x: 0,       //left position
-            y: 0        //top position
-          }
-      */
       banner: {
         img: "https://static.vecteezy.com/system/resources/previews/000/539/084/non_2x/barbershop-logo-design-vector.jpg",
         scala: 100,
