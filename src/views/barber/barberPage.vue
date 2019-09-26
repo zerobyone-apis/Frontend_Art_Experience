@@ -17,17 +17,17 @@
           <v-img :src="barberData.picture.img" aspect-ratio="1" class="banner-logo grey lighten-2">
             <template v-slot:placeholder></template>
           </v-img>
-        </div>
 
-        <div class="actions-box">
-          <v-img class="action-logo" :src="icons.facebook"></v-img>
-          <v-img class="action-logo" :src="icons.instagram"></v-img>
-          <v-btn small class="btn-reservation" @click="dialogs.add = true">reservar</v-btn>
+          <div class="actions-box">
+            <v-img class="action-logo" :src="icons.facebook"></v-img>
+            <v-img class="action-logo" :src="icons.instagram"></v-img>
+            <v-btn small class="btn-reservation" @click="dialogs.add = true">reservar</v-btn>
 
-          <div class="darkbox">
-            <p class="darkbox-name">{{ barberData.info.name }}</p>
-            <v-icon dark class="darkbox-white-stars" small>star star star star star</v-icon>
-            <v-icon class="darkbox-stars" small>{{ getStars() }}</v-icon>
+            <div class="darkbox">
+              <h2 class="font-title">{{ barberData.info.name }}</h2>
+              <v-icon dark class="darkbox-white-stars" small>star star star star star</v-icon>
+              <v-icon class="darkbox-stars" small>{{ getStars() }}</v-icon>
+            </div>
           </div>
         </div>
 
@@ -45,17 +45,12 @@
               <v-stepper-content step="1">
                 <v-card>
                   <div class="info-content-box">
-                    <!-- about the barbershop -->
-                    <div class="barbershop-content-info">
-                      <div class="info-box">
-                        <p class="font-info-title">Cargo</p>
-                        <p class="font-info">{{ barberData.info.job }}</p>
-                        <p class="font-info-title">cel:</p>
-                        <p class="font-info">{{ barberData.info.phone }}</p>
-                        <p class="font-info-title">email:</p>
-                        <p class="font-info">{{ barberData.info.email }}</p>
-                      </div>
-                    </div>
+                    <p class="font-title">Cargo</p>
+                    <p class="font-text">{{ barberData.info.job }}</p>
+                    <p class="font-title">cel:</p>
+                    <p class="font-text">{{ barberData.info.phone }}</p>
+                    <p class="font-title">email:</p>
+                    <p class="font-text">{{ barberData.info.email }}</p>
                   </div>
                 </v-card>
               </v-stepper-content>
@@ -74,19 +69,15 @@
             </v-stepper-items>
           </v-stepper>
         </div>
-        
+
         <!-- best pictures  -->
         <div class="pictures-box">
-           <div
-            class="picture-box"
-            v-for="(pic,index) in pictures"
-            :key="index"
-          >
-            <v-img :src="pic" aspect-ratio="1" class="picture">
-            </v-img>
+          <div class="picture-box" v-for="(pic,index) in pictures" :key="index">
+            <v-img :src="pic" aspect-ratio="1" class="picture"></v-img>
           </div>
         </div>
       </div>
+
       <!--Dialogs-->
       <add-dialog v-model="dialogs.add" :steps="steps" @event="add" button-text="Crear"></add-dialog>
     </div>
@@ -99,6 +90,7 @@
 import BarberCode from "./barber";
 //style
 import "./barber.scss";
+import "../../styles/fonts.scss";
 //components
 import { Component, Prop } from "vue-property-decorator";
 import AddDialog from "@/components/dialogs/addDialog/addDialog.vue";

@@ -33,13 +33,14 @@
     .banner {
       position: relative;
       width: 100%;
-      height: 30%;
+      height: 35%;
+      background-color: #252525b0;
 
       .banner-logo {
         position: absolute;
         width: 140px;
         height: 140px;
-        bottom: 5px;
+        bottom: 65px;
         left: 5px;
         border-radius: 5px;
         background-color: rgb(42, 42, 42);
@@ -49,18 +50,18 @@
       .banner-wallpaper {
         position: relative;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 60px);
       }
     }
 
     .actions-box {
       position: relative;
       width: 100%;
-      height: 10px; //var responsivity - height
-      background-color: white; //////////
+      height: 60px;
       display: inline-block;
       text-align: right;
       padding-top: 10px;
+      background-color: white;
 
       .action-logo {
         position: relative;
@@ -90,15 +91,6 @@
         height: 60px;
         left: 5px;
 
-        .darkbox-name {
-          position: relative;
-          font-size: 18px;
-          color: black;
-          border-color: black;
-          text-shadow: black;
-          text-shadow: 1px 1px rgba(151, 151, 151, 0.425);
-        }
-
         .darkbox-white-stars {
           position: absolute;
           left: 0px;
@@ -120,40 +112,43 @@
 
     .info-content {
       position: relative;
-      top: 60px;
+      // top: 60px;
       width: 100%;
-
+      
       .v-stepper {
         box-shadow: none !important;
-
+  
         .v-stepper__content {
           border-left: none !important;
         }
-
+  
         .v-stepper__header {
           height: 40px;
           box-shadow: none !important;
           border-bottom-style: solid;
           border-width: 1px;
           border-color: #cecece4f;
-          // padding-bottom: 20px;
-
+  
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: #252525b0;
+          box-shadow: 4px, 3px #ffffff4f;
+  
           .v-divider {
             visibility: hidden !important;
           }
-
+  
           .v-stepper__step {
             text-align: center !important;
-            font-size: 11px;
+            // font-size: 11px;
             padding-top: 10px;
             cursor: pointer;
             height: 40px;
             border-radius: 10px;
-
+  
             .v-stepper__label {
               padding-top: auto;
             }
-
+  
             .v-divider {
               flex: none !important;
             }
@@ -199,7 +194,6 @@
       position: relative;
       width: 100%;
       height: 200px;
-      // background-color: rgba(97, 97, 97, 0.096);
       text-align: center;
       display: inline-block;
       overflow: hidden;
@@ -212,8 +206,7 @@
         display: inline-block;
         text-align: center;
         margin-left: 10px;
-        // border-style: solid;
-        // background-color: white;
+        background-color: rgba(97, 97, 97, 0.096);
 
         .picture {
           width: 100%;
