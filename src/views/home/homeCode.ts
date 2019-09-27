@@ -4,7 +4,7 @@ import User from "../../models/User";
 
 export default class HomeCode extends XComponent {
 
-    private fields: any = {
+    private loginFields: any = {
         login: [
             { text: "username", icon: "account_circle", value: "" },
             { text: "password", icon: "vpn_key", value: "" }
@@ -23,11 +23,39 @@ export default class HomeCode extends XComponent {
         "https://media.haircutinspiration.com/photos/20181204005057/Fade-beard-buzzcut-%40patty_cuts.jpg"
     ];
 
+    public services: any = [
+        {
+            img: "event",
+            name: "Gestion de reservas"
+        },
+        {
+            img: "people",
+            name: "Perfil del barbero"
+        },
+        {
+            img: "star",
+            name: "Sistema de puntuaciones"
+        },
+        {
+            img: "people",
+            name: "other"
+        },
+        {
+            img: "people",
+            name: "other"
+        },
+        {
+            img: "people",
+            name: "other"
+        }
+    ];
+
+
     public customers: any = [
         {
             info: {
               name: "ZeroByOne",
-              job: "barber",
+              job: "CEO",
               email: "zerobyone@gmail.com",
               phone: "099 999 999",
               stars: 5
@@ -49,7 +77,7 @@ export default class HomeCode extends XComponent {
           {
             info: {
               name: "Damian Rodriguez",
-              job: "peluquero",
+              job: "CEO",
               email: "damianezretirl1@gmail.com",
               phone: "099 999 999",
               stars: 4

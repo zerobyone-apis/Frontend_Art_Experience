@@ -21,6 +21,10 @@
     width: 100%;
     height: 40%;
 
+    .banner-img {
+      height: 100%;
+    }
+
     .title {
       position: absolute;
       top: 60%;
@@ -37,10 +41,43 @@
 
   .info-content {
     position: relative;
-    top: 200px;
+    padding-top: 20px;
     width: 100%;
-    height: 600px;
-    text-align: center;
+    height: 100px;
+
+    .services-content {
+      position: relative;
+      width: 100%;
+      height: 160px;
+      text-align: center;
+      display: inline-block;
+      
+      .service-item {
+        position: relative;
+        width: 160px;
+        height: 130px;
+        padding-top: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        text-align: center;
+        // background-color: aliceblue;  
+
+        .service-image {
+          position: relative;
+          background-color: #d4d4d4;
+          padding-top: 12px;
+          margin: auto;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+
+        .service-name {
+          position: relative;
+          margin: auto;
+        }
+      }
+    }
 
     .customers-box {
       position: relative;
@@ -50,7 +87,7 @@
         position: relative;
         width: 100%;
         height: 240px;
-       
+
         .customers {
           top: 20px;
           position: absolute;
@@ -66,7 +103,6 @@
             display: inline-block;
             overflow: hidden;
             // overflow-y: scroll;
-
 
             .profile-box {
               position: relative;
