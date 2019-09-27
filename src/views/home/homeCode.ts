@@ -26,27 +26,28 @@ export default class HomeCode extends XComponent {
     public services: any = [
         {
             img: "event",
-            name: "Gestion de reservas"
+            name: "Gestion de reservas",
+            info: "La gestion automatizada de las reservas mejora el rendimiento y la facilidad de uso."
+        },
+        {
+            img: "home",
+            name: "Perfil de la barberia",
+            info: "Tendra toda la informacion de su barberia, incluyendo a sus barberos, productos y promociones"
         },
         {
             img: "people",
-            name: "Perfil del barbero"
+            name: "Perfil del barbero",
+            info: "Contendra toda la informacion del barbero, incluyendo sus trabajos y opiniones de los clientes"
         },
         {
             img: "star",
-            name: "Sistema de puntuaciones"
+            name: "Sistema de puntuaciones",
+            info: "Tendra una puntuacion su barberia, la cual aumentara el numero de clientes"
         },
         {
-            img: "people",
-            name: "other"
-        },
-        {
-            img: "people",
-            name: "other"
-        },
-        {
-            img: "people",
-            name: "other"
+            img: "info",
+            name: "Notificaciones",
+            info: "Se mantendra informado de toda la actividad de sus clientes"
         }
     ];
 

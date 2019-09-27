@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="theme.dark">
+  <v-app :dark="theme.dark" class="white">
     <Toolbar v-if="$store.state.userInfo"></Toolbar>
     <LeftMenu></LeftMenu>
     <main class="main-content">

@@ -2,7 +2,7 @@
   <div id="homePage" :class="$vuetify.breakpoint.name+'-format'">
     <!-- BANNER  -->
     <div class="banner">
-      <h2 class="title font-title">Art Experience</h2>
+      <p class="title font-title">Art Experience</p>
       <p class="sub-title font-title">gestion de Barbershops</p>
 
       <v-img
@@ -14,36 +14,52 @@
 
     <!-- INFO -->
     <div class="info-content">
-      <h2 class="font-title">Quienes somos?</h2>
-      <p class="font-text">
-        Art Experience es una empresa que se destaca en el mercado por brindar servicios de calidad dedicados
-        a gestion de barberias y administracion de reservas para clientes.
-      </p>
-
-      
-      <div class="services-content">
-        <div class="service-item" v-for="(item,index) in customers" :key="index">
-          <div>
-            <v-img class="service-image" :src="item.picture.img" aspect-ratio="1"></v-img>
-            </div>
-          <p class="service-name font-text">{{ item.info.name }}</p>
-          <p class="service-name font-text">{{ item.info.job }}</p>
-        </div>
+      <h1 class="about_us-title font-title">ACERCA DE NOSOTROS</h1>
+      <v-divider inset class="pt-4"></v-divider>
+      <div class="about_us-box">
+        <h3 class="font-text pt-4 pb-4">
+          Art Experience es una empresa que se destaca en el mercado por brindar servicios de calidad dedicados
+          a gestion de barberias y administracion de reservas para clientes.
+        </h3>
       </div>
 
-      <!-- <v-parallax height="100"
-        src="https://previews.123rf.com/images/natashapankina/natashapankina1609/natashapankina160900101/63622771-modelo-incons%C3%BAtil-de-la-mano-doodle-iconos-peluquer%C3%ADa-establecen.jpg"
-      ></v-parallax> -->
+      <!-- <div class="owners-content">
+        <div class="owner-item" v-for="(item,index) in customers" :key="index">
+          <div>
+            <v-img class="owner-image" :src="item.picture.img" aspect-ratio="1"></v-img>
+          </div>
+          <p class="owner-name font-text">{{ item.info.name }}</p>
+          <p class="owner-name font-text">{{ item.info.job }}</p>
+        </div>
+      </div>-->
 
-      <h2 class="font-title">Servicios</h2>
-      <p
-        class="font-text"
-      >Art Experience brinda servicios de administracion de barberia, reservas, productos y promociones</p>
+      <!-- <v-img
+        class="barber-knife"
+        aspect-rato="1"
+        src="https://http2.mlstatic.com/navaja-barberia-afeitar-D_NQ_NP_721089-MLA31605916965_072019-F.jpg"
+      ></v-img>-->
 
-      <div class="services-content">
-        <div class="service-item" v-for="(item,index) in services" :key="index">
-          <div class="service-image"><v-icon>{{ item.img }}</v-icon></div>
-          <p class="service-name font-text">{{ item.name }}</p>
+      <!-- <v-parallax class="barber-knife"
+        height="600"
+        src="https://wallpapercave.com/wp/wp2541317.jpg"
+      ></v-parallax>-->
+
+      <div>
+        <h1 class="font-title pt-4">SERVICIOS</h1>
+        <v-divider inset class="pt-4"></v-divider>
+        <p
+          class="font-text pt-4"
+        >Art Experience brinda servicios de administracion de barberia, reservas, productos y promociones</p>
+
+        <div class="services-content">
+          <div class="service-item" v-for="(item,index) in services" :key="index">
+            <div class="service-image">
+              <v-icon>{{ item.img }}</v-icon>
+            </div>
+            <h3 class="service-name font-title">{{ item.name }}</h3>
+
+            <p class="service-info font-text">{{ item.info }}</p>
+          </div>
         </div>
       </div>
 
