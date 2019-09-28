@@ -5,11 +5,9 @@
       <p class="title font-title">Art Experience</p>
       <p class="sub-title font-title">gestion de Barbershops</p>
 
-      <v-img
-        class="banner-img"
-        aspect-rato="1"
-        src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/02/10093256/barba-la-moda-que-no-se-va-1920-2.jpg"
-      ></v-img>
+      <v-carousel hide-delimiters vertical class="banner-img">
+        <v-carousel-item v-for="(pic,index) in pictures" :key="index" :src="pic"></v-carousel-item>
+      </v-carousel>
     </div>
 
     <!-- INFO -->
@@ -17,10 +15,10 @@
       <h1 class="about_us-title font-title">ACERCA DE NOSOTROS</h1>
       <v-divider inset class="pt-4"></v-divider>
       <div class="about_us-box">
-        <h3 class="font-text pt-4 pb-4">
+        <p class="font-text pt-4 pb-4">
           Art Experience es una empresa que se destaca en el mercado por brindar servicios de calidad dedicados
           a gestion de barberias y administracion de reservas para clientes.
-        </h3>
+        </p>
       </div>
 
       <!-- <div class="owners-content">

@@ -17,10 +17,10 @@ export default class HomeCode extends XComponent {
     }
 
     public pictures: any = [
-        "https://stylesatlife.com/wp-content/uploads/2018/09/Mexican-Haircuts-For-Guys-and-Girls.jpg",
-        "https://root.coreylittle.com/williamsonsource/2017/10/pompadour.jpg",
-        "https://blogocosa.com/wp-content/uploads/2019/05/pompadour-undercut-newest-30-tren-st-undercut-hairstyles-for-men-collection.jpg",
-        "https://media.haircutinspiration.com/photos/20181204005057/Fade-beard-buzzcut-%40patty_cuts.jpg"
+        "http://thebarberjob.com/wp-content/themes/2019-07-29%20The%20Barber%20Job%20Theme%201.3.5/images/Hombre-con-Estilo.jpg",
+        "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/02/10093256/barba-la-moda-que-no-se-va-1920-2.jpg",
+        "https://c.wallhere.com/photos/7f/46/xe2s_fuji35mmf14_fujinon_fujifilm_fuji_portugal_conceptual_portrait-942864.jpg!d"
+
     ];
 
     public services: any = [
