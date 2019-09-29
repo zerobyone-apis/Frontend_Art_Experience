@@ -112,39 +112,23 @@
       width: 100%;
       height: 200px;
       text-align: center;
-      box-align: initial;
-      // overflow: hidden;
-      // overflow-y: scroll;
+      display: inline-block;
 
       .service-item {
         position: relative;
-        width: 150px;
+        width: 160px;
         height: 200px;
-        // display: inline-block;
+        margin: 20px;
         float: left;
-        text-align: center;
-        margin: 10px;
-        background-color: rgba(97, 97, 97, 0.096);
+  
+        .service-icon {
+          position: relative;
+          border-radius: 50%;
+        }
 
-        // .service-image {
-        //   position: relative;
-        //   background-color: #d4d4d45b;
-        //   padding-top: 12px;
-        //   margin: auto;
-        //   width: 50px;
-        //   height: 50px;
-        //   border-radius: 50%;
-        // }
-
-        // .service-name {
-        //   position: relative;
-        //   margin: auto;
-        // }
-
-        // .service-info {
-        //   padding-top: 5px;
-        //   color: #838383fb;
-        // }
+        .service-name {
+          padding-bottom: 10px;
+        }
       }
     }
 

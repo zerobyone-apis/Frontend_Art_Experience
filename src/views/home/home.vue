@@ -44,7 +44,7 @@
 
       <div class="services-box">
         <div class="service-item" v-for="(item,index) in services" :key="index">
-          <v-icon>{{ item.img }}</v-icon>
+          <v-icon class="service-icon">{{ item.img }}</v-icon>
           <h3 class="service-name font-title">{{ item.name }}</h3>
           <p class="service-info font-text">{{ item.info }}</p>
         </div>
