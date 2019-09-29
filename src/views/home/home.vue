@@ -42,22 +42,11 @@
         src="https://wallpapercave.com/wp/wp2541317.jpg"
       ></v-parallax>-->
 
-      <div>
-        <h1 class="font-title pt-4">SERVICIOS</h1>
-        <v-divider inset class="pt-4"></v-divider>
-        <p
-          class="font-text pt-4"
-        >Art Experience brinda servicios de administracion de barberia, reservas, productos y promociones</p>
-
-        <div class="services-content">
-          <div class="service-item" v-for="(item,index) in services" :key="index">
-            <div class="service-image">
-              <v-icon>{{ item.img }}</v-icon>
-            </div>
-            <h3 class="service-name font-title">{{ item.name }}</h3>
-
-            <p class="service-info font-text">{{ item.info }}</p>
-          </div>
+      <div class="services-box">
+        <div class="service-item" v-for="(item,index) in services" :key="index">
+          <v-icon>{{ item.img }}</v-icon>
+          <h3 class="service-name font-title">{{ item.name }}</h3>
+          <p class="service-info font-text">{{ item.info }}</p>
         </div>
       </div>
 

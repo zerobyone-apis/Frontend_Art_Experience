@@ -2,7 +2,7 @@
   width: 100% !important;
   margin-left: 0 !important;
 }
-//this will change
+
 .sm-format,
 .md-format,
 .lg-format,
@@ -22,7 +22,8 @@
     height: 60%;
 
     .banner-img {
-      height: 100%;
+      position: relative;
+      height: 85% !important;
     }
 
     .title {
@@ -33,6 +34,7 @@
       font-size: 40px !important;
       color: white;
     }
+
     .sub-title {
       position: absolute;
       top: 55%;
@@ -40,7 +42,6 @@
       z-index: 1;
       color: white;
     }
-
   }
 
   .info-content {
@@ -51,20 +52,15 @@
     width: 100%;
     height: 100px;
 
-    
     .about_us-title {
       position: relative;
-      // top: 80%;
-      // z-index: 1;
-     }
-     .about_us-box {
-       position: relative;
-       width: 80%;
-      //  top: 90%;
-      //  left: 150px;
-       z-index: 1;
-     }
+    }
 
+    .about_us-box {
+      position: relative;
+      width: 80%;
+      z-index: 1;
+    }
 
     .barber-knife {
       position: absolute;
@@ -72,7 +68,7 @@
       top: 190px;
       height: 400px;
       width: 100%;
-      opacity: 0.2
+      opacity: 0.2;
     }
 
     //////////
@@ -82,7 +78,7 @@
       height: 160px;
       text-align: center;
       display: inline-block;
-      
+
       .owner-item {
         position: relative;
         width: 160px;
@@ -91,7 +87,6 @@
         margin-left: 5px;
         display: inline-block;
         text-align: center;
-        // background-color: aliceblue;  
 
         .owner-image {
           position: relative;
@@ -110,41 +105,46 @@
       }
     }
 
-/////////////
+    /////////////
 
-    .services-content {
+    .services-box {
       position: relative;
       width: 100%;
-      height: 160px;
+      height: 200px;
+      text-align: center;
+      box-align: initial;
+      // overflow: hidden;
+      // overflow-y: scroll;
 
       .service-item {
         position: relative;
-        width: 200px;
-        height: 220px;
-        float: inline-start;
+        width: 150px;
+        height: 200px;
+        // display: inline-block;
+        float: left;
         text-align: center;
         margin: 10px;
-        // background-color: #e2e2e2fb;
-        
-        .service-image {
-          position: relative;
-          background-color: #d4d4d45b;
-          padding-top: 12px;
-          margin: auto;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-        }
+        background-color: rgba(97, 97, 97, 0.096);
 
-        .service-name {
-          position: relative;
-          margin: auto; 
-        }
+        // .service-image {
+        //   position: relative;
+        //   background-color: #d4d4d45b;
+        //   padding-top: 12px;
+        //   margin: auto;
+        //   width: 50px;
+        //   height: 50px;
+        //   border-radius: 50%;
+        // }
 
-        .service-info {
-          padding-top: 5px;
-          color: #838383fb;
-        }
+        // .service-name {
+        //   position: relative;
+        //   margin: auto;
+        // }
+
+        // .service-info {
+        //   padding-top: 5px;
+        //   color: #838383fb;
+        // }
       }
     }
 
