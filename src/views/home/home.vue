@@ -1,5 +1,5 @@
 <template transition="slide-x-transition">
-  <div id="homePage" :class="$vuetify.breakpoint.name+'-format'">
+  <div id="homePage">
     <!-- BANNER  -->
     <div class="banner">
       <p class="title font-title">Art Experience</p>
@@ -47,6 +47,7 @@
           <v-icon class="service-icon">{{ item.img }}</v-icon>
           <h3 class="service-name font-title">{{ item.name }}</h3>
           <p class="service-info font-text">{{ item.info }}</p>
+          <a class="service-url font-text" :href="item.url">{{item.url}}</a>
         </div>
       </div>
 

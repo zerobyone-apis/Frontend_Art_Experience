@@ -27,27 +27,32 @@ export default class HomeCode extends XComponent {
         {
             img: "event",
             name: "Gestion de reservas",
-            info: "La gestion automatizada de las reservas mejora el rendimiento y la facilidad de uso."
+            info: "La gestion automatizada de las reservas mejora el rendimiento y la facilidad de uso.",
+            url:  "Read More"
         },
         {
             img: "home",
             name: "Perfil de la barberia",
-            info: "Tendra toda la informacion de su barberia, incluyendo a sus barberos, productos y promociones"
+            info: "Tendra toda la informacion de su barberia, incluyendo a sus barberos, productos y promociones",
+            url:  "Read More"
         },
         {
             img: "people",
             name: "Perfil del barbero",
-            info: "Contendra toda la informacion del barbero, incluyendo sus trabajos y opiniones de los clientes"
+            info: "Contendra toda la informacion del barbero, incluyendo sus trabajos y opiniones de los clientes",
+            url:  "Read More"
         },
         {
             img: "star",
             name: "Sistema de puntuaciones",
-            info: "Tendra una puntuacion su barberia, la cual aumentara el numero de clientes"
+            info: "Tendra una puntuacion su barberia, la cual aumentara el numero de clientes",
+            url:  "Read More"
         },
         {
             img: "info",
             name: "Notificaciones",
-            info: "Se mantendra informado de toda la actividad de sus clientes"
+            info: "Se mantendra informado de toda la actividad de sus clientes",
+            url:  "Read More"
         }
     ];
 
