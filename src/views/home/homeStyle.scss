@@ -21,13 +21,15 @@
     position: relative;
     margin: auto;
     width: 100%;
-    box-shadow: 2px 2px 2px 2px;
+    // box-shadow: 2px 2px 2px 2px;
     top: 65px;
     margin-bottom: 65px;
 
     .banner-img {
       position: relative;
       height: 100%;
+      background-image: linear-gradient(#ff9d2f, #ff6126);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
     }
 
     .title {
@@ -45,15 +47,6 @@
       top: 55%;
       left: 15%;
       color: white;
-    }
-
-    .div-cut {
-      position: absolute;
-      width: 110%;
-      height: 300px;
-      bottom: -200px;
-      background-color: rgb(255, 255, 255);
-      transform: rotateZ(-5deg);
     }
   }
 
@@ -137,25 +130,12 @@
     }
   }
 
-  .decorator-paralax {
-    .div-cut-top {
-      position: absolute;
-      width: 160%;
-      left: 10px;
-      height: 300px;
-      top: -200px;
-      background-color: rgb(255, 255, 255);
-      transform: rotateZ(5deg);
-    }
-    .div-cut-bottom {
-      position: absolute;
-      width: 160%;
-      left: 10px;
-      height: 300px;
-      bottom: -200px;
-      background-color: rgb(255, 255, 255);
-      transform: rotateZ(-5deg);
-    }
+  //DECORATOR - center of the page
+  .decoration-box {
+    position: relative;
+    // height: 300px;
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
   }
 
   //services
@@ -186,6 +166,7 @@
       .service-item {
         position: relative;
         margin: 5px;
+        margin-top: 20px;
         width: 300px;
         height: 280px;
         display: inline-table;
@@ -220,7 +201,7 @@
   .footer {
     position: relative;
     width: 100%;
-    height: 200px; //delete this
+    height: 200px; //delete this when end the footer design
     padding: 20px;
     margin-top: 100px;
     background-color: #66666657;
@@ -233,7 +214,6 @@
     .footer-social {
       position: relative;
       width: 100%;
-      // background-color: red;
       text-align: center;
 
       .social-logo {
