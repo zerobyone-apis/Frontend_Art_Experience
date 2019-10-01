@@ -17,90 +17,73 @@ export default class HomeCode extends XComponent {
     }
 
     public pictures: any = [
-        "http://thebarberjob.com/wp-content/themes/2019-07-29%20The%20Barber%20Job%20Theme%201.3.5/images/Hombre-con-Estilo.jpg",
-        "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/02/10093256/barba-la-moda-que-no-se-va-1920-2.jpg",
+        "https://mybarbershopbroward.files.wordpress.com/2016/09/barber-wallpaper-23.jpg",
         "https://c.wallhere.com/photos/7f/46/xe2s_fuji35mmf14_fujinon_fujifilm_fuji_portugal_conceptual_portrait-942864.jpg!d"
-
     ];
 
     public services: any = [
         {
-            img: "event",
+            icon: "event",
             name: "Gestion de reservas",
             info: "La gestion automatizada de las reservas mejora el rendimiento y la facilidad de uso.",
-            url:  "Read More"
+            url: "Read More"
         },
         {
-            img: "home",
+            icon: "home",
             name: "Perfil de la barberia",
             info: "Tendra toda la informacion de su barberia, incluyendo a sus barberos, productos y promociones",
-            url:  "Read More"
+            url: "Read More"
         },
         {
-            img: "people",
+            icon: "people",
             name: "Perfil del barbero",
             info: "Contendra toda la informacion del barbero, incluyendo sus trabajos y opiniones de los clientes",
-            url:  "Read More"
+            url: "Read More"
         },
         {
-            img: "star",
+            icon: "star",
             name: "Sistema de puntuaciones",
             info: "Tendra una puntuacion su barberia, la cual aumentara el numero de clientes",
-            url:  "Read More"
+            url: "Read More"
         },
         {
-            img: "info",
+            icon: "info",
             name: "Notificaciones",
             info: "Se mantendra informado de toda la actividad de sus clientes",
-            url:  "Read More"
+            url: "Read More"
         }
     ];
 
 
-    public customers: any = [
+    public employees: any = [
         {
             info: {
-              name: "ZeroByOne",
-              job: "CEO",
-              email: "zerobyone@gmail.com",
-              phone: "099 999 999",
-              stars: 5
+                name: "Maximiliano Olivero",
+                job: "FullStack Developer",
+                instagram: "https://www.instagram.com/zero_by_one/",
+                facebook: "https://www.facebook.com/profile.php?id=100010314702327"
             },
             picture: {
-              img: "http://es.web.img3.acsta.net/r_640_360/newsv7/16/04/15/12/49/422146.jpg",
-              scala: 100,
-              x: 0,
-              y: 0
-            },
-            banner: {
-              img: "https://s.yimg.com/ny/api/res/1.2/OoBy44.dLtaLgobVIO7fNA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NzQ0O2g9Mzcy/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d4345e2367382e3b40a1e43f5016972b",
-              scala: 100,
-              x: 0,
-              y: 0
+                img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/ee793e4d2e3c93a0ab9bc4f4ae14f239/5E3690D5/t51.2885-19/s150x150/51832663_382908072507752_2052880357581127680_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+                scala: 100,
+                x: 0,
+                y: 0
             }
-          },
-    
-          {
+        },
+        {
             info: {
-              name: "Damian Rodriguez",
-              job: "CEO",
-              email: "damianezretirl1@gmail.com",
-              phone: "099 999 999",
-              stars: 4
+                name: "Damian Rodriguez",
+                job: "Fullstack Developer",
+                instagram: "https://www.instagram.com/damianezetiel/",
+                facebook: "https://www.facebook.com/TheUniqueDesign"
             },
             picture: {
-              img: "https://i.ytimg.com/vi/9aFVSkncq00/maxresdefault.jpg",
-              scala: 100,
-              x: 0,
-              y: 0
-            },
-            banner: {
-              img: "https://diarioavance.com/wp-content/uploads/2017/03/matrix.jpg",
-              scala: 100,
-              x: 0,
-              y: 0
+                img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/1e189700600076f5dee4867e46e34909/5E1822F5/t51.2885-19/s150x150/14478313_1450150071665952_6746916811926667264_a.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+                scala: 100,
+                x: 0,
+                y: 0
             }
-          }
+        },
     ];
 
     public home: any = {

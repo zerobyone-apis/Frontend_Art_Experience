@@ -5,55 +5,66 @@
       <p class="title font-title">Art Experience</p>
       <p class="sub-title font-title">gestion de Barbershops</p>
 
-      <v-carousel hide-delimiters vertical class="banner-img">
+      <v-carousel class="banner-img" :show-arrows="false" hide-delimiter-background hide-delimiters>
         <v-carousel-item v-for="(pic,index) in pictures" :key="index" :src="pic"></v-carousel-item>
       </v-carousel>
     </div>
 
-    <!-- INFO -->
-    <div class="info-content">
+    <div class="about_us-box">
       <h1 class="about_us-title font-title">ACERCA DE NOSOTROS</h1>
-      <v-divider inset class="pt-4"></v-divider>
-      <div class="about_us-box">
-        <p class="font-text pt-4 pb-4">
-          Art Experience es una empresa que se destaca en el mercado por brindar servicios de calidad dedicados
-          a gestion de barberias y administracion de reservas para clientes.
-        </p>
-      </div>
+      <p class="about_us-text font-text pt-4 pb-4">
+        Art Experience es una empresa que se destaca en el mercado por brindar servicios de calidad dedicados
+        a gestion de barberias y administracion de reservas para clientes.
+      </p>
 
-      <!-- <div class="owners-content">
-        <div class="owner-item" v-for="(item,index) in customers" :key="index">
-          <div>
-            <v-img class="owner-image" :src="item.picture.img" aspect-ratio="1"></v-img>
+      <div class="employees-list">
+        <div class="employee-item" v-for="(item,index) in employees" :key="index">
+          <v-img class="employee-img" :src="item.picture.img" aspect-ratio="1"></v-img>
+          <p class="employee-name">{{ item.info.name }}</p>
+          <p class="employee-info">{{ item.info.job }}</p>
+
+          <div class="employee-social">
+            <a :href="item.info.instagram">
+              <v-img class="social-logo" :src="icons.instagram"></v-img>
+            </a>
+            <a :href="item.info.facebook">
+              <v-img class="social-logo" :src="icons.facebook"></v-img>
+            </a>
           </div>
-          <p class="owner-name font-text">{{ item.info.name }}</p>
-          <p class="owner-name font-text">{{ item.info.job }}</p>
-        </div>
-      </div>-->
-
-      <!-- <v-img
-        class="barber-knife"
-        aspect-rato="1"
-        src="https://http2.mlstatic.com/navaja-barberia-afeitar-D_NQ_NP_721089-MLA31605916965_072019-F.jpg"
-      ></v-img>-->
-
-      <!-- <v-parallax class="barber-knife"
-        height="600"
-        src="https://wallpapercave.com/wp/wp2541317.jpg"
-      ></v-parallax>-->
-
-      <div class="services-box">
-        <div class="service-item" v-for="(item,index) in services" :key="index">
-          <v-icon class="service-icon">{{ item.img }}</v-icon>
-          <h3 class="service-name font-title">{{ item.name }}</h3>
-          <p class="service-info font-text">{{ item.info }}</p>
-          <a class="service-url font-text" :href="item.url">{{item.url}}</a>
         </div>
       </div>
+    </div>
 
-      <!-- <v-carousel>
-        <v-carousel-item v-for="(pic,index) in pictures" :key="index" :src="pic"></v-carousel-item>
-      </v-carousel>-->
+    <div class="services-box">
+      <h1 class="services-title font-title">NUESTROS SERVICIOS</h1>
+      <p
+        class="services-text font-text pt-4 pb-4"
+      >Brindamos servicios de calidad que facilitan su trabajo y aumenta su productividad.</p>
+
+      <div class="services-list">
+        <div class="service-item" v-for="(item,index) in services" :key="index">
+          <v-icon class="service-icon">{{ item.icon }}</v-icon>
+          <p class="service-name">{{ item.name }}</p>
+          <p class="service-info">{{ item.info }}</p>
+          <p class="service-url">Ver mas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="logo">Art Experience</p>
+      <p class="footer-bussiness">© 2019 Art Experience</p>
+
+      <p class="footer-email">artexperience@gmail.com</p>
+
+      <div class="footer-social">
+        <a href>
+          <v-img class="social-logo" :src="icons.instagram"></v-img>
+        </a>
+        <a href>
+          <v-img class="social-logo" :src="icons.facebook"></v-img>
+        </a>
+      </div>
     </div>
   </div>
 </template>

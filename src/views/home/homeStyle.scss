@@ -12,347 +12,222 @@
 }
 
 #homePage {
-  position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
+  position: absolute;
   height: 100%;
-  width: 90%;
-  background-color: rgb(99, 97, 100);
-  border-block: border-box;
-  box-shadow: 0px 0px 5px 5px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
 
   .banner {
     position: relative;
     margin: auto;
-    width: 90%;
-    height: 60%;
-    box-shadow: 24px 24px 24px 24px;
+    width: 100%;
+    box-shadow: 2px 2px 2px 2px;
+    top: 65px;
+    margin-bottom: 65px;
 
     .banner-img {
       position: relative;
-      height: 85% !important;
+      height: 100%;
     }
 
     .title {
       position: absolute;
-      top: 60%;
-      left: 10%;
       z-index: 1;
+      top: 45%;
+      left: 10%;
       font-size: 40px !important;
       color: white;
     }
 
     .sub-title {
       position: absolute;
-      top: 67%;
-      left: 15%;
       z-index: 1;
+      top: 55%;
+      left: 15%;
       color: white;
     }
   }
 
-  .info-content {
+  .about_us-box {
     position: relative;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
     width: 100%;
-    height: 100px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    // background-color: #504e4ebb;
 
     .about_us-title {
       position: relative;
+      top: 40px;
     }
 
-    .about_us-box {
+    .about_us-text {
       position: relative;
-      width: 80%;
-      z-index: 1;
+      top: 40px;
+      font-size: 18px;
     }
 
-    .barber-knife {
-      position: absolute;
-      left: 0px;
-      top: 190px;
-      height: 400px;
-      width: 100%;
-      opacity: 0.2;
-    }
-
-    //////////
-    .owners-content {
+    .employees-list {
       position: relative;
       width: 100%;
-      height: 160px;
+      top: 20px;
+      padding: 10px;
       text-align: center;
-      display: inline-block;
 
-      .owner-item {
+      .employee-item {
         position: relative;
-        width: 160px;
-        height: 130px;
-        padding-top: 5px;
-        margin-left: 5px;
-        display: inline-block;
+        margin: 5px;
+        width: 300px;
+        height: 280px;
+        display: inline-table;
         text-align: center;
 
-        .owner-image {
-          position: relative;
-          background-color: #d4d4d45b;
-          padding-top: 12px;
-          margin: auto;
-          width: 100px;
-          height: 100px;
-          border-radius: 10px;
-        }
-
-        .owner-name {
-          position: relative;
-          margin: auto;
-        }
-      }
-    }
-
-    /////////////
-
-    .services-box {
-      position: relative;
-      width: 100%;
-      height: max-content;
-      text-align: center;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
-      grid-template-rows: auto;
-      grid-gap: 0 25px;
-      background: #683faabb;
-
-      .service-item {
-        position: relative;
-        height: 200px;
-        background:#2c334d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #000;
-        margin: 10px;
-        
-        .service-icon {
-          position: relative;
+        .employee-img {
           border-radius: 50%;
-        }
-
-        .service-name {
-          //padding-bottom: 10px;
-          position: absolute;
-          top: -60px;
-          right: 20px;
-          margin: 0;
-          padding: 0;
-          font-size: 2em;
-          color:rgba(255,255,255,.10);
-          transition: 0.5s; 
-        }
-        .service-name:hover{
-          top:-140px;
-         } 
-      
-        .service-info{
+          width: 150px;
+          height: 150px;
           margin: auto;
-        
+          border-width: 4px;
+          border-style: solid;
+          border-color: #c9c7c744;
+        }
+
+        .employee-name {
+          margin-top: 10px;
           font-size: 16px;
-          font-weight: 500;
-          color:#fff;
-         }
-        .service-url a{
-          position: relative;
-          margin: 20px 0 0;
-          padding: 10px 20px;
-          text-decoration: none;
-          border: 1px solid #fff;
-          display: inline-block;
-          color:rgb(190, 156, 156);
-          transition: 0.5s;
-          transform: translateY(-40px);
-          opacity: 1;
-          visibility: hidden;
-        } 
-        .service-url a:hover{
-          transform: translateY(0);
-          opacity: 1;
-          visibility: visible;
         }
-      }
-    }
 
-    .customers-box {
-      position: relative;
-      top: 50px;
-
-      .customers-content {
-        position: relative;
-        width: 100%;
-        height: 240px;
-
-        .customers {
-          top: 20px;
-          position: absolute;
-          width: 100%;
-          height: 220px;
-          border-top-width: 2px;
-
-          .customers-profiles {
-            position: relative;
-            width: 100%;
-            height: 220px;
-            text-align: center;
-            display: inline-block;
-            overflow: hidden;
-            // overflow-y: scroll;
-
-            .profile-box {
-              position: relative;
-              width: 200px;
-              height: 50px;
-              display: inline-block;
-              text-align: center;
-              margin-left: 10px;
-              background-color: white;
-
-              .picture-background {
-                position: relative;
-                width: 100%;
-                height: 50%;
-                background-color: white;
-              }
-
-              .info-box {
-                position: relative;
-                width: 100%;
-                height: 50%;
-                background-color: white;
-                text-align: center;
-
-                .profile-picture:hover {
-                  border-style: solid;
-                }
-
-                .profile-picture {
-                  // position: absolute;
-                  top: -30px;
-                  margin: auto;
-                  width: 100px;
-                  height: 100px;
-                  border-style: solid;
-                  border-color: white;
-                  border-radius: 50%;
-                }
-
-                .barber-profile-text {
-                  position: relative;
-                  font-size: 12px;
-                  // bottom: 5px;
-                }
-              }
-            }
-          }
+        .employee-info {
+          color: #504e4ebb;
         }
-      
-        .barbershop-actions {
+
+        .employee-social {
           position: relative;
           width: 100%;
-          height: 50px; //var responsivity - height
-          background-color: rgb(42, 42, 42);
-          display: inline-block;
-          text-align: right;
-          padding-top: 10px;
 
-          .action-logo {
+          .social-logo {
             position: relative;
-            margin-right: 20px;
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
             display: inline-block;
-            background-color: #d4d4d4;
-            border-color: #d4d4d4;
+            margin: 0 20px 0 20px;
+            background-color: white;
+            border-color: white;
             border-radius: 10px;
             border-style: solid;
             border-width: 2px;
             cursor: pointer;
           }
-
-          .btn-reservation {
-            position: relative;
-            margin-right: 10px;
-            height: 20px;
-            bottom: 10px;
-            background-color: #d4d4d4;
-          }
         }
 
-        .barbershop-content-presentation {
-          height: 200px;
-
-          .barbershop-content-info {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            text-align: left;
-            padding-left: 10px;
-          }
-
-          .barbershop-content-pictures {
-            position: relative;
-            width: 100%;
-            height: 200px;
-          }
-        }
-
-        .barbershop-content-recomendation {
-          position: relative;
-          width: 100%;
-          height: 400px;
-          margin-top: 10px;
-          border-top-width: 10px;
-          border-top-style: solid;
-          background-color: rgb(42, 42, 42);
-          border-top-color: rgb(50, 50, 50);
+        .employee-url {
+          position: absolute;
+          bottom: 0px;
+          margin-left: 40%;
         }
       }
     }
+  }
 
-    .services {
+  .services-box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    margin-top: 100px;
+    background-color: #dfdfdf57;
+
+    .services-title {
+      top: 40px;
+      text-align: center;
+    }
+
+    .services-text {
+      top: 40px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .services-list {
       position: relative;
-      top: 50px;
       width: 100%;
-      height: 200px;
+      top: 20px;
+      padding: 10px;
+      text-align: center;
+
+      .service-item {
+        position: relative;
+        margin: 5px;
+        width: 300px;
+        height: 280px;
+        display: inline-table;
+        text-align: center;
+        font-size: 16px;
+
+        .service-icon {
+          font-size: 80px;
+          color: #424242bb;
+        }
+
+        .service-name {
+          margin-bottom: 20px;
+        }
+
+        .service-info {
+          margin-left: 10px;
+          color: #504e4ebb;
+        }
+
+        .service-url {
+          position: absolute;
+          bottom: 0px;
+          margin-left: 40%;
+        }
+      }
     }
   }
 
-  // .font-info-title {
-  //   color: #1817177a;
-  //   // border-bottom: 2px solid #cecece4f;
-  //   padding-bottom: 10px;
-  //   line-height: 120%;
-  //   font-size: 26px !important;
-  //   font-family: Oswald !important;
-  //   font-style: normal;
-  //   letter-spacing: 2px;
-  // }
+  //footer
+  .footer {
+    position: relative;
+    width: 100%;
+    height: 200px; //delete this
+    padding: 20px;
+    margin-top: 100px;
+    background-color: #66666657;
 
-  // .font-info {
-  //   color: #1817177a;
-  //   // border-bottom: 2px solid #cecece4f;
-  //   padding-bottom: 10px;
-  //   line-height: 120%;
-  //   font-size: 16px !important;
-  //   font-family: Oswald !important;
-  //   font-style: normal;
-  //   letter-spacing: 2px;
-  //   text-shadow: 1px 1px 1px rgb(221, 221, 221);
-  // }
+    .footer-bussiness {
+      position: relative;
+      text-align: center;
+    }
 
-  // .font-info-small {
-  //   margin-bottom: -1px;
-  //   font-style: italic;
-  //   font-size: 11px;
-  // }
+    .logo {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .footer-social {
+      position: relative;
+      width: 100%;
+      // background-color: red;
+      text-align: center;
+
+      .social-logo {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: 0 20px 0 20px;
+        background-color: white;
+        border-color: white;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 2px;
+        cursor: pointer;
+      }
+    }
+    
+    .footer-email {
+      text-align: center;
+    }
+  }
 }
