@@ -3,24 +3,46 @@
   margin-left: 0 !important;
 }
 //this will change
-.sm-format,.md-format,.lg-format,.xl-format {
+.sm-format,
+.md-format,
+.lg-format,
+.xl-format {
   width: 60%;
   margin-left: 20%;
 }
 
-
 #toolbar {
+  padding-top: 0px;
+  padding-right: 5%;
+  padding-bottom: 0px;
+  padding-left: 5%;
+
   .logo {
     cursor: pointer;
     width: 120px;
     height: 25px;
-  //  background-color: rgba(0, 0, 0, 0.685);
   }
 
-  .menuItems {
-    position: absolute;
-    left: 200px;
+  .toolbar-items {
+    margin: auto;
   }
+
+  .right-box {
+    float: right;
+    display: block;
+    margin-left: 15px;
+    float: left;
+  }
+
+  // .menuItems {
+  //   position: absolute;
+  //   left: 200px;
+
+  //   .toolbar-button_reservation {
+  //     position: relative;
+  //     right: 0px !important;
+  //   }
+  // }
 
   .toolbar-button.v-btn {
     font-size: 12px;

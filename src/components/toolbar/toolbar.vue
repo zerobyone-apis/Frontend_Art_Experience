@@ -1,44 +1,37 @@
 <template v-cloak>
-  <v-toolbar id="toolbar" :class="$vuetify.breakpoint.name+'-format'" fixed flat height="60px" color="rgba(0, 0, 0, 0.685)">
-    <!-- LEFT MENU BUTTON  -->
+  <v-toolbar id="toolbar" fixed light height="65px">
+    <!-- LEFT MENU - BUTTON  -->
     <v-toolbar-side-icon
       :style="{'color' : theme.colors.navIcons}"
       @click.native.stop="leftDrawer = true"
     ></v-toolbar-side-icon>
 
     <!-- LOGO  -->
-    <img class="logo" src="@/assets/logo.png" @click.stop="pageRouter('/')" alt="Avatar" />
+    <v-toolbar-title @click.stop="pageRouter('/')">
+      Art Experience
+      <!-- <img class="logo" src="@/assets/logo.png" @click.stop="pageRouter('/')" alt="Avatar" /> -->
+    </v-toolbar-title>
 
-    <v-spacer></v-spacer>
+    <div class="flex-grow-1"></div>
 
-    <!-- <v-avatar v-if="false" size="40px" style="cursor: pointer">
-      <img src="@/assets/user.jpg" alt="Avatar" />
-    </v-avatar> -->
-
-    <div class="menuItems hidden-xs-only hidden-sm-only">
-      <!--list items menu-->
-      <v-btn dark flat small class="toolbar-button" v-for="(item, index) in filteredConf" :key="index" @click="pageRouter(item.route)">
+    <v-toolbar-items class="toolbar-items">
+      <v-btn
+        flat
+        small
+        class="toolbar-button"
+        v-for="(item, index) in filteredConf"
+        :key="index"
+        @click="pageRouter(item.route)"
+      >
         <v-icon>{{ item.icon }}</v-icon>
         <span>{{ $i18n.t(item.name) }}</span>
       </v-btn>
+    </v-toolbar-items>
+
+    <div class="right-box">
+      <v-btn outline class="toolbar-button">RESERVAR</v-btn>
     </div>
 
-    <!--NOTIFICATIONS-->
-    <v-menu avatar nudge-top="-53px" right>
-      <v-btn icon slot="activator" light>
-        <v-icon :color="theme.colors.navIcons">notifications</v-icon>
-      </v-btn>
-
-      <v-list>
-        <v-list-tile @click v-for="item in notifications" :key="item.name">
-          <v-list-tile-action class="pl-3">
-            <v-list-tile-title>
-              <span>{{ item.name }}</span>
-            </v-list-tile-title>
-          </v-list-tile-action>
-        </v-list-tile>
-      </v-list>
-    </v-menu>
   </v-toolbar>
 </template>
 
