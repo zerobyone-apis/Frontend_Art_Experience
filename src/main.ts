@@ -7,8 +7,13 @@ import VueI18n from "vue-i18n";
 import Locale from "./locale";
 import Croppa from 'vue-croppa';
 import 'vue-croppa/dist/vue-croppa.css';
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 Vue.use(Croppa);
 Vue.use(VueI18n);
+AOS.init({ disable: "phone" });
 
 const i18n = new VueI18n({
   locale: store.state.lang, // set locale

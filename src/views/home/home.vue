@@ -5,7 +5,7 @@
       <p class="title font-title">Art Experience</p>
       <p class="sub-title font-title">gestion de Barbershops</p>
 
-      <v-carousel class="banner-img" :show-arrows="false" hide-delimiter-background hide-delimiters>
+      <v-carousel height="730" class="banner-img" :show-arrows="false" hide-delimiter-background hide-delimiters>
         <v-carousel-item v-for="(pic,index) in pictures" :key="index" :src="pic"></v-carousel-item>
       </v-carousel>
 
@@ -13,14 +13,24 @@
     </div>
     <!-- about us -->
     <div class="about_us-box">
-      <h1 class="about_us-title font-title">ACERCA DE NOSOTROS</h1>
-      <p class="about_us-text font-text pt-4 pb-4">
+      <h1
+        class="about_us-title font-title"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >ACERCA DE NOSOTROS</h1>
+      <p class="about_us-text font-text pt-4 pb-4" data-aos="fade-up" data-aos-duration="600">
         Art Experience es una empresa que se destaca en el mercado por brindar servicios de calidad dedicados
         a gestion de barberias y administracion de reservas para clientes.
       </p>
       <!-- list employees  -->
       <div class="employees-list">
-        <div class="employee-item" v-for="(item,index) in employees" :key="index">
+        <div
+          class="employee-item"
+          v-for="(item,index) in employees"
+          :key="index"
+          data-aos="fade-up"
+          data-aos-duration="600"
+        >
           <v-img class="employee-img" :src="item.picture.img" aspect-ratio="1"></v-img>
           <p class="employee-name">{{ item.info.name }}</p>
           <p class="employee-info">{{ item.info.job }}</p>
@@ -38,8 +48,7 @@
     </div>
     <!-- center decorator -->
     <div class="decoration-box">
-      <v-parallax class="paralax" src="https://kontinent.se/wp-content/uploads/Barbershop_7.jpg">
-      </v-parallax>
+      <v-parallax class="paralax" src="https://kontinent.se/wp-content/uploads/Barbershop_7.jpg"></v-parallax>
 
       <!-- <div class="div-cut-top"></div>
       <div class="div-cut-bottom"></div>-->
@@ -47,12 +56,24 @@
 
     <!-- services -->
     <div class="services-box">
-      <h1 class="services-title font-title">NUESTROS SERVICIOS</h1>
+      <h1
+        class="services-title font-title"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >NUESTROS SERVICIOS</h1>
       <p
         class="services-text font-text pt-4 pb-4"
+        data-aos="fade-up"
+        data-aos-duration="600"
       >Brindamos servicios de calidad que facilitan su trabajo y aumenta su productividad.</p>
       <div class="services-list">
-        <div class="service-item" v-for="(item,index) in services" :key="index">
+        <div
+          class="service-item"
+          v-for="(item,index) in services"
+          :key="index"
+          data-aos="fade-right"
+          data-aos-offset="50"
+        >
           <v-icon class="service-icon">{{ item.icon }}</v-icon>
           <p class="service-name">{{ item.name }}</p>
           <p class="service-info">{{ item.info }}</p>
@@ -61,8 +82,8 @@
       </div>
     </div>
     <!-- footer -->
-    <div class="footer">
-      <p class="logo">Art Experience</p>
+    <div class="footer" data-aos="fade-top" data-aos-offset="50">
+      <p class="logo" data-aos="fade-up" data-aos-duration="600">Art Experience</p>
       <p class="footer-email">artexperience@gmail.com</p>
       <div class="footer-social">
         <a href>

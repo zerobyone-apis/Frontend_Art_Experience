@@ -55,7 +55,7 @@
     width: 100%;
     text-align: center;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: -70px;
 
     .about_us-title {
       position: relative;
@@ -135,7 +135,7 @@
     position: relative;
     // height: 300px;
     background-image: linear-gradient(#ff9d2f, #ff6126);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
   }
 
   //services
@@ -143,7 +143,7 @@
     position: relative;
     width: 100%;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: -70px;
 
     .services-title {
       top: 40px;
@@ -168,13 +168,13 @@
         margin: 5px;
         margin-top: 20px;
         width: 300px;
-        height: 280px;
+        height: 240px;
         display: inline-table;
         text-align: center;
         font-size: 16px;
 
         .service-icon {
-          font-size: 80px;
+          font-size: 40px;
           color: #424242bb;
         }
 

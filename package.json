@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "axios": "^0.18.0",
     "vee-validate": "^2.2.11",
     "vue": "^2.6.6",
