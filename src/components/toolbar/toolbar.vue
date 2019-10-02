@@ -1,10 +1,10 @@
 <template v-cloak>
   <v-toolbar id="toolbar" fixed light height="65px">
     <!-- LEFT MENU - BUTTON  -->
-    <v-toolbar-side-icon
+    <!-- <v-toolbar-side-icon
       :style="{'color' : theme.colors.navIcons}"
       @click.native.stop="leftDrawer = true"
-    ></v-toolbar-side-icon>
+    ></v-toolbar-side-icon>-->
 
     <!-- LOGO  -->
     <v-toolbar-title @click.stop="pageRouter('/')">
@@ -15,12 +15,15 @@
     <div class="flex-grow-1"></div>
 
     <v-toolbar-items class="toolbar-items">
+      <!-- <a href="/#anchor">Link to anchor</a> -->
+
       <v-btn
         flat
         small
         class="toolbar-button"
         v-for="(item, index) in filteredConf"
         :key="index"
+        :href="item.href"
         @click="pageRouter(item.route)"
       >
         <v-icon>{{ item.icon }}</v-icon>
@@ -31,7 +34,6 @@
     <div class="right-box">
       <v-btn outline class="toolbar-button">RESERVAR</v-btn>
     </div>
-
   </v-toolbar>
 </template>
 
