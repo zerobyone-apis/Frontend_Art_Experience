@@ -4,6 +4,11 @@ import User from "../../models/User";
 
 export default class HomeCode extends XComponent {
 
+    private homeInfo: any = {
+        number: "099 999 999",
+        email: "artexperience@gmail.com"
+    }
+
     private loginFields: any = {
         login: [
             { text: "username", icon: "account_circle", value: "" },
@@ -19,6 +24,38 @@ export default class HomeCode extends XComponent {
     public pictures: any = [
         "https://mybarbershopbroward.files.wordpress.com/2016/09/barber-wallpaper-23.jpg",
         "https://c.wallhere.com/photos/7f/46/xe2s_fuji35mmf14_fujinon_fujifilm_fuji_portugal_conceptual_portrait-942864.jpg!d"
+    ];
+
+    public employees: any = [
+        {
+            info: {
+                name: "Maximiliano Olivero",
+                job: "FullStack Developer",
+                instagram: "https://www.instagram.com/zero_by_one/",
+                facebook: "https://www.facebook.com/profile.php?id=100010314702327"
+            },
+            picture: {
+                img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/ee793e4d2e3c93a0ab9bc4f4ae14f239/5E3690D5/t51.2885-19/s150x150/51832663_382908072507752_2052880357581127680_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+                scala: 100,
+                x: 0,
+                y: 0
+            }
+        },
+        {
+            info: {
+                name: "Damian Rodriguez",
+                job: "Fullstack Developer",
+                instagram: "https://www.instagram.com/damianezetiel/",
+                facebook: "https://www.facebook.com/TheUniqueDesign"
+            },
+            picture: {
+                img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/1e189700600076f5dee4867e46e34909/5E1822F5/t51.2885-19/s150x150/14478313_1450150071665952_6746916811926667264_a.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+                scala: 100,
+                x: 0,
+                y: 0
+            }
+        },
+        
     ];
 
     public services: any = [
@@ -54,36 +91,31 @@ export default class HomeCode extends XComponent {
         }
     ];
 
-
-    public employees: any = [
+    public courses: any = [
         {
-            info: {
-                name: "Maximiliano Olivero",
-                job: "FullStack Developer",
-                instagram: "https://www.instagram.com/zero_by_one/",
-                facebook: "https://www.facebook.com/profile.php?id=100010314702327"
-            },
-            picture: {
-                img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/ee793e4d2e3c93a0ab9bc4f4ae14f239/5E3690D5/t51.2885-19/s150x150/51832663_382908072507752_2052880357581127680_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
-                scala: 100,
-                x: 0,
-                y: 0
-            }
+            icon: "event",
+            img: "https://www.inquirer.com/resizer/orhvGzXeXNLr2xpL6_d81Lv-IQE=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/PTR2I5SGUNHJJGUGMHSGXFFCKU.jpg",
+            name: "Basico",
+            duration: "3 meses",
+            info: "Curso basico de corte y estilo.",
+            url: "Read More"
         },
         {
-            info: {
-                name: "Damian Rodriguez",
-                job: "Fullstack Developer",
-                instagram: "https://www.instagram.com/damianezetiel/",
-                facebook: "https://www.facebook.com/TheUniqueDesign"
-            },
-            picture: {
-                img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/1e189700600076f5dee4867e46e34909/5E1822F5/t51.2885-19/s150x150/14478313_1450150071665952_6746916811926667264_a.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
-                scala: 100,
-                x: 0,
-                y: 0
-            }
+            icon: "home",
+            img: "https://static.wixstatic.com/media/bd10eec5564a47b78638ff005f18261d.jpg/v1/crop/x_1203,y_720,w_6156,h_4191/fill/w_602,h_600,al_c,q_85,usm_0.66_1.00_0.01/Barber%20Shop.webp",
+            name: "Perfeccionamiento",
+            duration: "4 meses",
+            info: "Curso de perfeccionamiento de corte y estilo.",
+            url: "Read More"
         },
+        {
+            icon: "people",
+            img:"https://hairstyleonpoint.com/wp-content/uploads/2017/04/v-shaped-low-fade-mens-haircut.jpg",
+            name: "Avanzado",
+            duration: "5 meses",
+            info: "Curso avanzado de corte y estilo.",
+            url: "Read More"
+        }
     ];
 
     public home: any = {

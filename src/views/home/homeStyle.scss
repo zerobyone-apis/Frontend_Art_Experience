@@ -17,11 +17,39 @@
   width: 100%;
   background-color: rgb(255, 255, 255);
 
+  //DECORATOR - center of the page - right
+  .decoration-box_rigth {
+    position: relative;
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+  }
+  //DECORATOR - center of the page - left
+  .decoration-box_left {
+    position: relative;
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+  }
+  //SOCIAL LOGO - only style, no position
+  .social-logo {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+  }
+  //ANCHORS - indicators of position
+  .anchor {
+    position: relative;
+    bottom: 100px;
+  }
+
   .banner {
     position: relative;
     margin: auto;
     width: 100%;
-    // box-shadow: 2px 2px 2px 2px;
     top: 65px;
     margin-bottom: 65px;
 
@@ -55,7 +83,7 @@
     width: 100%;
     text-align: center;
     padding: 20px;
-    margin-top: -70px;
+    margin-top: -50px;
 
     .about_us-title {
       position: relative;
@@ -106,18 +134,10 @@
           position: relative;
           width: 100%;
 
-          .social-logo {
+          .employee-social-logo {
             position: relative;
-            width: 30px;
-            height: 30px;
             display: inline-block;
             margin: 0 20px 0 20px;
-            background-color: white;
-            border-color: white;
-            border-radius: 10px;
-            border-style: solid;
-            border-width: 2px;
-            cursor: pointer;
           }
         }
 
@@ -130,20 +150,12 @@
     }
   }
 
-  //DECORATOR - center of the page
-  .decoration-box {
-    position: relative;
-    // height: 300px;
-    background-image: linear-gradient(#ff9d2f, #ff6126);
-    clip-path: polygon(0 50%, 100% 100%, 100% 0);
-  }
-
   //services
   .services-box {
     position: relative;
     width: 100%;
     padding: 20px;
-    margin-top: -70px;
+    margin-top: -50px;
 
     .services-title {
       top: 40px;
@@ -167,7 +179,7 @@
         position: relative;
         margin: 5px;
         margin-top: 20px;
-        width: 300px;
+        width: 250px;
         height: 240px;
         display: inline-table;
         text-align: center;
@@ -197,6 +209,101 @@
     }
   }
 
+  //courses
+  .courses-box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    margin-top: -50px;
+
+    .courses-title {
+      top: 40px;
+      text-align: center;
+    }
+
+    .courses-text {
+      top: 40px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .courses-list {
+      position: relative;
+      width: 100%;
+      top: 20px;
+      padding: 10px;
+      text-align: center;
+
+      .course-item {
+        position: relative;
+        margin: 5px;
+        margin-top: 20px;
+        width: 200px;
+        height: 320px;
+        display: inline-table;
+        text-align: center;
+        font-size: 16px;
+        // background-color: #ff6126;
+
+        .course-name {
+          // margin-bottom: 20px;
+        }
+
+        .course-img {
+          width: 100%;
+          height: 100px;
+        }
+
+        .course-duration {
+          // margin-left: 10px;
+          color: #504e4ebb;
+        }
+
+        .course-info {
+          margin-left: 10px;
+          color: #504e4ebb;
+        }
+
+        .course-url {
+          position: absolute;
+          bottom: 0px;
+          margin-left: 40%;
+          color: #3b3b3bbb;
+        }
+      }
+    }
+  }
+
+  .contact_us-box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    margin-top: -50px;
+
+    .contact_us-title {
+      top: 40px;
+      text-align: center;
+    }
+
+    .contact_us-text {
+      top: 40px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .contact_us-wpp {
+      position: relative;
+      margin: auto;
+      cursor: none;
+    }
+
+    .contact_us-number {
+      top: 40px;
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
   //footer
   .footer {
     position: relative;
@@ -216,18 +323,11 @@
       width: 100%;
       text-align: center;
 
-      .social-logo {
+      .footer-social-logo {
         position: relative;
-        width: 25px;
-        height: 25px;
         display: inline-block;
         margin: 0 20px 0 20px;
-        background-color: white;
-        border-color: white;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 2px;
-        cursor: pointer;
+        border-style: none;
       }
     }
 
