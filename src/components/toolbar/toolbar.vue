@@ -15,10 +15,8 @@
     <div class="flex-grow-1"></div>
 
     <v-toolbar-items class="toolbar-items">
-      <!-- <a href="/#anchor">Link to anchor</a> -->
-
       <v-btn
-        flat
+        text
         small
         class="toolbar-button"
         v-for="(item, index) in filteredConf"
@@ -32,7 +30,7 @@
     </v-toolbar-items>
 
     <div class="right-box">
-      <v-btn outline class="toolbar-button">RESERVAR</v-btn>
+      <v-btn outlined class="toolbar-button">RESERVAR</v-btn>
     </div>
   </v-toolbar>
 </template>

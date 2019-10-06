@@ -13,6 +13,7 @@
 
 #homePage {
   position: absolute;
+  top: 65px;
   height: 100%;
   width: 100%;
   background-color: rgb(255, 255, 255);
@@ -50,7 +51,7 @@
     position: relative;
     margin: auto;
     width: 100%;
-    top: 65px;
+    // top: 65px;
     margin-bottom: 65px;
 
     .banner-img {

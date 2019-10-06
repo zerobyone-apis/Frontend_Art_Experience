@@ -2,7 +2,7 @@
   <v-navigation-drawer id="drawer-left" dark temporary fixed left v-model="drawer" color="rgba(0, 0, 0, 0.685)">
     <v-list subheader>
       <v-list v-if="filteredConf.length > 0">
-        <v-list-tile
+        <!-- <v-list-tile
           v-for="(item, index) in filteredConf"
           :key="index"
           @click="pageRouter(item.route)"
@@ -17,7 +17,7 @@
               <span>{{ $i18n.t(item.name) }}</span>
             </v-list-tile-title>
           </v-list-tile-content>
-        </v-list-tile>
+        </v-list-tile> -->
       </v-list>
     </v-list>
 

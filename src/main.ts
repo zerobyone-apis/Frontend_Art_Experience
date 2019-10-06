@@ -1,5 +1,5 @@
 import Vue from "vue";
-import "./plugins/vuetify";
+import vuetify from "./plugins/vuetify";
 import App from "./app/app.vue";
 import router from "./router";
 import store from "./store";
@@ -15,6 +15,7 @@ Vue.use(Croppa);
 Vue.use(VueI18n);
 AOS.init({ disable: "phone" });
 
+
 const i18n = new VueI18n({
   locale: store.state.lang, // set locale
   messages: {
@@ -26,6 +27,7 @@ const i18n = new VueI18n({
 Vue.config.productionTip = false;
 
 new Vue({
+  vuetify,
   router,
   store,
   i18n,

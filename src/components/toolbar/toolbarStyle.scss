@@ -24,7 +24,9 @@
   }
 
   .toolbar-items {
-    margin: auto;
+    position: absolute;
+    text-align: center !important;
+    left: 200px !important;
   }
 
   .right-box {
