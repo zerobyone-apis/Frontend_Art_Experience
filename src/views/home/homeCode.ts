@@ -9,18 +9,6 @@ export default class HomeCode extends XComponent {
         email: "artexperience@gmail.com"
     }
 
-    private loginFields: any = {
-        login: [
-            { text: "username", icon: "account_circle", value: "" },
-            { text: "password", icon: "vpn_key", value: "" }
-        ],
-        register: [
-            { text: "username", icon: "account_circle", value: "" },
-            { text: "password", icon: "vpn_key", value: "" },
-            { text: "email", icon: "email", value: "" },
-        ]
-    }
-
     public pictures: any = [
         "https://mybarbershopbroward.files.wordpress.com/2016/09/barber-wallpaper-23.jpg",
         "https://c.wallhere.com/photos/7f/46/xe2s_fuji35mmf14_fujinon_fujifilm_fuji_portugal_conceptual_portrait-942864.jpg!d"
@@ -147,7 +135,21 @@ export default class HomeCode extends XComponent {
 
 
 
-    //old
+    //old - no usar el siguiente codigo ni borrarlo
+
+    
+    private loginFields: any = {
+        login: [
+            { text: "username", icon: "account_circle", value: "" },
+            { text: "password", icon: "vpn_key", value: "" }
+        ],
+        register: [
+            { text: "username", icon: "account_circle", value: "" },
+            { text: "password", icon: "vpn_key", value: "" },
+            { text: "email", icon: "email", value: "" },
+        ]
+    }
+    
     private user: User = new User();
 
     private rules: any = {
