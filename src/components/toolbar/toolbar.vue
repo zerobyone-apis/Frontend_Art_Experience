@@ -1,10 +1,9 @@
 <template v-cloak>
   <v-toolbar id="toolbar" fixed light height="65px">
     <!-- LEFT MENU - BUTTON  -->
-    <!-- <v-toolbar-side-icon
-      :style="{'color' : theme.colors.navIcons}"
-      @click.native.stop="leftDrawer = true"
-    ></v-toolbar-side-icon>-->
+    <v-btn class="left-menu-btn d-flex d-sm-none" @click.native.stop="leftDrawer = true" fab text small>
+      <v-icon @click.native.stop="leftDrawer = true">view_headline</v-icon>
+    </v-btn>
 
     <!-- LOGO  -->
     <v-toolbar-title @click.stop="pageRouter('/')">
@@ -14,7 +13,7 @@
 
     <div class="flex-grow-1"></div>
 
-    <v-toolbar-items class="toolbar-items">
+    <v-toolbar-items class="toolbar-items hidden-xs-only">
       <v-btn
         text
         small
@@ -30,7 +29,7 @@
     </v-toolbar-items>
 
     <div class="right-box">
-      <v-btn outlined class="toolbar-button">RESERVAR</v-btn>
+      <v-btn outlined class="toolbar-button-reservation">RESERVAR</v-btn>
     </div>
   </v-toolbar>
 </template>

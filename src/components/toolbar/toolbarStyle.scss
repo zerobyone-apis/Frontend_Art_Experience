@@ -12,6 +12,8 @@
 }
 
 #toolbar {
+  // position: relative;
+  width: 100%;
   padding-top: 0px;
   padding-right: 5%;
   padding-bottom: 0px;
@@ -23,6 +25,15 @@
     height: 25px;
   }
 
+  .left-menu-btn {
+    position: absolute;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+    box-shadow: none;
+    background-color: white;
+  }
+
   .toolbar-items {
     position: absolute;
     text-align: center !important;
@@ -32,22 +43,18 @@
   .right-box {
     float: right;
     display: block;
-    margin-left: 15px;
+    margin-left: 40px;
     float: left;
+
+    .toolbar-button-reservation {
+      font-size: 10px;
+      text-transform: none;
+    }
   }
 
-  // .menuItems {
-  //   position: absolute;
-  //   left: 200px;
-
-  //   .toolbar-button_reservation {
-  //     position: relative;
-  //     right: 0px !important;
-  //   }
-  // }
-
   .toolbar-button.v-btn {
-    font-size: 12px;
+    font-size: 10px;
+    right: 30px;
     text-transform: none;
   }
 }
