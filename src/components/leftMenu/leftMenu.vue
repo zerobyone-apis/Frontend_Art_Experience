@@ -12,6 +12,7 @@
       v-for="(item, index) in filteredConf"
       :key="index"
       @click="pageRouter(item.route)"
+      :href="item.href"
       class="pb-1 pt-1"
     >
       <v-list-item-content>
