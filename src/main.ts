@@ -10,7 +10,9 @@ import 'vue-croppa/dist/vue-croppa.css';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import BackToTop from 'vue-backtotop'
+ 
+Vue.use(BackToTop)
 Vue.use(Croppa);
 Vue.use(VueI18n);
 AOS.init({ disable: "phone" });
