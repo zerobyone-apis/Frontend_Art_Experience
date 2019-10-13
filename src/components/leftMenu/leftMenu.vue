@@ -11,21 +11,19 @@
     <v-list-item
       v-for="(item, index) in filteredConf"
       :key="index"
-      @click="pageRouter(item.route)"
+      @click="drawer = false"
       :href="item.href"
-      class="pb-1 pt-1"
+      class="list-item"
     >
-      <v-list-item-content>
-        <v-list-item-action class="list-item">
+      <v-list-item-content class="list-item-content">
+        <!-- <v-list-item-avatar>
           <v-icon color="#DDDDDD">{{ item.icon }}</v-icon>
-        </v-list-item-action>
+        </v-list-item-avatar> -->
         <v-list-item-title>{{ item.name }}</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
 
-
-
-    <v-btn small fab class="settings">
+    <v-btn small fab class="settings" v-if="false">
       <v-icon color="#BDBDBD">settings</v-icon>
     </v-btn>
   </v-navigation-drawer>
