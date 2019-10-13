@@ -1,7 +1,12 @@
 <template>
   <v-app id="app">
-   <Toolbar v-if="$store.state.userInfo" class="toolbar-app-fixed"></Toolbar>
-   <LeftMenu class="left_menu-app-fixed"></LeftMenu>
+    <Toolbar v-if="$store.state.userInfo" class="toolbar-app-fixed"></Toolbar>
+   <back-to-top>
+     <v-btn fab text small class="green">
+       <v-icon>keyboard_arrow_up</v-icon>
+     </v-btn>
+   </back-to-top>
+    <LeftMenu class="left_menu-app-fixed"></LeftMenu>
     <v-content class="content">
       <v-container fluid class="container">
         <router-view></router-view>

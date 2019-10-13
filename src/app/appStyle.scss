@@ -12,4 +12,11 @@
     .container {
         padding: 0 !important;
     }
+
+    .goToUp {
+        position: fixed;
+        z-index: 2;
+        right: 10px;
+        bottom: 50px;
+    }
 }
