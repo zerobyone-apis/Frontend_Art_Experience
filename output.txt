@@ -1,0 +1,1915 @@
+yarn run v1.15.2
+$ vue-cli-service serve
+ INFO  Starting development server...
+Starting type checking and linting service...
+Using 1 worker with 2048MB memory limit
+[34mi[39m [90m｢wds｣[39m: Project is running at http://localhost:8080/
+[34mi[39m [90m｢wds｣[39m: webpack output is served from /
+[34mi[39m [90m｢wds｣[39m: Content not from webpack is served from C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\public
+[34mi[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+ ERROR  Failed to compile with 103 errors15:44:22
+
+ error  in ./src/app/appStyle.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/app/appStyle.scss 4:14-225 14:3-18:5 15:22-233
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/components/leftMenu/leftMenuStyle.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/components/leftMenu/leftMenuStyle.scss 4:14-239 14:3-18:5 15:22-247
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/leftMenu/leftMenu.vue?vue&type=script&lang=ts&
+ @ ./src/components/leftMenu/leftMenu.vue?vue&type=script&lang=ts&
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/views/home/homeStyle.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/views/home/homeStyle.scss 4:14-235 14:3-18:5 15:22-243
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/home/home.vue?vue&type=script&lang=ts&
+ @ ./src/views/home/home.vue?vue&type=script&lang=ts&
+ @ ./src/views/home/home.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/components/dialogs/addDialog/addDialogStyle.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/components/dialogs/addDialog/addDialogStyle.scss 4:14-249 14:3-18:5 15:22-257
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/dialogs/addDialog/addDialog.vue?vue&type=script&lang=ts&
+ @ ./src/components/dialogs/addDialog/addDialog.vue?vue&type=script&lang=ts&
+ @ ./src/components/dialogs/addDialog/addDialog.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/components/toolbar/toolbarStyle.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/components/toolbar/toolbarStyle.scss 4:14-238 14:3-18:5 15:22-246
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/toolbar/toolbar.vue?vue&type=script&lang=ts&
+ @ ./src/components/toolbar/toolbar.vue?vue&type=script&lang=ts&
+ @ ./src/components/toolbar/toolbar.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/components/customTable/customTableStyle.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/components/customTable/customTableStyle.scss 4:14-242 14:3-18:5 15:22-250
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/customTable/customTable.vue?vue&type=script&lang=ts&
+ @ ./src/components/customTable/customTable.vue?vue&type=script&lang=ts&
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/views/mainPage/mainPageStyle.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/views/mainPage/mainPageStyle.scss 4:14-239 14:3-18:5 15:22-247
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/views/barberShop/barberShop.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/views/barberShop/barberShop.scss 4:14-236 14:3-18:5 15:22-244
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barberShop/barberShopPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barberShop/barberShopPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/styles/fonts.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/styles/fonts.scss 4:14-222 14:3-18:5 15:22-230
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barberShop/barberShopPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barberShop/barberShopPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./src/views/barber/barber.scss
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'fiber'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./src/views/barber/barber.scss 4:14-232 14:3-18:5 15:22-240
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/styles/main.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/styles/main.sass 4:14-191 14:3-18:5 15:22-199
+ @ ./node_modules/vuetify/lib/framework.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VApp/VApp.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VApp/VApp.sass 4:14-200 14:3-18:5 15:22-208
+ @ ./node_modules/vuetify/lib/components/VApp/VApp.js
+ @ ./node_modules/vuetify/lib/components/VApp/index.js
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VParallax/VParallax.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VParallax/VParallax.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VParallax/VParallax.js
+ @ ./node_modules/vuetify/lib/components/VParallax/index.js
+ @ ./src/views/home/home.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VIcon/VIcon.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VIcon/VIcon.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VIcon/VIcon.js
+ @ ./node_modules/vuetify/lib/components/VIcon/index.js
+ @ ./src/views/home/home.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VBtn/VBtn.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VBtn/VBtn.sass 4:14-200 14:3-18:5 15:22-208
+ @ ./node_modules/vuetify/lib/components/VBtn/VBtn.js
+ @ ./node_modules/vuetify/lib/components/VBtn/index.js
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCarousel/VCarousel.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCarousel/VCarousel.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VCarousel/VCarousel.js
+ @ ./node_modules/vuetify/lib/components/VCarousel/index.js
+ @ ./src/views/home/home.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VImg/VImg.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VImg/VImg.sass 4:14-200 14:3-18:5 15:22-208
+ @ ./node_modules/vuetify/lib/components/VImg/VImg.js
+ @ ./node_modules/vuetify/lib/components/VImg/index.js
+ @ ./src/views/home/home.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCard/VCard.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCard/VCard.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VCard/VCard.js
+ @ ./node_modules/vuetify/lib/components/VCard/index.js
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VStepper/VStepper.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VStepper/VStepper.sass 4:14-204 14:3-18:5 15:22-212
+ @ ./node_modules/vuetify/lib/components/VStepper/VStepper.js
+ @ ./node_modules/vuetify/lib/components/VStepper/index.js
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VGrid/VGrid.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VGrid/VGrid.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VGrid/VCol.js
+ @ ./node_modules/vuetify/lib/components/VGrid/index.js
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDialog/VDialog.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDialog/VDialog.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VDialog/VDialog.js
+ @ ./node_modules/vuetify/lib/components/VDialog/index.js
+ @ ./src/views/barber/barberPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VGrid/_grid.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VGrid/_grid.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VGrid/VContainer.js
+ @ ./node_modules/vuetify/lib/components/VGrid/index.js
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDivider/VDivider.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDivider/VDivider.sass 4:14-204 14:3-18:5 15:22-212
+ @ ./node_modules/vuetify/lib/components/VDivider/VDivider.js
+ @ ./node_modules/vuetify/lib/components/VDivider/index.js
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VWindow/VWindow.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VWindow/VWindow.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VWindow/VWindow.js
+ @ ./node_modules/vuetify/lib/components/VCarousel/VCarousel.js
+ @ ./node_modules/vuetify/lib/components/VCarousel/index.js
+ @ ./src/views/home/home.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VToolbar/VToolbar.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VToolbar/VToolbar.sass 4:14-204 14:3-18:5 15:22-212
+ @ ./node_modules/vuetify/lib/components/VToolbar/VToolbar.js
+ @ ./node_modules/vuetify/lib/components/VToolbar/index.js
+ @ ./src/components/toolbar/toolbar.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VAlert/VAlert.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VAlert/VAlert.sass 4:14-202 14:3-18:5 15:22-210
+ @ ./node_modules/vuetify/lib/components/VAlert/VAlert.js
+ @ ./node_modules/vuetify/lib/components/VAlert/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCheckbox/VCheckbox.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCheckbox/VCheckbox.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VCheckbox/VCheckbox.js
+ @ ./node_modules/vuetify/lib/components/VCheckbox/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCheckbox/VSimpleCheckbox.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCheckbox/VSimpleCheckbox.sass 4:14-211 14:3-18:5 15:22-219
+ @ ./node_modules/vuetify/lib/components/VCheckbox/VSimpleCheckbox.js
+ @ ./node_modules/vuetify/lib/components/VCheckbox/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VList/VListItemGroup.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VList/VListItemGroup.sass 4:14-210 14:3-18:5 15:22-218
+ @ ./node_modules/vuetify/lib/components/VList/VListItemGroup.js
+ @ ./node_modules/vuetify/lib/components/VList/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VList/VListItem.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VList/VListItem.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VList/VListItem.js
+ @ ./node_modules/vuetify/lib/components/VList/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VList/VListGroup.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VList/VListGroup.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VList/VListGroup.js
+ @ ./node_modules/vuetify/lib/components/VList/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VList/VList.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VList/VList.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VList/VList.js
+ @ ./node_modules/vuetify/lib/components/VList/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VNavigationDrawer/VNavigationDrawer.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VNavigationDrawer/VNavigationDrawer.sass 4:14-213 14:3-18:5 15:22-221
+ @ ./node_modules/vuetify/lib/components/VNavigationDrawer/VNavigationDrawer.js
+ @ ./node_modules/vuetify/lib/components/VNavigationDrawer/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTextField/VTextField.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTextField/VTextField.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VTextField/VTextField.js
+ @ ./node_modules/vuetify/lib/components/VTextField/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VMenu/VMenu.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VMenu/VMenu.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VMenu/VMenu.js
+ @ ./node_modules/vuetify/lib/components/VMenu/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSelect/VSelect.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSelect/VSelect.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VSelect/VSelect.js
+ @ ./node_modules/vuetify/lib/components/VSelect/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/directives/ripple/VRipple.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/directives/ripple/VRipple.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/directives/ripple/index.js
+ @ ./node_modules/vuetify/lib/components/VStepper/VStepperStep.js
+ @ ./node_modules/vuetify/lib/components/VStepper/index.js
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSheet/VSheet.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSheet/VSheet.sass 4:14-202 14:3-18:5 15:22-210
+ @ ./node_modules/vuetify/lib/components/VSheet/VSheet.js
+ @ ./node_modules/vuetify/lib/components/VList/VList.js
+ @ ./node_modules/vuetify/lib/components/VList/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/styles/components/_selection-controls.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/styles/components/_selection-controls.sass 4:14-215 14:3-18:5 15:22-223
+ @ ./node_modules/vuetify/lib/components/VCheckbox/VCheckbox.js
+ @ ./node_modules/vuetify/lib/components/VCheckbox/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDatePicker/VDatePickerTitle.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDatePicker/VDatePickerTitle.sass 4:14-212 14:3-18:5 15:22-220
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePickerTitle.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePicker.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/index.js
+ @ ./src/components/dialogs/addDialog/addDialog.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDatePicker/VDatePickerYears.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDatePicker/VDatePickerYears.sass 4:14-212 14:3-18:5 15:22-220
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePickerYears.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePicker.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/index.js
+ @ ./src/components/dialogs/addDialog/addDialog.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDatePicker/VDatePickerHeader.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDatePicker/VDatePickerHeader.sass 4:14-213 14:3-18:5 15:22-221
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePickerHeader.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePicker.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/index.js
+ @ ./src/components/dialogs/addDialog/addDialog.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VResponsive/VResponsive.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VResponsive/VResponsive.sass 4:14-207 14:3-18:5 15:22-215
+ @ ./node_modules/vuetify/lib/components/VResponsive/VResponsive.js
+ @ ./node_modules/vuetify/lib/components/VResponsive/index.js
+ @ ./node_modules/vuetify/lib/components/VImg/VImg.js
+ @ ./node_modules/vuetify/lib/components/VImg/index.js
+ @ ./src/views/home/home.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VProgressCircular/VProgressCircular.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VProgressCircular/VProgressCircular.sass 4:14-213 14:3-18:5 15:22-221
+ @ ./node_modules/vuetify/lib/components/VProgressCircular/VProgressCircular.js
+ @ ./node_modules/vuetify/lib/components/VProgressCircular/index.js
+ @ ./node_modules/vuetify/lib/components/VBtn/VBtn.js
+ @ ./node_modules/vuetify/lib/components/VBtn/index.js
+ @ ./src/views/barberShop/barberShopPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTooltip/VTooltip.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTooltip/VTooltip.sass 4:14-204 14:3-18:5 15:22-212
+ @ ./node_modules/vuetify/lib/components/VTooltip/VTooltip.js
+ @ ./node_modules/vuetify/lib/components/VTooltip/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTimeline/VTimeline.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTimeline/VTimeline.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VTimeline/VTimeline.js
+ @ ./node_modules/vuetify/lib/components/VTimeline/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTextarea/VTextarea.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTextarea/VTextarea.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VTextarea/VTextarea.js
+ @ ./node_modules/vuetify/lib/components/VTextarea/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VItemGroup/VItemGroup.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VItemGroup/VItemGroup.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VItemGroup/VItemGroup.js
+ @ ./node_modules/vuetify/lib/components/VList/VListItemGroup.js
+ @ ./node_modules/vuetify/lib/components/VList/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTreeview/VTreeview.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTreeview/VTreeview.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VTreeview/VTreeview.js
+ @ ./node_modules/vuetify/lib/components/VTreeview/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTimePicker/VTimePickerTitle.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTimePicker/VTimePickerTitle.sass 4:14-212 14:3-18:5 15:22-220
+ @ ./node_modules/vuetify/lib/components/VTimePicker/VTimePickerTitle.js
+ @ ./node_modules/vuetify/lib/components/VTimePicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTimePicker/VTimePickerClock.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTimePicker/VTimePickerClock.sass 4:14-212 14:3-18:5 15:22-220
+ @ ./node_modules/vuetify/lib/components/VTimePicker/VTimePickerClock.js
+ @ ./node_modules/vuetify/lib/components/VTimePicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCalendar/mixins/calendar-with-events.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCalendar/mixins/calendar-with-events.sass 4:14-225 14:3-18:5 15:22-233
+ @ ./node_modules/vuetify/lib/components/VCalendar/mixins/calendar-with-events.js
+ @ ./node_modules/vuetify/lib/components/VCalendar/VCalendar.js
+ @ ./node_modules/vuetify/lib/components/VCalendar/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VTabs/VTabs.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VTabs/VTabs.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VTabs/VTabs.js
+ @ ./node_modules/vuetify/lib/components/VTabs/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VSystemBar/VSystemBar.js
+ @ ./node_modules/vuetify/lib/components/VSystemBar/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSubheader/VSubheader.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSubheader/VSubheader.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VSubheader/VSubheader.js
+ @ ./node_modules/vuetify/lib/components/VSubheader/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSnackbar/VSnackbar.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSnackbar/VSnackbar.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VSnackbar/VSnackbar.js
+ @ ./node_modules/vuetify/lib/components/VSnackbar/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass 4:14-211 14:3-18:5 15:22-219
+ @ ./node_modules/vuetify/lib/components/VSkeletonLoader/VSkeletonLoader.js
+ @ ./node_modules/vuetify/lib/components/VSkeletonLoader/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSlideGroup/VSlideGroup.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSlideGroup/VSlideGroup.sass 4:14-207 14:3-18:5 15:22-215
+ @ ./node_modules/vuetify/lib/components/VSlideGroup/VSlideGroup.js
+ @ ./node_modules/vuetify/lib/components/VSlideGroup/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDatePicker/VDatePickerTable.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDatePicker/VDatePickerTable.sass 4:14-212 14:3-18:5 15:22-220
+ @ ./node_modules/vuetify/lib/components/VDatePicker/mixins/date-picker-table.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePickerMonthTable.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/VDatePicker.js
+ @ ./node_modules/vuetify/lib/components/VDatePicker/index.js
+ @ ./src/components/dialogs/addDialog/addDialog.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/barber/barberPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSlider/VSlider.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSlider/VSlider.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VSlider/VSlider.js
+ @ ./node_modules/vuetify/lib/components/VSlider/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VRangeSlider/VRangeSlider.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VRangeSlider/VRangeSlider.sass 4:14-208 14:3-18:5 15:22-216
+ @ ./node_modules/vuetify/lib/components/VRangeSlider/VRangeSlider.js
+ @ ./node_modules/vuetify/lib/components/VRangeSlider/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VRating/VRating.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VRating/VRating.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VRating/VRating.js
+ @ ./node_modules/vuetify/lib/components/VRating/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass 4:14-211 14:3-18:5 15:22-219
+ @ ./node_modules/vuetify/lib/components/VProgressLinear/VProgressLinear.js
+ @ ./node_modules/vuetify/lib/components/VProgressLinear/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VRadioGroup/VRadio.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VRadioGroup/VRadio.sass 4:14-202 14:3-18:5 15:22-210
+ @ ./node_modules/vuetify/lib/components/VRadioGroup/VRadio.js
+ @ ./node_modules/vuetify/lib/components/VRadioGroup/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VRadioGroup/VRadioGroup.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VRadioGroup/VRadioGroup.sass 4:14-207 14:3-18:5 15:22-215
+ @ ./node_modules/vuetify/lib/components/VRadioGroup/VRadioGroup.js
+ @ ./node_modules/vuetify/lib/components/VRadioGroup/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VPicker/VPicker.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VPicker/VPicker.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VPicker/VPicker.js
+ @ ./node_modules/vuetify/lib/components/VPicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VPagination/VPagination.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VPagination/VPagination.sass 4:14-207 14:3-18:5 15:22-215
+ @ ./node_modules/vuetify/lib/components/VPagination/VPagination.js
+ @ ./node_modules/vuetify/lib/components/VPagination/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VOverlay/VOverlay.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VOverlay/VOverlay.sass 4:14-204 14:3-18:5 15:22-212
+ @ ./node_modules/vuetify/lib/components/VOverlay/VOverlay.js
+ @ ./node_modules/vuetify/lib/components/VOverlay/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSwitch/VSwitch.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSwitch/VSwitch.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VSwitch/VSwitch.js
+ @ ./node_modules/vuetify/lib/components/VSwitch/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VAvatar/VAvatar.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VAvatar/VAvatar.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VAvatar/VAvatar.js
+ @ ./node_modules/vuetify/lib/components/VAvatar/index.js
+ @ ./node_modules/vuetify/lib/components/VList/VListItemAvatar.js
+ @ ./node_modules/vuetify/lib/components/VList/index.js
+ @ ./src/components/leftMenu/leftMenu.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue?vue&type=script&lang=ts&
+ @ ./src/app/app.vue
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VChip/VChip.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VChip/VChip.sass 4:14-201 14:3-18:5 15:22-209
+ @ ./node_modules/vuetify/lib/components/VChip/VChip.js
+ @ ./node_modules/vuetify/lib/components/VChip/index.js
+ @ ./node_modules/vuetify/lib/components/VSelect/VSelect.js
+ @ ./node_modules/vuetify/lib/components/VSelect/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VLabel/VLabel.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VLabel/VLabel.sass 4:14-202 14:3-18:5 15:22-210
+ @ ./node_modules/vuetify/lib/components/VLabel/VLabel.js
+ @ ./node_modules/vuetify/lib/components/VLabel/index.js
+ @ ./node_modules/vuetify/lib/components/VTextField/VTextField.js
+ @ ./node_modules/vuetify/lib/components/VTextField/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VInput/VInput.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VInput/VInput.sass 4:14-202 14:3-18:5 15:22-210
+ @ ./node_modules/vuetify/lib/components/VInput/VInput.js
+ @ ./node_modules/vuetify/lib/components/VInput/index.js
+ @ ./node_modules/vuetify/lib/components/VTextField/VTextField.js
+ @ ./node_modules/vuetify/lib/components/VTextField/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCounter/VCounter.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCounter/VCounter.sass 4:14-204 14:3-18:5 15:22-212
+ @ ./node_modules/vuetify/lib/components/VCounter/VCounter.js
+ @ ./node_modules/vuetify/lib/components/VCounter/index.js
+ @ ./node_modules/vuetify/lib/components/VTextField/VTextField.js
+ @ ./node_modules/vuetify/lib/components/VTextField/index.js
+ @ ./src/components/customTable/customTable.vue
+ @ ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/ts-loader??ref--13-2!./node_modules/vuetify-loader/lib/loader.js!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue?vue&type=script&lang=ts&
+ @ ./src/views/mainPage/mainPage.vue
+ @ ./src/router.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCalendar/VCalendarWeekly.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCalendar/VCalendarWeekly.sass 4:14-211 14:3-18:5 15:22-219
+ @ ./node_modules/vuetify/lib/components/VCalendar/VCalendarWeekly.js
+ @ ./node_modules/vuetify/lib/components/VCalendar/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VCalendar/VCalendarDaily.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VCalendar/VCalendarDaily.sass 4:14-210 14:3-18:5 15:22-218
+ @ ./node_modules/vuetify/lib/components/VCalendar/VCalendarDaily.js
+ @ ./node_modules/vuetify/lib/components/VCalendar/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VMessages/VMessages.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VMessages/VMessages.sass 4:14-205 14:3-18:5 15:22-213
+ @ ./node_modules/vuetify/lib/components/VMessages/VMessages.js
+ @ ./node_modules/vuetify/lib/components/VMessages/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VOverflowBtn/VOverflowBtn.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VOverflowBtn/VOverflowBtn.sass 4:14-208 14:3-18:5 15:22-216
+ @ ./node_modules/vuetify/lib/components/VOverflowBtn/VOverflowBtn.js
+ @ ./node_modules/vuetify/lib/components/VOverflowBtn/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VFooter/VFooter.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VFooter/VFooter.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VFooter/VFooter.js
+ @ ./node_modules/vuetify/lib/components/VFooter/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VFileInput/VFileInput.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VFileInput/VFileInput.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VFileInput/VFileInput.js
+ @ ./node_modules/vuetify/lib/components/VFileInput/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDataIterator/VDataFooter.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDataIterator/VDataFooter.sass 4:14-207 14:3-18:5 15:22-215
+ @ ./node_modules/vuetify/lib/components/VDataIterator/VDataFooter.js
+ @ ./node_modules/vuetify/lib/components/VDataIterator/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VExpansionPanel/VExpansionPanel.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VExpansionPanel/VExpansionPanel.sass 4:14-211 14:3-18:5 15:22-219
+ @ ./node_modules/vuetify/lib/components/VExpansionPanel/VExpansionPanels.js
+ @ ./node_modules/vuetify/lib/components/VExpansionPanel/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDataTable/VEditDialog.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDataTable/VEditDialog.sass 4:14-207 14:3-18:5 15:22-215
+ @ ./node_modules/vuetify/lib/components/VDataTable/VEditDialog.js
+ @ ./node_modules/vuetify/lib/components/VDataTable/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDataTable/VDataTableHeader.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDataTable/VDataTableHeader.sass 4:14-212 14:3-18:5 15:22-220
+ @ ./node_modules/vuetify/lib/components/VDataTable/VDataTableHeader.js
+ @ ./node_modules/vuetify/lib/components/VDataTable/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDataTable/VSimpleTable.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDataTable/VSimpleTable.sass 4:14-208 14:3-18:5 15:22-216
+ @ ./node_modules/vuetify/lib/components/VDataTable/VSimpleTable.js
+ @ ./node_modules/vuetify/lib/components/VDataTable/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDataTable/VVirtualTable.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDataTable/VVirtualTable.sass 4:14-209 14:3-18:5 15:22-217
+ @ ./node_modules/vuetify/lib/components/VDataTable/VVirtualTable.js
+ @ ./node_modules/vuetify/lib/components/VDataTable/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VDataTable/VDataTable.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VDataTable/VDataTable.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VDataTable/VDataTable.js
+ @ ./node_modules/vuetify/lib/components/VDataTable/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VAutocomplete/VAutocomplete.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VAutocomplete/VAutocomplete.sass 4:14-209 14:3-18:5 15:22-217
+ @ ./node_modules/vuetify/lib/components/VCombobox/VCombobox.js
+ @ ./node_modules/vuetify/lib/components/VCombobox/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VContent/VContent.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VContent/VContent.sass 4:14-204 14:3-18:5 15:22-212
+ @ ./node_modules/vuetify/lib/components/VContent/VContent.js
+ @ ./node_modules/vuetify/lib/components/VContent/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VColorPicker/VColorPickerSwatches.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VColorPicker/VColorPickerSwatches.sass 4:14-216 14:3-18:5 15:22-224
+ @ ./node_modules/vuetify/lib/components/VColorPicker/VColorPickerSwatches.js
+ @ ./node_modules/vuetify/lib/components/VColorPicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VColorPicker/VColorPicker.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VColorPicker/VColorPicker.sass 4:14-208 14:3-18:5 15:22-216
+ @ ./node_modules/vuetify/lib/components/VColorPicker/VColorPicker.js
+ @ ./node_modules/vuetify/lib/components/VColorPicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VColorPicker/VColorPickerCanvas.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VColorPicker/VColorPickerCanvas.sass 4:14-214 14:3-18:5 15:22-222
+ @ ./node_modules/vuetify/lib/components/VColorPicker/VColorPickerCanvas.js
+ @ ./node_modules/vuetify/lib/components/VColorPicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VChipGroup/VChipGroup.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VChipGroup/VChipGroup.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VChipGroup/VChipGroup.js
+ @ ./node_modules/vuetify/lib/components/VChipGroup/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VBreadcrumbs/VBreadcrumbs.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VBreadcrumbs/VBreadcrumbs.sass 4:14-208 14:3-18:5 15:22-216
+ @ ./node_modules/vuetify/lib/components/VBreadcrumbs/VBreadcrumbs.js
+ @ ./node_modules/vuetify/lib/components/VBreadcrumbs/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VBottomNavigation/VBottomNavigation.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VBottomNavigation/VBottomNavigation.sass 4:14-213 14:3-18:5 15:22-221
+ @ ./node_modules/vuetify/lib/components/VBottomNavigation/VBottomNavigation.js
+ @ ./node_modules/vuetify/lib/components/VBottomNavigation/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VBottomSheet/VBottomSheet.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VBottomSheet/VBottomSheet.sass 4:14-208 14:3-18:5 15:22-216
+ @ ./node_modules/vuetify/lib/components/VBottomSheet/VBottomSheet.js
+ @ ./node_modules/vuetify/lib/components/VBottomSheet/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VBtnToggle/VBtnToggle.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VBtnToggle/VBtnToggle.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VBtnToggle/VBtnToggle.js
+ @ ./node_modules/vuetify/lib/components/VBtnToggle/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VBanner/VBanner.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VBanner/VBanner.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VBanner/VBanner.js
+ @ ./node_modules/vuetify/lib/components/VBanner/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VBadge/VBadge.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VBadge/VBadge.sass 4:14-202 14:3-18:5 15:22-210
+ @ ./node_modules/vuetify/lib/components/VBadge/VBadge.js
+ @ ./node_modules/vuetify/lib/components/VBadge/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass 4:14-203 14:3-18:5 15:22-211
+ @ ./node_modules/vuetify/lib/components/VAppBar/VAppBar.js
+ @ ./node_modules/vuetify/lib/components/VAppBar/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VColorPicker/VColorPickerPreview.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VColorPicker/VColorPickerPreview.sass 4:14-215 14:3-18:5 15:22-223
+ @ ./node_modules/vuetify/lib/components/VColorPicker/VColorPickerPreview.js
+ @ ./node_modules/vuetify/lib/components/VColorPicker/VColorPicker.js
+ @ ./node_modules/vuetify/lib/components/VColorPicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VColorPicker/VColorPickerEdit.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VColorPicker/VColorPickerEdit.sass 4:14-212 14:3-18:5 15:22-220
+ @ ./node_modules/vuetify/lib/components/VColorPicker/VColorPickerEdit.js
+ @ ./node_modules/vuetify/lib/components/VColorPicker/VColorPicker.js
+ @ ./node_modules/vuetify/lib/components/VColorPicker/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+ error  in ./node_modules/vuetify/src/components/VSpeedDial/VSpeedDial.sass
+
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.
+ - options has an unknown property 'indentedSyntax'. These properties are valid:
+   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }
+    at validate (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\node_modules\schema-utils\dist\validate.js:50:11)
+    at Object.loader (C:\Users\Damian\Desktop\ArtExperience\-Frontend-_Art_Experience-\node_modules\sass-loader\dist\index.js:36:28)
+
+ @ ./node_modules/vuetify/src/components/VSpeedDial/VSpeedDial.sass 4:14-206 14:3-18:5 15:22-214
+ @ ./node_modules/vuetify/lib/components/VSpeedDial/VSpeedDial.js
+ @ ./node_modules/vuetify/lib/components/VSpeedDial/index.js
+ @ ./node_modules/vuetify/lib/components/index.js
+ @ ./node_modules/vuetify/lib/index.js
+ @ ./src/plugins/vuetify.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://192.168.1.4:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.ts
+
+No type errors found
+No lint errors found
+Version: typescript 3.6.3, tslint 5.20.0
+Time: 2413ms
+�Desea terminar el trabajo por lotes (S/N)? 
