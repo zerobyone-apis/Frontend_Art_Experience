@@ -1,11 +1,13 @@
 <template>
-  <v-app :dark="theme.dark" class="white">
-    <Toolbar v-if="$store.state.userInfo"></Toolbar>
-    <LeftMenu></LeftMenu>
-    <main class="main-content">
-      <router-view></router-view>
-    </main>
-    <!-- <notifications width="100%" :duration="5000" position="bottom" group="foo"/> -->
+  <v-app id="app">
+   <Toolbar v-if="$store.state.userInfo" class="toolbar-app-fixed"></Toolbar>
+   <LeftMenu class="left_menu-app-fixed"></LeftMenu>
+    <v-content class="content">
+      <v-container fluid class="container">
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+    <v-footer app></v-footer>
   </v-app>
 </template>
 
