@@ -2,10 +2,11 @@
 
 .font-title {
     font-family: titling-gothic-fb-extended,sans-serif;
-    color: #3f3f3fd5;
+    color: rgb(110, 110, 110);
     font-weight: 300;
     text-transform: none;
-    box-shadow: 4px, 3px #ffffff4f;
+    // box-shadow: 4px, 3px #ffffff4f;
+    text-shadow: 2px 2px 2px #b6b6b665;
 }
 
 .font-text {
