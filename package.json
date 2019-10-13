@@ -9,9 +9,11 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@inotom/vue-go-top": "^1.1.0",
     "aos": "^2.3.4",
     "axios": "^0.19.0",
     "vue": "^2.6.10",
+    "vue-backtotop": "^1.6.1",
     "vue-class-component": "^7.1.0",
     "vue-croppa": "^1.3.8",
     "vue-i18n": "^8.14.1",
