@@ -113,13 +113,13 @@
         text-align: center;
 
         .employee-img {
-          border-radius: 50%;
+          border-radius: 4%;
           width: 150px;
           height: 150px;
           margin: auto;
           border-width: 4px;
           border-style: solid;
-          border-color: #c9c7c744;
+          border-color: white;
         }
 
         .employee-name {
@@ -246,9 +246,6 @@
         font-size: 16px;
         // background-color: #ff6126;
 
-        .course-name {
-          // margin-bottom: 20px;
-        }
 
         .course-img {
           width: 100%;
