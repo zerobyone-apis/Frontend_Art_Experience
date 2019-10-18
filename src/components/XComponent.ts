@@ -25,6 +25,6 @@ export default class XComponent extends Vue {
   }
 
   translate(text: string) {
-    return this.$i18n.t(text);
+    return this["$i18n"].t(text);
   }
 }

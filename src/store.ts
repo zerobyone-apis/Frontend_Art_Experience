@@ -11,7 +11,8 @@ const vuexLocal = new VuexPersistence({
 export default new Vuex.Store({
   state: {
     drawer: {
-      left: false
+      left: false,
+      reservation: false
     },
     settings: {},
     userInfo: {},
@@ -27,32 +28,11 @@ export default new Vuex.Store({
     lang: "en"
   },
   mutations: {
-    setLang(state, lang) {
-      state.lang = lang;
-      main.i18n.locale = state.lang;
-    },
-
-    setSettings(state, settings) {
-      state.settings = settings;
-    },
-
-    setUserInfo(state, info) {
-      state.userInfo = info;
-    },
-
-    // setTheme(state, dark) {
-    //   state.theme.dark = dark;
-    // },
-
-    // setColors(state, colors) {
-    //   state.theme.colors.nav = colors.nav;
-    //   state.theme.colors.menu = colors.menu;
-    //   state.theme.colors.menuIcons = colors.menuIcons;
-    //   state.theme.colors.navIcons = colors.navIcons;
-    // },
-
     setLeftDrawer(state, drawer) {
-      state.drawer.left = drawer;
+      state["drawer"].left = drawer;
+    },
+    setReservationDrawer(state, drawer) {
+      state["drawer"].reservation = drawer;
     }
   },
 

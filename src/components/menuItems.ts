@@ -4,17 +4,17 @@ export default class MenuItems extends Vue {
 
   private menu: any = {
     options: [
-      { name: "SERVICIOS", icon: "", href: "/#services", route: "" },
-      { name: "CURSOS", icon: "", href: "/#cources", route: "" },
-      { name: "CONTACTENOS", icon: "", href: "/#contact", route: "" }
+      { name: "RESERVAR", icon: "", href: "/", route: "", toolbar: false },
+      { name: "SERVICIOS", icon: "", href: "/#services", route: "", toolbar: true },
+      { name: "CURSOS", icon: "", href: "/#cources", route: "", toolbar: true },
+      { name: "CONTACTENOS", icon: "", href: "/#contact", route: "", toolbar: true }
     ]
   };
 
   //go to the route
-  pageRouter(route: string) {
+  public pageRouter(route: string) {
     if (route != "") {
-      console.log(route)
-      this.$router.push(route);
+      this["$router"].push(route);
 
     }
   }

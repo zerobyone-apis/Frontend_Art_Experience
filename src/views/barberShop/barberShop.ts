@@ -183,8 +183,6 @@ export default class BarberShopCode extends XComponent {
     }
   ];
 
-
-
   showBarberProfile(selectedBarber: any) {
     this.selectedBarber = selectedBarber;
     this.barberDialog = true;
