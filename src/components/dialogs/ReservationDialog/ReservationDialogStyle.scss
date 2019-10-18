@@ -1,17 +1,15 @@
 .v-dialog {
   border-radius: 4px !important;
-  // height: 100%;
   background-color: white;
+  width: auto;
 }
 
 .reservation-dialog {
   background-color: #ffffff !important;
 
   .btn_close {
-    // position: absolute;
     top: 0px;
     left: 0px;
-    // z-index: 1;
   }
 
   .v-stepper {
@@ -27,9 +25,7 @@
   .content {
     padding-top: 20px;
     position: relative;
-    width: 100%;
     height: 100% !important;
-    // height: 420px;
 
     .step-title {
       text-align: center;
