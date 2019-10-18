@@ -2,6 +2,7 @@
   <v-dialog
     v-model="model"
     persistent
+    overlay-color="black"
     transition="slide-x-transition"
     :fullscreen="$vuetify.breakpoint.name == 'xs'"
   >
@@ -30,9 +31,11 @@
                   data-aos="fade-down"
                   data-aos-duration="600"
                 >
+                  
+                  <v-img class="item-img-big" :src="item.picture.img" aspect-ratio="1"></v-img>
                   <p class="item-info">{{ item.info.job }}</p>
-                  <v-img class="item-img" :src="item.picture.img" aspect-ratio="1"></v-img>
                   <p class="item-name">{{ item.info.name }}</p>
+                  
                 </div>
               </div>
 
@@ -61,7 +64,7 @@
                   data-aos-duration="600"
                 >
                   <p class="item-info">{{ item.name }}</p>
-                  <v-img class="item-img" :src="item.img" aspect-ratio="1"></v-img>
+                  <v-img class="item-img-big" :src="item.img" aspect-ratio="1"></v-img>
                   <p class="item-cost">{{ "$"+item.cost }}</p>
                 </div>
               </div>
