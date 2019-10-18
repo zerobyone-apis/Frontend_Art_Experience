@@ -2,8 +2,8 @@
   <div id="homePage">
     <!-- banner  -->
     <div class="banner">
-      <p class="title font-title">Art Experience</p>
-      <p class="sub-title font-title">gestion de Barbershops</p>
+      <p class="title font-title">{{ data.homeInfo.name }}</p>
+      <p class="sub-title font-title">{{ data.homeInfo.slogan }}</p>
 
       <v-carousel
         height="730"
@@ -12,7 +12,7 @@
         hide-delimiter-background
         hide-delimiters
       >
-        <v-carousel-item v-for="(pic,index) in pictures" :key="index" :src="pic"></v-carousel-item>
+        <v-carousel-item v-for="(pic,index) in data.pictures" :key="index" :src="pic"></v-carousel-item>
       </v-carousel>
     </div>
     <!-- about us -->
@@ -22,16 +22,17 @@
         class="about_us-title font-title"
         data-aos="fade-up"
         data-aos-duration="600"
-      >ACERCA DE NOSOTROS</h1>
-      <p class="about_us-text font-text pt-4 pb-4" data-aos="fade-up" data-aos-duration="600">
-        Art Experience brinda servicios de calidad dedicados
-        a gestion de barberias y administracion de reservas para clientes.
-      </p>
+      >{{ data.homeInfo.aboutUsTitle }}</h1>
+      <p
+        class="about_us-text font-text pt-4 pb-4"
+        data-aos="fade-up"
+        data-aos-duration="600"
+      >{{ data.homeInfo.aboutUs }}</p>
       <!-- list employees  -->
       <div class="employees-list">
         <div
           class="employee-item"
-          v-for="(item,index) in employees"
+          v-for="(item,index) in data.employees"
           :key="index"
           data-aos="fade-up"
           data-aos-duration="600"
@@ -68,16 +69,16 @@
         class="services-title font-title"
         data-aos="fade-up"
         data-aos-duration="600"
-      >NUESTROS SERVICIOS</h1>
+      >{{ data.homeInfo.servicesTitle }}</h1>
       <p
         class="services-text font-text pt-4 pb-4"
         data-aos="fade-up"
         data-aos-duration="600"
-      >Brindamos servicios de calidad que facilitan su trabajo y aumenta su productividad.</p>
+      >{{ data.homeInfo.services }}</p>
       <div class="services-list">
         <div
           class="service-item"
-          v-for="(item,index) in services"
+          v-for="(item,index) in data.services"
           :key="index"
           data-aos="fade-right"
           data-aos-offset="50"
@@ -87,7 +88,7 @@
           <p class="service-info">{{ item.info }}</p>
           <!-- <a href>
             <p class="service-url">Ver mas</p>
-          </a> -->
+          </a>-->
         </div>
       </div>
     </div>
@@ -105,16 +106,16 @@
         class="courses-title font-title"
         data-aos="fade-up"
         data-aos-duration="600"
-      >NUESTROS CURSOS</h1>
+      >{{ data.homeInfo.coursesTitle }}</h1>
       <p
         class="courses-text font-text pt-4 pb-4"
         data-aos="fade-up"
         data-aos-duration="600"
-      >Ofrecemos cursos para aumentaran su experiencia</p>
+      >{{ data.homeInfo.courses }}</p>
       <div class="courses-list">
         <div
           class="course-item"
-          v-for="(item,index) in courses"
+          v-for="(item,index) in data.courses"
           :key="index"
           data-aos="fade-right"
           data-aos-offset="50"
@@ -125,7 +126,7 @@
           <p class="course-info">{{ item.info }}</p>
           <!-- <a href>
             <p class="course-url">Ver mas</p>
-          </a> -->
+          </a>-->
         </div>
       </div>
     </div>
@@ -138,20 +139,20 @@
     <!-- contact_us  -->
     <div class="contact_us-box">
       <div class="anchor" id="contact"></div>
-      <h1 class="contact_us-title font-title" data-aos="fade-up" data-aos-duration="600">CONTACTENOS</h1>
+      <h1 class="contact_us-title font-title" data-aos="fade-up" data-aos-duration="600">{{ data.homeInfo.contactUsTitle }}</h1>
       <p
         class="contact_us-text font-text pt-4 pb-4"
         data-aos="fade-up"
         data-aos-duration="600"
-      >Comuniquese con nosotros para mas informacion</p>
+      >{{ data.homeInfo.contactUs }}</p>
       <v-img class="social-logo contact_us-wpp" :src="require('../../assets/icons/whatsapp.png')"></v-img>
-      <p class="contact_us-number font-text pt-4 pb-4">{{ homeInfo.number }}</p>
+      <p class="contact_us-number font-text pt-4 pb-4">{{ data.homeInfo.number }}</p>
     </div>
 
     <!-- footer -->
     <div class="footer">
       <p class="logo" data-aos="fade-up" data-aos-duration="600">Art Experience</p>
-      <p class="footer-email">{{ homeInfo.email }}</p>
+      <p class="footer-email">{{ data.homeInfo.email }}</p>
       <div class="footer-social">
         <a href>
           <v-img
@@ -179,9 +180,12 @@ import "./homeStyle.scss";
 import "../../styles/fonts.scss";
 //components
 import { Component } from "vue-property-decorator";
+import AddDialog from "../../components/dialogs/addDialog/addDialog.vue";
 
 @Component({
-  components: {}
+  components: {
+    AddDialog
+  }
 })
 export default class Home extends HomeCode {}
 </script>
