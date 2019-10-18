@@ -1,7 +1,9 @@
 #drawer-left {
   top: 65px;
-  width: 200px !important;
+  width: 100% !important;
   height: calc(100% - 65px) !important;
+  text-align: center;
+  padding-top: 50%;
 
   .settings {
     position: absolute !important;
@@ -10,11 +12,7 @@
   }
 
   .list-item {
-    // margin: auto;
+    margin: auto;
     // padding-bottom: 10px;
-    .list-item-content {
-      // position: relative;
-      // height: 40px !important;
-    }
   }
 }

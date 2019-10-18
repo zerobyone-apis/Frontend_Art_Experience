@@ -6,7 +6,7 @@
     fixed
     left
     v-model="drawer"
-    color="rgba(0, 0, 0, 0.685)"
+    color="rgba(0, 0, 0, 0.6)"
   >
     <v-list-item
       v-for="(item, index) in filteredConf"

@@ -7,15 +7,15 @@ export default class LeftMenuCode extends MenuItems {
     
     //show and hide the leftsidemenu
     get drawer() {
-        return this.$store.state.drawer.left;
+        return this["$store"].state.drawer.left;
     }
     set drawer(drawer) {
-        this.$store.commit("setLeftDrawer", drawer);
+        this["$store"].commit("setLeftDrawer", drawer);
     }
 
     //find the option by search menu
     get filteredConf() {
-        return this.menu.options.filter(option => {
+        return this["menu"].options.filter(option => {
             return option.name.indexOf(this.search.toLowerCase()) >= 0;
         });
     }
@@ -23,7 +23,7 @@ export default class LeftMenuCode extends MenuItems {
     //go to the route
     pageRouter(route: string) {
         console.log(route)
-        this.$router.push(route);
+        this["$router"].push(route);
     }
 }
 
