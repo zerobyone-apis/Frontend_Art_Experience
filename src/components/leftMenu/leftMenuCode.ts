@@ -1,10 +1,15 @@
 import { Component, Vue } from "vue-property-decorator";
 import MenuItems from '../menuItems';
+import ReservationStructure from '../dialogs/structure/Reservation';
+
 
 @Component({})
 export default class LeftMenuCode extends MenuItems {
     private search: string = "";
-    
+
+    //reservation structure: contains dialog, steps
+    private reservation = new ReservationStructure();
+
     //show and hide the leftsidemenu
     get drawer() {
         return this["$store"].state.drawer.left;
@@ -19,7 +24,7 @@ export default class LeftMenuCode extends MenuItems {
             return option.name.indexOf(this.search.toLowerCase()) >= 0;
         });
     }
-    
+
     //go to the route
     pageRouter(route: string) {
         console.log(route)

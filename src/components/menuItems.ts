@@ -4,7 +4,6 @@ export default class MenuItems extends Vue {
 
   private menu: any = {
     options: [
-      { name: "RESERVAR", icon: "", href: "/", route: "", toolbar: false },
       { name: "SERVICIOS", icon: "", href: "/#services", route: "", toolbar: true },
       { name: "CURSOS", icon: "", href: "/#cources", route: "", toolbar: true },
       { name: "CONTACTENOS", icon: "", href: "/#contact", route: "", toolbar: true }

@@ -61,6 +61,7 @@ export default class ReservationDialogCode extends Vue {
 
     set model(model: boolean) {
         this.$emit("input", model);
+        this.wizard = 1;
     }
 
     next() {

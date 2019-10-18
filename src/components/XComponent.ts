@@ -1,7 +1,8 @@
-import { Vue, Component } from 'vue-property-decorator';
+import { Vue } from 'vue-property-decorator';
 
 export default class XComponent extends Vue {
   protected loading: any = { table: false, request: false };
+  
   protected dialogs: any = {
     add: false, 
     save: false, 
@@ -10,6 +11,7 @@ export default class XComponent extends Vue {
     register: false,
     imgSettings: false
   };
+
   protected wizard: number = 1;
   protected errors: any = { wizard: false };
   protected tableConf: any = {
@@ -19,6 +21,7 @@ export default class XComponent extends Vue {
       text: ''
     }
   };
+
   protected  icons: any = {
     instagram: "https://image.flaticon.com/icons/png/512/87/87390.png",
     facebook: "https://image.flaticon.com/icons/png/512/33/33702.png"

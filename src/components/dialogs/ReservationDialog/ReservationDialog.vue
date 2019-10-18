@@ -1,12 +1,22 @@
 <template>
-  <v-dialog v-model="model" transition="slide-x-transition">
+  <v-dialog
+    v-model="model"
+    persistent
+    transition="slide-x-transition"
+    :fullscreen="$vuetify.breakpoint.name == 'xs'"
+  >
     <div class="reservation-dialog">
+      <v-btn @click="model=false" fab text small class="btn_close">
+        <v-icon>close</v-icon>
+      </v-btn>
+
       <v-stepper v-model="wizard">
         <v-stepper-items>
           <v-stepper-content v-for="(step,index) in steps" :key="index+1" :step="index+1">
             <!-- custom content -->
             <div class="content" v-if="index==0">
               <!-- list employees -->
+
               <p
                 class="text step-title"
               >Seleccione el barbero con el que quiere realizar el servicio</p>
@@ -99,9 +109,9 @@
                     <!-- Hours BOX -->
                     <div v-if="field.is == 'hour'" class="hours-item">
                       <div class="hours-box">
-                        <p class="font-text hours-name">Manana</p>
+                        <p class="font-text hours-name">Manaña</p>
                         <v-btn
-                        text
+                          text
                           small
                           class="hour-item font-text"
                           v-for="(hour,i) in data.hours.week"
@@ -109,6 +119,7 @@
                           @click="selectHour('week', i)"
                         >{{ hour }}</v-btn>
                       </div>
+
                       <div class="hours-box">
                         <p class="font-text hours-name">Tarde</p>
                         <v-btn
