@@ -1,79 +1,166 @@
-.stepper {
-  .v-stepper__content {
-    padding: 0 !important;
-  }
-}
-.x-dialogs {
-  border-radius: 0px !important;
-
-  .x-stepper {
-    box-shadow: none !important;
-    border: none;
-    border-radius: 80px;
-    margin: 31px;
-
-    .v-stepper__header {
-      box-shadow: none;
-      border-radius: 50px;
-      padding: 11px 28px;
-      margin-left: 5%;
-      width: 89%;
-      margin-top: 22px;
-      border: 1px solid #d4d4d4;
-    }
-
-    .v-stepper__step > .v-stepper__label {
-      color: #8f8f8f !important;
-      text-shadow: none;
-    }
-
-    .v-stepper__step__step {
-      background-color: #de5656 !important;
-    }
-  }
+.v-dialog {
+  border-radius: 4px !important;
 }
 
-.x-dialogs__footer {
-  border-top: 1px solid #f1f1f1;
-  padding: 8px;
-}
-
-.x-dialogs__content {
-  position: relative;
+.add-dialog {
   width: 100%;
-  height: 100%;
-  padding-top: 50px;
-  padding-left: 60px; 
-  padding-right: 60px;
-}
+  background-color: #ffffff !important;
 
-.date-box {
-  input {
-    border-style: solid;
-    height: 30px !important;
-    font-size: 16px;
+  .v-stepper {
+    border-radius: 0px !important;
+    .v-stepper__content {
+      padding: 0px;
+    }
   }
-}
 
-.hours-box {
-  position: relative;
-  top: 0px;
-  width: 100%;
-  height: 100px;
-  display: inline-block;
-  overflow: hidden;
-  overflow-y: scroll;
-  text-align: center;
-
-  .hour-item.v-btn {
+  //STEP 0: CUSTOM CONTENT
+  .content {
     position: relative;
-    width: 30px !important;
-    min-width: 50px !important;
-    height: 20px;
-    top: 0px;
-    border-radius: 10px;
-    margin: 1 !important;
-    display: inline-block;
-    text-align: center;
+    width: 100%;
+    height: 420px;
+
+    .step-title {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .employees-list {
+      position: relative;
+      width: 100%;
+      height: 42%;
+      top: 20px;
+      padding: 10px;
+      text-align: center;
+      overflow-y: auto;
+      background-color: #dbdbdbbb;
+
+      .employee-item {
+        position: relative;
+        margin: 5px;
+        width: 120px;
+        height: 80px;
+        display: inline-table;
+        text-align: center;
+
+        .employee-img {
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          margin: auto;
+          border-width: 4px;
+          border-style: solid;
+          background-color: white;
+          border-color: white;
+        }
+
+        .employee-name {
+          // margin-top: 10px;
+          font-size: 14px;
+        }
+
+        .employee-info {
+          color: #504e4ebb;
+          font-size: 14px;
+        }
+
+        .employee-url {
+          position: absolute;
+          bottom: 0px;
+          margin-left: 40%;
+        }
+      }
+
+      .employee-item:hover {
+        .employee-img {
+          border-color: rgba(22, 255, 22, 0.534);
+        }
+        
+      }
+    }
+
+    .selected-barber {
+      position: relative;
+      width: 100%;
+      // height: max-content;
+      // padding: 30px;
+      text-align: center;
+
+      .select-barber-name {
+        // position: relative;
+        font-size: 13px;
+        margin-top: 30px;
+      }
+
+      .employee-item {
+        position: relative;
+        margin: 5px;
+        width: 100%;
+        height: 140px;
+        // display: inline-table;
+        text-align: center;
+        
+        .employee-img {
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          margin: auto;
+          border-width: 4px;
+          border-style: solid;
+          background-color: white;
+          border-color: white;
+        }
+
+        .employee-name {
+          // margin-top: 10px;
+          font-size: 14px;
+        }
+
+        .employee-info {
+          color: #504e4ebb;
+          font-size: 14px;
+        }
+
+        .employee-url {
+          position: absolute;
+          bottom: 0px;
+          margin-left: 40%;
+        }
+      }
+
+      
+    }
+  }
+
+  //AUTOMATIC CONTENT
+  .automatic-box {
+    position: relative;
+    // background-color: red;
+    width: 200px;
+    margin:auto;
+    .layout-box {
+      .hours-item {
+        .hours-name {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  //FOOTER
+  .footer-dialog {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    // bottom: 0px;
+    padding-right: 20px;
+    margin-top: 50px;
+
+    .footer-button {
+      float: right;
+      border-style: solid;
+      margin-left: 20px;
+    }
   }
 }

@@ -1,47 +1,45 @@
-import { Vue } from "vue-property-decorator";
+import { Vue, Component } from "vue-property-decorator";
+import PageData from '../../../data/PageData';
 
 export default class AddDialog extends Vue {
+    private data: any = new PageData();
+
     private item: any = {};
     private modals: any = {};
     private date: string = new Date().toISOString().substr(0, 10);
-    private time: string = "";
     private wizard: number = 1;
-    private errors: boolean = false;
 
-    /**
-     * @name MODEL
-     * @description emits the input method to the parent for define visibility of the dialog
-     */
+    public selectedBarber: any = {
+        info: {
+            name: "",
+            job: ""
+        },
+        picture: {
+            img: "",
+            scala: 100,
+            x: 0,
+            y: 0
+        }
+    };
+
     get model(): boolean {
-        return this.value;
+        return this["value"];
     }
 
     set model(model: boolean) {
         this.$emit("input", model);
     }
 
-    /**
-     * @name NEXT
-     * @description next step in stepper dialog
-     */
     next() {
-        if (this.steps.length > this.wizard) this.wizard += 1;
+        if (this["steps"].length > this.wizard) this.wizard += 1;
     }
 
-    /**
-     * @name PREV
-     * @description prev step in stepper dialog
-     */
     prev() {
-        if (this.steps.length > 0) this.wizard -= 1;
+        if (this["steps"].length > 0) this.wizard -= 1;
     }
 
-    /**
-     * @name JUMP
-     * @description jump to the step entered in the stepper dialog
-     */
     jump(value: number) {
-        if (value >= 0 && value <= this.steps.length) {
+        if (value >= 0 && value <= this["steps"].length) {
             this.wizard = value;
         }
     }
@@ -65,42 +63,44 @@ export default class AddDialog extends Vue {
      * @name ERROR_FIELD
      * @description Check the required fields and return if there is an empty one
      */
-    errorField(field: any) {
-        let error = false;
-        if (field.required && !this.item[field.name]) {
-            error = true;
-        }
-        return error;
-    }
+    // errorField(field: any) {
+    //     let error = false;
+    //     if (field.required && !this.item[field.name]) {
+    //         error = true;
+    //     }
+    //     return error;
+    // }
 
     /**s
      * @name EVENT
      * @description emits the "event" method to the parent
      */
-    event() {
-        this.errors = false;
-        this.steps.map((step: any, index: number) => {
-            let form = "step" + (index + 1);
+    // event() {
+    //     this.errors = false;
+    //     this.steps.map((step: any, index: number) => {
+    //         let form = "step" + (index + 1);
 
-            if (!this.$refs[form][0].validate()) {
-                this.errors = true;
-                this.wizard = index + 1;
-            }
-        });
-        if (!this.errors) {
-            this.$emit("event", this.item);
-        }
-    }
+    //         if (!this.$refs[form][0].validate()) {
+    //             this.errors = true;
+    //             this.wizard = index + 1;
+    //         }
+    //     });
+    //     if (!this.errors) {
+    //         this.$emit("event", this.item);
+    //     }
+    // }
 
-    saveDate(date: any) {
-        this.$refs["dialog1"][0].save(date.toString());
-        this.modal = false;
-    }
+    // saveDate(date: any) {
+    //     this.$refs["dialog1"][0].save(date.toString());
+    //     this.modal = false;
+    // }
 
     //start: open the barberShop
     //end: close the barberShop
     //workTime: val of division of the time
     getHours(workTime: number) {
-        return ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"];
+        return ["10:00", "11:00", "12:00", "13:00",
+            "14:00", "15:00", "16:00", "17:00", "18:00",
+            "19:00", "20:00"];
     }
 }

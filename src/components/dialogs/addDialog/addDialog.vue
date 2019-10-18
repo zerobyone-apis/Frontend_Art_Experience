@@ -1,39 +1,23 @@
 <template>
-  <v-dialog v-model="model" fullscreen scrollable transition="slide-x-transition">
-    <v-card class="x-dialogs">
-      <v-card-text style="padding:0;">
-        <v-stepper v-model="wizard" class="stepper">
-          <v-stepper-items>
-            <v-stepper-content v-for="(step,index) in steps" :key="index+1" :step="index+1">
-              <div class="black" style="position: relative; width: 100%; height: 60px;">
-                <v-layout row wrap class="text-xs-center">
-                  <v-flex xs4 xl4 sm4 class="text-xs-left pt-3 pl-1">
-                    <v-icon @click="model=false" dark fab>arrow_back</v-icon>
-                  </v-flex>
-                  <v-flex xs4 xl4 sm4 class="pt-3">
-                    <span class="white--text">{{ $i18n.t(step.title) }}</span>
-                  </v-flex>
-                  <v-flex xs4 xl4 sm4></v-flex>
-                </v-layout>
-              </div>
+  <v-dialog v-model="model" transition="slide-x-transition">
+    <div class="add-dialog">
+      <v-stepper v-model="wizard">
+        <v-stepper-items>
+          <v-stepper-content v-for="(step,index) in steps" :key="index+1" :step="index+1">
+            <!-- automatic content -->
+            <slot :name="'step'+(index+1)" :data="data" :selectedBarber="selectedBarber">
+              <div class="content">
+                <p class="text title-emplyees">{{step.title}}</p>
 
-              <v-form :ref="'step'+(index+1)">
-                <!--default step structure-->
-                <slot
-                  :name="'step'+(index+1)"
-                  :jump="jump"
-                  :next="next"
-                  :prev="prev"
-                  :event="steps.length-1 == index ? event : () =>{}"
-                >
-                  <v-layout row wrap class="x-dialogs__content">
+                <div class="automatic-box">
+                  <v-layout row wrap class="layout-box">
                     <v-flex
                       v-for="(field,index) in step.fields"
                       :key="index"
                       xs12
                       sm12
                       lg12
-                      class="pb-3"
+                      class="pb-3 px-4"
                     >
                       <component
                         v-if="field.is != 'date' && field.is != 'hour'"
@@ -48,35 +32,34 @@
                         :label="$i18n.t(field.label)"
                         :prepend-icon="field.icon"
                         :selectable="field.selectable"
-                        :readonly="field.readOnly"
                         color="x-theme__color"
                       ></component>
 
-                      <!-- Hours BOX  -->
-                      <div v-if="field.is == 'hour'">
-                        <p class="text-xs-center">Manana</p>
+                      <!-- Hours BOX -->
+                      <div v-if="field.is == 'hour'" class="hours-item">
                         <div class="hours-box">
+                          <p class="font-text hours-name">Manana</p>
                           <v-btn
-                            outline
                             small
-                            class="hour-item"
+                            text
+                            class="hour-item font-text"
                             v-for="(hour,i) in getHours(field.workTime).slice(0,5)"
                             :key="i"
                           >{{ hour }}</v-btn>
                         </div>
-                        <p class="text-xs-center">Tarde</p>
                         <div class="hours-box">
+                          <p class="font-text hours-name">Tarde</p>
                           <v-btn
-                            outline
                             small
-                            class="hour-item"
+                            text
+                            class="hour-item font-text"
                             v-for="(hour,i) in getHours(field.workTime).slice(5)"
                             :key="i"
                           >{{ hour }}</v-btn>
                         </div>
                       </div>
 
-                      <!-- Date Field  -->
+                      <!-- Date Field -->
                       <v-dialog
                         v-if="field.is == 'date'"
                         :ref="'dialog'+(index+1)"
@@ -95,55 +78,52 @@
                             v-on="on"
                           ></v-text-field>
                         </template>
-
                         <v-date-picker color="black" v-model="date" scrollable>
                           <v-spacer></v-spacer>
                           <v-btn
-                            flat
+                            text
                             color="primary"
                             @click="item[field.name] = date; 
-                            modals['dialog'+(index+1)] = false"
+                          modals['dialog'+(index+1)] = false"
                           >OK</v-btn>
                         </v-date-picker>
                       </v-dialog>
                     </v-flex>
-
-                    <!--footer-->
-                    <v-flex xs12 sm12 lg12 class="pr-3">
-                      <v-btn
-                        v-if="steps.length == index+1"
-                        color="x-theme__color"
-                        flat
-                        small
-                        outline
-                        style="float: right;"
-                        @click.native="event"
-                      >{{ buttonText }}</v-btn>
-                      <v-btn
-                        v-if="wizard != steps.length"
-                        style="float: right;"
-                        flat
-                        small
-                        color="x-theme__color"
-                        @click.native="wizard += 1"
-                      >{{ $i18n.t('GENERAL.next') }}</v-btn>
-                      <v-btn
-                        v-if="wizard > 1"
-                        color="grey"
-                        style="float: right;"
-                        flat
-                        small
-                        @click.native="wizard-=1"
-                      >{{ $i18n.t('GENERAL.prev') }}</v-btn>
-                    </v-flex>
                   </v-layout>
-                </slot>
-              </v-form>
-            </v-stepper-content>
-          </v-stepper-items>
-        </v-stepper>
-      </v-card-text>
-    </v-card>
+                </div>
+              </div>
+            </slot>
+
+            <!-- footer -->
+            <div class="footer-dialog">
+              <v-btn
+                v-if="steps.length == index+1"
+                text
+                small
+                class="footer-button"
+                @click.native="event"
+              >{{ buttonText }}</v-btn>
+
+              <v-btn
+                v-if="wizard != steps.length"
+                text
+                small
+                class="footer-button"
+                @click.native="wizard += 1"
+              >{{ $i18n.t('GENERAL.next') }}</v-btn>
+
+              <v-btn
+                v-if="wizard > 1"
+                text
+                small
+                class="footer-button"
+                @click.native="wizard -= 1"
+              >{{ $i18n.t('GENERAL.prev') }}</v-btn>
+            </div>
+          </v-stepper-content>
+        </v-stepper-items>
+      </v-stepper>
+    </div>
   </v-dialog>
 </template>
 
@@ -153,6 +133,7 @@ import { VSelect, VTextField, VCheckbox } from "vuetify/lib";
 
 import AddDialogCode from "./addDialogCode";
 import "./addDialogStyle.scss";
+import "../../../styles/fonts.scss";
 
 @Component({})
 export default class AddDialog extends AddDialogCode {
