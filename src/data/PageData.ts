@@ -19,6 +19,33 @@ export default class PageData {
     "https://mybarbershopbroward.files.wordpress.com/2016/09/barber-wallpaper-23.jpg"
   ];
 
+  public weekObject: any = [
+    {hour:"11:00",selected: false ,saturday:false}, 
+    {hour:"11:50",selected: false ,saturday:false}, 
+    {hour:"12:40",selected: false ,saturday:false},
+    {hour:"13:30",selected: false ,saturday:false},
+    {hour:"14:20",selected: false ,saturday:false},
+    {hour:"16:00",selected: false ,saturday:false},
+    {hour:"16:50",selected: false ,saturday:false},
+    {hour:"17:40",selected: false ,saturday:false},
+    {hour:"18:30",selected: false ,saturday:false},
+    {hour:"10:00",selected: false ,saturday:true},
+    {hour:"10:40",selected: false ,saturday:true}, 
+    {hour:"11:20",selected: false ,saturday:true}, 
+    {hour:"12:00",selected: false ,saturday:true},
+    {hour:"12:40",selected: false ,saturday:true}, 
+    {hour:"13:20",selected: false ,saturday:true}, 
+    {hour:"14:00",selected: false ,saturday:true},
+    {hour:"14:40",selected: false ,saturday:true}, 
+    {hour:"15:20",selected: false ,saturday:true}, 
+    {hour:"16:00",selected: false ,saturday:true},
+    {hour:"16:40",selected: false ,saturday:true}, 
+    {hour:"17:20",selected: false ,saturday:true}, 
+    {hour:"18:00",selected: false ,saturday:true},
+    {hour:"18:40",selected: false ,saturday:true}, 
+    {hour:"19:20",selected: false ,saturday:true}
+  ]
+
   public hours: any =  {
     week: ["11:00", "11:50", "12:40", "13:30", "14:20", "16:00", "16:50", "17:40", "18:30"],
     saturday: ["10:00", "10:40", "11:20", "12:20", "13:00", "13:40", "14:20", "15:00", "15:40", "16:20", "17:00", "17:40"]

@@ -29,31 +29,26 @@ export default class ReservationDialogCode extends Vue {
         img: ""
     };
 
-    ///////////////////////////////////////////////////// 
-    private arrayWeek = this.data.hours.week;
-    private arraySaturday = this.data.hours.saturday;
-    ///////////////////////////////////////////////////
-    private selectHour(array: string, index: number) {
-        this.arrayWeek.map(item => {
-            item = false;
+    private selectHour(hour: any) { 
+        this.data.weekObject.map((item: any) => {
+            if (item != hour) {
+                item.selected = false;
+            } else { 
+                item.selected = true;
+            }
         });
-
-        this.arraySaturday.map(item => {
-            item = false;
-        });
-
-        switch (array) {
-            case "week":
-                this.arrayWeek[index] = true;
-                break;
-
-            case "saturday":
-                this.arraySaturday[index] = true;
-                break;
-        }
-
-
     }
+
+    private getHours(saturday: boolean) { 
+        let items: any = [];
+        this.data.weekObject.forEach((item: any) => {
+            if (item.saturday == saturday) { 
+                items.push(item);
+            }
+        });
+        return items;
+    }
+
 
     get model(): boolean {
         return this["value"];
@@ -132,9 +127,5 @@ export default class ReservationDialogCode extends Vue {
     //start: open the barberShop
     //end: close the barberShop
     //workTime: val of division of the time
-    getHours(workTime: number) {
-        return ["10:00", "11:00", "12:00", "13:00",
-            "14:00", "15:00", "16:00", "17:00", "18:00",
-            "19:00", "20:00"];
-    }
+
 }

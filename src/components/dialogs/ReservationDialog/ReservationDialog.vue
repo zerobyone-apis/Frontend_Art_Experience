@@ -31,11 +31,9 @@
                   data-aos="fade-down"
                   data-aos-duration="600"
                 >
-                  
                   <v-img class="item-img-big" :src="item.picture.img" aspect-ratio="1"></v-img>
                   <p class="item-info">{{ item.info.job }}</p>
                   <p class="item-name">{{ item.info.name }}</p>
-                  
                 </div>
               </div>
 
@@ -112,27 +110,27 @@
                     <!-- Hours BOX -->
                     <div v-if="field.is == 'hour'" class="hours-item">
                       <div class="hours-box">
-                        <p class="font-text hours-name">Manaña</p>
+                        <p class="font-text hours-name">Semana</p>
                         <v-btn
-                          text
+                          :text="!hour.selected"
                           small
                           class="hour-item font-text"
-                          v-for="(hour,i) in data.hours.week"
+                          v-for="(hour,i) in getHours(false)"
                           :key="i"
-                          @click="selectHour('week', i)"
-                        >{{ hour }}</v-btn>
+                          @click="selectHour(hour)"
+                        >{{ hour["hour"] }}</v-btn>
                       </div>
 
                       <div class="hours-box">
-                        <p class="font-text hours-name">Tarde</p>
+                        <p class="font-text hours-name">Sabados</p>
                         <v-btn
+                        :text="!hour.selected"
                           small
                           class="hour-item font-text"
-                          v-for="(hour,i) in data.hours.saturday"
+                          v-for="(hour,i) in getHours(true)"
                           :key="i"
-                          text
-                          @click="selectHour('saturday', i)"
-                        >{{ hour }}</v-btn>
+                          @click="selectHour(hour)"
+                        >{{ hour["hour"] }}</v-btn>
                       </div>
                     </div>
 
