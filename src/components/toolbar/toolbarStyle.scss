@@ -19,6 +19,12 @@
   padding-bottom: 0px;
   padding-left: 5%;
 
+  .v-toolbar__title {
+    position: relative;
+    font-size: 1.0em;
+    width: 100%;
+  }
+
   .logo {
     cursor: pointer;
     width: 120px;
@@ -27,7 +33,7 @@
 
   .left-menu-btn {
     position: absolute;
-    left: -20px;
+    left: -10px;
     width: 20px;
     height: 20px;
     box-shadow: none;
@@ -52,6 +58,13 @@
     .toolbar-button-reservation {
       font-size: 10px;
       text-transform: none;
+    }
+    .reservation-mobile {
+      border-radius: 20px;
+      background-color: rgb(77, 77, 77)!important;
+      color: rgb(255, 255, 255);
+      border-style: solid;
+      border-color: rgb(151, 151, 151);
     }
   }
 

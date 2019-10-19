@@ -35,11 +35,12 @@
       </v-btn>
     </v-toolbar-items>
 
-    <div class="right-box hidden-xs-only">
+    <div class="right-box">
       <v-btn
         outlined
         @click.native.stop="reservation.dialog = true"
         class="toolbar-button-reservation"
+        :class="{'reservation-mobile' : $vuetify.breakpoint.name == 'xs'}"
       >RESERVAR</v-btn>
     </div>
 
