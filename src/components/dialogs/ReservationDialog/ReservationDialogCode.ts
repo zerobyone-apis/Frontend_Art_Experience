@@ -3,47 +3,46 @@ import PageData from '../../../data/PageData';
 
 export default class ReservationDialogCode extends Vue {
     private data: any = new PageData();
-
-    private reservation = {
-        barberId: 1,
-        clientId: 2,
-        workId: 1,
-        startHour: "",
-        startDate: "",
-        isSuccess: true,
-    }
-
     private item: any = {};
-
     private wizard: number = 1;
 
-    public selectedBarber: any = {
-        idBarber: -1,
-        idUser: -1,
-        name: "",
-        job: "",
-        amountCuts: -1,
-        clientsBarber: -1,
-        rateOfBarber: -1,
-        amountOfReservesByDay: -1,
-        img: "",
-        instagram: "",
-        facebook: ""
-    };
+    private reservation = {
+        barberId: null,
+        clientId: null,
+        workId: null,
+        startHour: null,
+        startDate: null,
+        isSuccess: false,
+    }
 
+    private selectedBarber: any = {};
+    private selectedJob: any = {};
 
-    public selectedJob: any = {
-        name: "",
-        cost: "",
-        img: ""
-    };
+    private selectJob(job: any) {
+        this.selectedJob = job;
+        this.reservation.workId = job.workId;
+    }
 
-    //do this methosd    
-    private getDaysExceptWednesday() { 
+    private selectBarber(barber: any) {
+        this.selectedBarber = barber;
+        this.reservation.barberId = barber.barberId;
+    }
+
+    private checkSuccessStep() {
+        let required = this["steps"][this.wizard - 1].required;
+        if (this.reservation[required] != undefined) {
+            return false;//not disabled
+        } else {
+            return true; //disabled
+        }
+    }
+
+    //pensar este metodo: debe desmarcar todos los domingos 
+    private getDaysExceptWednesday() {
         return val => parseInt(val.split('-')[2]) % 7 === 1;
     }
 
-    private getDayNumber(date: any) { 
+    private getDayNumber(date: any) {
         return new Date(date).getDay();
     }
 
@@ -67,7 +66,6 @@ export default class ReservationDialogCode extends Vue {
         });
         return items;
     }
-
 
     get model(): boolean {
         return this["value"];
@@ -100,5 +98,15 @@ export default class ReservationDialogCode extends Vue {
         if (type == "checkbox") component = "v-checkbox";
         if (type == "date") component = "v-date-picker";
         return component;
+    }
+
+    event() {
+        console.log(this.reservation)
+        this.wizard = 1;
+        //reset
+        // this.selectedBarber = {};
+        // this.selectedJob = {};
+        // this.reservation.startDate = "";
+        this.model = false;
     }
 }

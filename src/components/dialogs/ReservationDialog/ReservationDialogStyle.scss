@@ -1,7 +1,7 @@
 .v-dialog__content.v-dialog__content--active {
-  background-image: url("http://www.pngmart.com/files/8/Lines-PNG-Transparent-Photo.png");
+  background-image: url("");
   background-repeat: repeat;
-  background-size: 100px;
+  background-size: 50px;
 }
 
 .v-dialog {
@@ -33,25 +33,21 @@
 
   //STEP 0: CUSTOM CONTENT
   .content {
-    padding-top: 20px;
     position: relative;
     height: 100% !important;
 
     .step-title {
       text-align: center;
-      margin-top: 20px;
-      margin: 20px;
+      padding: 20px;
     }
 
     .items-list {
       position: relative;
       width: 100%;
-      // height: 250px;
       top: 20px;
       padding: 10px;
       text-align: center;
       overflow-y: auto;
-      // background-color: #dbdbdbbb;
 
       .item {
         position: relative;
@@ -71,8 +67,8 @@
           background-color: white;
           border-color: white;
         }
+
         .item-img-big {
-          // border-radius: 50%;
           border-radius: 10px;
           width: 120px;
           height: 120px;
@@ -84,7 +80,6 @@
         }
 
         .item-name {
-          // margin-top: 10px;
           font-size: 12px;
         }
 

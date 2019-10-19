@@ -4,16 +4,17 @@ export default class Reservation {
   private dialog: boolean = false;
 
   private steps: any = [
-    {
+    {//custom
       title: "custom",
-      fields: []
+      required: "barberId"
     },
-    {
+    {//custom
       title: "custom",
-      fields: []
+      required: "workId"      
     },
-    {
+    {//automatic
       title: "Indique la fecha y la hora en la que quiere reservar",
+      required: "startHour",
       fields: [
         {
           is: "date",
@@ -21,13 +22,12 @@ export default class Reservation {
           label: "fecha de inicio",
           hint: "EVENT.hintDate",
           icon: "event",
-          date: new Date().toISOString().substr(0, 10), //is used only for the component
-          modal: [], //is only used for the component
+          date: new Date().toISOString().substr(0, 10),
+          modal: [],
           required: true
         },
         {
           is: "hour",
-          workTime: 0.5,
           name: "startHour",
           label: "horarios",
           hint: "EVENT.hintDate",

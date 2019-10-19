@@ -20,13 +20,12 @@
               <p
                 class="text step-title"
               >Seleccione el barbero con el que quiere realizar el servicio</p>
-
               <div class="items-list">
                 <div
                   class="item"
                   v-for="(barber,index) in data.barbers"
                   :key="index"
-                  @click="selectedBarber = barber"
+                  @click="selectBarber(barber)"
                   data-aos="fade-down"
                   data-aos-duration="600"
                 >
@@ -35,13 +34,12 @@
                   <p class="item-info">{{ barber.job }}</p>
                 </div>
               </div>
-
               <div class="selected-item">
                 <p class="select-item-name font-text">Barbero seleccionado</p>
                 <div class="item">
-                  <p class="item-info">{{ selectedBarber.job }}</p>
-                  <img class="item-img" :src="selectedBarber.img" aspect-ratio="1" />
-                  <p class="item-name">{{ selectedBarber.name }}</p>
+                  <p class="item-info">{{ selectedBarber["job"] }}</p>
+                  <img class="item-img" :src="selectedBarber['img']" aspect-ratio="1" />
+                  <p class="item-name">{{ selectedBarber['name'] }}</p>
                 </div>
               </div>
             </div>
@@ -50,28 +48,25 @@
             <div class="content" v-if="index==1">
               <!-- list jobs -->
               <p class="text step-title">Seleccione el servicio que desea realizar</p>
-
               <div class="items-list">
                 <div
                   class="item"
-                  v-for="(item,index) in data.jobs"
+                  v-for="(job,index) in data.jobs"
                   :key="index"
-                  @click="selectedJob = item"
+                  @click="selectJob(job)"
                   data-aos="fade-down"
                   data-aos-duration="600"
                 >
-                  <p class="item-info">{{ item.name }}</p>
-                  <v-img class="item-img-big" :src="item.img" aspect-ratio="1"></v-img>
-                  <p class="item-cost">{{ "$"+item.cost }}</p>
+                  <p class="item-info">{{ job.name }}</p>
+                  <v-img class="item-img-big" :src="job.img" aspect-ratio="1"></v-img>
+                  <p class="item-cost">{{ "$"+job.cost }}</p>
                 </div>
               </div>
-
               <div class="selected-item">
                 <p class="select-item-name font-text">Servicio seleccionado</p>
                 <div class="item">
-                  <p class="item-info">{{ selectedJob.name }}</p>
-                  <img class="item-img" :src="selectedJob.img" aspect-ratio="1" />
-                  <!-- <p class="item-cost">{{ "$"+ selectedJob.cost }}</p> -->
+                  <p class="item-info">{{ selectedJob["name"] }}</p>
+                  <img class="item-img" :src="selectedJob['img']" aspect-ratio="1" />
                 </div>
               </div>
             </div>
@@ -108,7 +103,10 @@
 
                     <!-- Hours BOX -->
                     <div v-if="field.is == 'hour'" class="hours-item">
-                      <div class="hours-box" v-if="getDayNumber(reservation.startDate) != 6">
+                      <div
+                        class="hours-box"
+                        v-if="getDayNumber(reservation.startDate) != 6 && reservation.startDate"
+                      >
                         <p class="font-text hours-name">Semana</p>
                         <v-btn
                           :text="!hour.selected"
@@ -120,7 +118,10 @@
                         >{{ hour["hour"] }}</v-btn>
                       </div>
 
-                      <div class="hours-box" v-if="getDayNumber(reservation.startDate) == 6">
+                      <div
+                        class="hours-box"
+                        v-if="getDayNumber(reservation.startDate) == 6 && reservation.startDate"
+                      >
                         <p class="font-text hours-name">Sabados</p>
                         <v-btn
                           :text="!hour.selected"
@@ -155,7 +156,6 @@
                       <!-- :allowed-dates="getDaysExceptWednesday()" -->
                       <v-date-picker
                         :min="new Date().toISOString().substr(0, 10)"
-                        
                         locale="es"
                         color="black"
                         v-model="field.date"
@@ -179,10 +179,12 @@
             <div class="footer-dialog">
               <v-btn
                 v-if="steps.length == index+1"
+                class="footer-button"
+                v-bind:v-model="reservation"
+                :disabled="checkSuccessStep()"
+                @click.native="event"
                 text
                 small
-                class="footer-button"
-                @click.native="event"
               >{{ buttonText }}</v-btn>
 
               <v-btn
@@ -190,6 +192,8 @@
                 text
                 small
                 class="footer-button"
+                v-bind:v-model="reservation"
+                :disabled="checkSuccessStep()"
                 @click.native="wizard += 1"
               >{{ $i18n.t('GENERAL.next') }}</v-btn>
 
