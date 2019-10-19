@@ -32,23 +32,23 @@
       <div class="employees-list">
         <div
           class="employee-item"
-          v-for="(item,index) in data.employees"
+          v-for="(barber,index) in data.barbers"
           :key="index"
           data-aos="fade-up"
           data-aos-duration="600"
         >
-          <v-img class="employee-img" :src="item.picture.img" aspect-ratio="1"></v-img>
-          <p class="employee-name">{{ item.info.name }}</p>
-          <p class="employee-info">{{ item.info.job }}</p>
+          <v-img class="employee-img" :src="barber.img" aspect-ratio="1"></v-img>
+          <p class="employee-name">{{ barber.name }}</p>
+          <p class="employee-info">{{ barber.job }}</p>
 
           <div class="employee-social">
-            <a :href="item.info.instagram">
+            <a :href="barber.instagram">
               <v-img
                 class="employee-social-logo social-logo"
                 :src="require('../../assets/icons/instagram.png')"
               ></v-img>
             </a>
-            <a :href="item.info.facebook">
+            <a :href="barber.facebook">
               <v-img
                 class="employee-social-logo social-logo"
                 :src="require('../../assets/icons/facebook.png')"

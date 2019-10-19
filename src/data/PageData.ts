@@ -15,71 +15,64 @@ export default class PageData {
     contactUs: "Comuniquese con nosotros para mas informacion"
   }
 
-  public pictures: any = [
+  public pictures: any = [ //banner
     "https://mybarbershopbroward.files.wordpress.com/2016/09/barber-wallpaper-23.jpg"
   ];
 
   public weekObject: any = [
-    {hour:"11:00",selected: false ,saturday:false}, 
-    {hour:"11:50",selected: false ,saturday:false}, 
-    {hour:"12:40",selected: false ,saturday:false},
-    {hour:"13:30",selected: false ,saturday:false},
-    {hour:"14:20",selected: false ,saturday:false},
-    {hour:"16:00",selected: false ,saturday:false},
-    {hour:"16:50",selected: false ,saturday:false},
-    {hour:"17:40",selected: false ,saturday:false},
-    {hour:"18:30",selected: false ,saturday:false},
-    {hour:"10:00",selected: false ,saturday:true},
-    {hour:"10:40",selected: false ,saturday:true}, 
-    {hour:"11:20",selected: false ,saturday:true}, 
-    {hour:"12:00",selected: false ,saturday:true},
-    {hour:"12:40",selected: false ,saturday:true}, 
-    {hour:"13:20",selected: false ,saturday:true}, 
-    {hour:"14:00",selected: false ,saturday:true},
-    {hour:"14:40",selected: false ,saturday:true}, 
-    {hour:"15:20",selected: false ,saturday:true}, 
-    {hour:"16:00",selected: false ,saturday:true},
-    {hour:"16:40",selected: false ,saturday:true}, 
-    {hour:"17:20",selected: false ,saturday:true}, 
-    {hour:"18:00",selected: false ,saturday:true},
-    {hour:"18:40",selected: false ,saturday:true}, 
-    {hour:"19:20",selected: false ,saturday:true}
+    { hour: "11:00", selected: false, saturday: false },
+    { hour: "11:50", selected: false, saturday: false },
+    { hour: "12:40", selected: false, saturday: false },
+    { hour: "13:30", selected: false, saturday: false },
+    { hour: "14:20", selected: false, saturday: false },
+    { hour: "16:00", selected: false, saturday: false },
+    { hour: "16:50", selected: false, saturday: false },
+    { hour: "17:40", selected: false, saturday: false },
+    { hour: "18:30", selected: false, saturday: false },
+    { hour: "10:00", selected: false, saturday: true },
+    { hour: "10:40", selected: false, saturday: true },
+    { hour: "11:20", selected: false, saturday: true },
+    { hour: "12:00", selected: false, saturday: true },
+    { hour: "12:40", selected: false, saturday: true },
+    { hour: "13:20", selected: false, saturday: true },
+    { hour: "14:00", selected: false, saturday: true },
+    { hour: "14:40", selected: false, saturday: true },
+    { hour: "15:20", selected: false, saturday: true },
+    { hour: "16:00", selected: false, saturday: true },
+    { hour: "16:40", selected: false, saturday: true },
+    { hour: "17:20", selected: false, saturday: true },
+    { hour: "18:00", selected: false, saturday: true },
+    { hour: "18:40", selected: false, saturday: true },
+    { hour: "19:20", selected: false, saturday: true }
   ]
 
-  public hours: any =  {
-    week: ["11:00", "11:50", "12:40", "13:30", "14:20", "16:00", "16:50", "17:40", "18:30"],
-    saturday: ["10:00", "10:40", "11:20", "12:20", "13:00", "13:40", "14:20", "15:00", "15:40", "16:20", "17:00", "17:40"]
-  }
-
-  public employees: any = [
+  public barbers = [
     {
-      info: {
-        name: "Maximiliano Olivero",
-        job: "Barbero",
-        instagram: "https://www.instagram.com/zero_by_one/",
-        facebook: "https://www.facebook.com/profile.php?id=100010314702327"
-      },
-      picture: {
-        img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/ee793e4d2e3c93a0ab9bc4f4ae14f239/5E3690D5/t51.2885-19/s150x150/51832663_382908072507752_2052880357581127680_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
-        scala: 100,
-        x: 0,
-        y: 0
-      }
+      idBarber: 1,
+      idUser: 1,
+      name: "Maximiliano Olivera",
+      job: "Barbero",
+      amountCuts: 2,
+      clientsBarber: 5,
+      rateOfBarber: 0,
+      amountOfReservesByDay: 10,
+      img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/ee793e4d2e3c93a0ab9bc4f4ae14f239/5E3690D5/t51.2885-19/s150x150/51832663_382908072507752_2052880357581127680_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+      instagram: "https://www.instagram.com/damianezetiel/",
+      facebook: "https://www.facebook.com/TheUniqueDesign"
     },
     {
-      info: {
-        name: "Damian Rodriguez",
-        job: "Peluquero",
-        instagram: "https://www.instagram.com/damianezetiel/",
-        facebook: "https://www.facebook.com/TheUniqueDesign"
-      },
-      picture: {
-        img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/1e189700600076f5dee4867e46e34909/5E1822F5/t51.2885-19/s150x150/14478313_1450150071665952_6746916811926667264_a.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
-        scala: 100,
-        x: 0,
-        y: 0
-      }
-    },
+      idBarber: 2,
+      idUser: 2,
+      name: "Damian Rodriguez",
+      job: "Peluquero",
+      amountCuts: 2,
+      clientsBarber: 5,
+      rateOfBarber: 0,
+      amountOfReservesByDay: 10,
+      img: "https://instagram.fmvd4-1.fna.fbcdn.net/vp/1e189700600076f5dee4867e46e34909/5E1822F5/t51.2885-19/s150x150/14478313_1450150071665952_6746916811926667264_a.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+      instagram: "https://www.instagram.com/damianezetiel/",
+      facebook: "https://www.facebook.com/TheUniqueDesign"
+    }
   ];
 
   public services: any = [
