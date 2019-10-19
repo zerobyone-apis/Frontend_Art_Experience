@@ -48,8 +48,8 @@ export default class PageData {
 
   public barbers = [
     {
-      idBarber: 1,
-      idUser: 1,
+      barberId: 1,
+      userId: 1,
       name: "Maximiliano Olivera",
       job: "Barbero",
       amountCuts: 2,
@@ -61,8 +61,8 @@ export default class PageData {
       facebook: "https://www.facebook.com/TheUniqueDesign"
     },
     {
-      idBarber: 2,
-      idUser: 2,
+      barberId: 2,
+      userId: 2,
       name: "Damian Rodriguez",
       job: "Peluquero",
       amountCuts: 2,
@@ -137,26 +137,31 @@ export default class PageData {
 
   public jobs: any = [
     {
+      workId: 1,
       name: "Corte clasico",
       cost: 250,
       img: "https://cms.modumb.com/storage/videos/_635x585/0894-miniatura-2129.jpg"
     },
     {
+      workId: 2,
       name: "Degrade",
       cost: 280,
       img: "http://www.altacapacitacion.com.uy/wp-content/uploads/2018/04/tecnica-degrade.jpg"
     },
     {
+      workId: 3,
       name: "Degrade + cejas",
       cost: 320,
       img: "https://kena.com/wp-content/uploads/2017/08/8e141af7b324d1cc9fcabb00f2914525-natural-eye-makeup-natural-eyes-300x300.jpg"
     },
     {
+      workId: 4,
       name: "Degrade + barba",
       cost: 350,
       img: "https://cortesdecabellohombre.com/wp-content/uploads/2018/01/Barba-Espesa-con-degradado-y-pelo-hacia-atras.jpg"
     },
     {
+      workId: 5,
       name: "Corte vip",
       cost: 550,
       img: "https://blog.newoldman.com.br/wp-content/uploads/2018/12/Barba-degrade-Como-fazer-manter-e-imagens-para-inspirar-5-e1544829028226.jpg"
