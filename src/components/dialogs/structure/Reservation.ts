@@ -21,30 +21,20 @@ export default class Reservation {
           label: "fecha de inicio",
           hint: "EVENT.hintDate",
           icon: "event",
-          // rules: this.rules.required,
+          date: new Date().toISOString().substr(0, 10), //is used only for the component
+          modal: [], //is only used for the component
           required: true
         },
         {
           is: "hour",
           workTime: 0.5,
-          name: "startDate",
+          name: "startHour",
           label: "horarios",
           hint: "EVENT.hintDate",
           icon: "event",
-          // rules: this.rules.required,
           required: true
         }
       ]
     }
   ];
 }
-
-// {
-//   is: "select",
-//   name: "typeWork",
-//   label: "Tipo de trabajo",
-//   hint: "EVENT.hintTypeWork",
-//   icon: "work",
-//   // rules: this.rules.required,
-//   required: false
-// },

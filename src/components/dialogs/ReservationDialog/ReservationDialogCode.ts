@@ -1,25 +1,34 @@
-import { Vue, Component } from "vue-property-decorator";
+import { Vue } from "vue-property-decorator";
 import PageData from '../../../data/PageData';
 
 export default class ReservationDialogCode extends Vue {
     private data: any = new PageData();
 
+    private reservation = {
+        barberId: 1,
+        clientId: 2,
+        workId: 1,
+        startHour: "",
+        startDate: "",
+        isSuccess: true,
+    }
+
     private item: any = {};
-    private modals: any = {};
-    private date: string = new Date().toISOString().substr(0, 10);
+
     private wizard: number = 1;
 
     public selectedBarber: any = {
-        info: {
-            name: "",
-            job: ""
-        },
-        picture: {
-            img: "",
-            scala: 100,
-            x: 0,
-            y: 0
-        }
+        idBarber: -1,
+        idUser: -1,
+        name: "",
+        job: "",
+        amountCuts: -1,
+        clientsBarber: -1,
+        rateOfBarber: -1,
+        amountOfReservesByDay: -1,
+        img: "",
+        instagram: "",
+        facebook: ""
     };
 
 
@@ -29,20 +38,30 @@ export default class ReservationDialogCode extends Vue {
         img: ""
     };
 
-    private selectHour(hour: any) { 
+    //do this methosd    
+    private getDaysExceptWednesday() { 
+        return val => parseInt(val.split('-')[2]) % 7 === 1;
+    }
+
+    private getDayNumber(date: any) { 
+        return new Date(date).getDay();
+    }
+
+    private selectHour(hour: any) {
         this.data.weekObject.map((item: any) => {
-            if (item != hour) {
-                item.selected = false;
-            } else { 
+            if (item == hour) {
                 item.selected = true;
+                this.reservation.startHour = hour.hour;
+            } else {
+                item.selected = false;
             }
         });
     }
 
-    private getHours(saturday: boolean) { 
+    private getHours(saturday: boolean) {
         let items: any = [];
         this.data.weekObject.forEach((item: any) => {
-            if (item.saturday == saturday) { 
+            if (item.saturday == saturday) {
                 items.push(item);
             }
         });
@@ -73,10 +92,6 @@ export default class ReservationDialogCode extends Vue {
         }
     }
 
-    /**
-     * @name GET_FIELD_TYPE
-     * @description return a type of component by a type string
-     */
     getFieldType(type: string): string {
         let component: string = "";
         if (type == "input") component = "v-text-field";
@@ -84,48 +99,6 @@ export default class ReservationDialogCode extends Vue {
         if (type == "list") component = "x-list";
         if (type == "checkbox") component = "v-checkbox";
         if (type == "date") component = "v-date-picker";
-
         return component;
     }
-
-    /**
-     * @name ERROR_FIELD
-     * @description Check the required fields and return if there is an empty one
-     */
-    // errorField(field: any) {
-    //     let error = false;
-    //     if (field.required && !this.item[field.name]) {
-    //         error = true;
-    //     }
-    //     return error;
-    // }
-
-    /**s
-     * @name EVENT
-     * @description emits the "event" method to the parent
-     */
-    // event() {
-    //     this.errors = false;
-    //     this.steps.map((step: any, index: number) => {
-    //         let form = "step" + (index + 1);
-
-    //         if (!this.$refs[form][0].validate()) {
-    //             this.errors = true;
-    //             this.wizard = index + 1;
-    //         }
-    //     });
-    //     if (!this.errors) {
-    //         this.$emit("event", this.item);
-    //     }
-    // }
-
-    // saveDate(date: any) {
-    //     this.$refs["dialog1"][0].save(date.toString());
-    //     this.modal = false;
-    // }
-
-    //start: open the barberShop
-    //end: close the barberShop
-    //workTime: val of division of the time
-
 }

@@ -17,7 +17,6 @@
             <!-- custom content -->
             <div class="content" v-if="index==0">
               <!-- list employees -->
-
               <p
                 class="text step-title"
               >Seleccione el barbero con el que quiere realizar el servicio</p>
@@ -25,24 +24,24 @@
               <div class="items-list">
                 <div
                   class="item"
-                  v-for="(item,index) in data.employees"
+                  v-for="(barber,index) in data.barbers"
                   :key="index"
-                  @click="selectedBarber = item"
+                  @click="selectedBarber = barber"
                   data-aos="fade-down"
                   data-aos-duration="600"
                 >
-                  <v-img class="item-img-big" :src="item.picture.img" aspect-ratio="1"></v-img>
-                  <p class="item-info">{{ item.info.job }}</p>
-                  <p class="item-name">{{ item.info.name }}</p>
+                  <v-img class="item-img-big" :src="barber.img" aspect-ratio="1"></v-img>
+                  <p class="item-name">{{ barber.name }}</p>
+                  <p class="item-info">{{ barber.job }}</p>
                 </div>
               </div>
 
               <div class="selected-item">
                 <p class="select-item-name font-text">Barbero seleccionado</p>
                 <div class="item">
-                  <p class="item-info">{{ selectedBarber.info.job }}</p>
-                  <img class="item-img" :src="selectedBarber.picture.img" aspect-ratio="1" />
-                  <p class="item-name">{{ selectedBarber.info.name }}</p>
+                  <p class="item-info">{{ selectedBarber.job }}</p>
+                  <img class="item-img" :src="selectedBarber.img" aspect-ratio="1" />
+                  <p class="item-name">{{ selectedBarber.name }}</p>
                 </div>
               </div>
             </div>
@@ -93,7 +92,7 @@
                   >
                     <component
                       v-if="field.is != 'date' && field.is != 'hour'"
-                      v-model="item[field.name]"
+                      v-model="reservation[field.name]"
                       :is="getFieldType(field.is)"
                       :type="field.type"
                       :items="(field.data || {}).items"
@@ -109,7 +108,7 @@
 
                     <!-- Hours BOX -->
                     <div v-if="field.is == 'hour'" class="hours-item">
-                      <div class="hours-box">
+                      <div class="hours-box" v-if="getDayNumber(reservation.startDate) != 6">
                         <p class="font-text hours-name">Semana</p>
                         <v-btn
                           :text="!hour.selected"
@@ -121,10 +120,10 @@
                         >{{ hour["hour"] }}</v-btn>
                       </div>
 
-                      <div class="hours-box">
+                      <div class="hours-box" v-if="getDayNumber(reservation.startDate) == 6">
                         <p class="font-text hours-name">Sabados</p>
                         <v-btn
-                        :text="!hour.selected"
+                          :text="!hour.selected"
                           small
                           class="hour-item font-text"
                           v-for="(hour,i) in getHours(true)"
@@ -138,28 +137,36 @@
                     <v-dialog
                       v-if="field.is == 'date'"
                       :ref="'dialog'+(index+1)"
-                      v-model="modals['dialog'+(index+1)]"
-                      :return-value.sync="date"
+                      v-model="field.modal['dialog'+(index+1)]"
+                      :return-value.sync="field.date"
                       lazy
                       full-width
                       width="290px"
                     >
                       <template v-slot:activator="{ on }">
                         <v-text-field
-                          v-model="item[field.name]"
+                          v-model="reservation[field.name]"
                           :label="field.label"
                           :prepend-icon="field.icon"
                           readonly
                           v-on="on"
                         ></v-text-field>
                       </template>
-                      <v-date-picker color="black" v-model="date" scrollable>
+                      <!-- :allowed-dates="getDaysExceptWednesday()" -->
+                      <v-date-picker
+                        :min="new Date().toISOString().substr(0, 10)"
+                        
+                        locale="es"
+                        color="black"
+                        v-model="field.date"
+                        scrollable
+                      >
                         <v-spacer></v-spacer>
                         <v-btn
                           text
                           color="primary"
-                          @click="item[field.name] = date; 
-                          modals['dialog'+(index+1)] = false"
+                          @click="reservation[field.name] = field.date; 
+                          field.modal['dialog'+(index+1)] = false"
                         >OK</v-btn>
                       </v-date-picker>
                     </v-dialog>
