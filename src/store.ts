@@ -11,8 +11,7 @@ const vuexLocal = new VuexPersistence({
 export default new Vuex.Store({
   state: {
     drawer: {
-      left: false,
-      reservation: false
+      left: false
     },
     settings: {},
     userInfo: {},
@@ -30,13 +29,11 @@ export default new Vuex.Store({
   mutations: {
     setLeftDrawer(state, drawer) {
       state["drawer"].left = drawer;
-    },
-    setReservationDrawer(state, drawer) {
-      state["drawer"].reservation = drawer;
     }
   },
 
-  actions: {},
+  actions: {
+  },
 
   plugins: [vuexLocal.plugin]
 });
