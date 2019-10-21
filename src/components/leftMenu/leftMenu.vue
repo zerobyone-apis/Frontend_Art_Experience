@@ -1,6 +1,6 @@
 <template v-cloak>
   <v-navigation-drawer
-    id="drawer-left"
+    id="drawer-left" 
     dark
     temporary
     fixed
@@ -9,7 +9,7 @@
     color="rgba(0, 0, 0, 0.6)"
   >
     <!-- custom item list Reservation -->
-    <v-list-item @click="drawer=false;reservation.dialog=true" class="list-item"> 
+    <v-list-item @click="drawer=false;reservationDialog=true" class="list-item"> 
       <v-list-item-content class="list-item-content">
         <v-list-item-title>RESERVAR</v-list-item-title>
       </v-list-item-content>
@@ -35,7 +35,7 @@
     </v-btn>
 
     <!-- dialogs -->
-    <reservation-dialog v-model="reservation.dialog" :steps="reservation.steps"></reservation-dialog>
+    <reservation-dialog v-model="reservationDialog"></reservation-dialog>
   </v-navigation-drawer>
 </template>
 
