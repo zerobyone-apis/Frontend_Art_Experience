@@ -1,14 +1,14 @@
 <template v-cloak>
-  <v-toolbar id="toolbar" fixed light height="65px" v-if="!leftDrawer">
+  <v-toolbar id="toolbar" fixed light height="65px" v-if="!$store.state.drawer.left">
     <!-- LEFT MENU - BUTTON  -->
     <v-btn
       class="left-menu-btn d-flex d-sm-none"
-      @click.native.stop="leftDrawer = true"
+      @click.native.stop="$store.commit('setLeftDrawer', true)"
       fab
       text
       small
     >
-      <v-icon @click.native.stop="leftDrawer = true">menu</v-icon>
+      <v-icon>menu</v-icon>
     </v-btn>
 
     <!-- LOGO  -->
@@ -31,21 +31,21 @@
         @click="pageRouter(item.route)"
       >
         <v-icon>{{ item.icon }}</v-icon>
-        <span>{{ $i18n.t(item.name) }}</span>
+        <span>{{ item.name }}</span>
       </v-btn>
     </v-toolbar-items>
 
     <div class="right-box">
       <v-btn
         outlined
-        @click.native.stop="reservation.dialog = true"
+        @click.native.stop="reservationDialog = true"
         class="toolbar-button-reservation"
         :class="{'reservation-mobile' : $vuetify.breakpoint.name == 'xs'}"
       >RESERVAR</v-btn>
     </div>
 
     <!-- dialogs -->
-    <reservation-dialog v-model="reservation.dialog" :steps="reservation.steps">
+    <reservation-dialog v-model="reservationDialog">
     </reservation-dialog>
 
   </v-toolbar>
