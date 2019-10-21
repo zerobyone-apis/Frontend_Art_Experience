@@ -1,16 +1,20 @@
-import { Vue } from "vue-property-decorator";
+import { Vue, Component } from "vue-property-decorator";
 import PageData from '../../../data/PageData';
+import ReservationStructure from './ReservationStructure';
 import  InBack  from "./IntegrationBackend";
 //timeout: 1000,
 
+@Component({})
 export default class ReservationDialogCode extends Vue {
+    private structure = new ReservationStructure();
+    private steps: any = this.structure.steps;
     private data: any = new PageData();
     private item: any = {};
     private wizard: number = 1;
     private inback = new InBack();
 
     private reservation = {
-        barberId: null,
+        employeeId: null,
         clientId: null,
         workId: null,
         startHour: null,
@@ -18,6 +22,7 @@ export default class ReservationDialogCode extends Vue {
         isSuccess: false,
     }
 
+    private selectedEmployee: any = {};
     private structureObjectReservationResponse = {
         reserve_id: null,
         barberOrHairdresserId: null,
@@ -35,23 +40,38 @@ export default class ReservationDialogCode extends Vue {
         additionalCost : null,
         totalCost : null
     }
-
-
-    private selectedBarber: any = {};
     private selectedJob: any = {};
+
+    //show and hide the reservation
+   get model(): boolean {
+    return this["value"];
+  }
+
+  set model(model: boolean) {
+    this.$emit("input", model);
+  }
 
     private selectJob(job: any) {
         this.selectedJob = job;
         this.reservation.workId = job.workId;
     }
 
-    private selectBarber(barber: any) {
-        this.selectedBarber = barber;
-        this.reservation.barberId = barber.barberId;
+    private selectEmployee(employee: any) {
+        this.selectedEmployee = employee;
+        this.selectedJob = {};
+        this.reservation.employeeId = employee.userId;
+    }
+
+    private getWorksByTypeEmployee() { 
+        if (this.selectedEmployee["barberId"]) {
+            return this.data.works.barberWorks;
+        } else { 
+            return this.data.works.hairdresserWorks;
+        }
     }
 
     private checkSuccessStep() {
-        let required = this["steps"][this.wizard - 1].required;
+        let required = this.steps[this.wizard - 1].required;
         if (this.reservation[required] != undefined) {
             return false;//not disabled
         } else {
@@ -89,25 +109,16 @@ export default class ReservationDialogCode extends Vue {
         return items;
     }
 
-    get model(): boolean {
-        return this["value"];
-    }
-
-    set model(model: boolean) {
-        this.$emit("input", model);
-        this.wizard = 1;
-    }
-
     next() {
-        if (this["steps"].length > this.wizard) this.wizard += 1;
+        if (this.steps.length > this.wizard) this.wizard += 1;
     }
 
     prev() {
-        if (this["steps"].length > 0) this.wizard -= 1;
+        if (this.steps.length > 0) this.wizard -= 1;
     }
 
     jump(value: number) {
-        if (value >= 0 && value <= this["steps"].length) {
+        if (value >= 0 && value <= this.steps.length) {
             this.wizard = value;
         }
     }

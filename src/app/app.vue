@@ -29,5 +29,7 @@ import "./appStyle.scss";
     LeftMenu
   }
 })
-export default class App extends AppCode {}
+export default class App extends AppCode {
+  
+}
 </script>
