@@ -1,10 +1,13 @@
 import { Vue } from "vue-property-decorator";
 import PageData from '../../../data/PageData';
+import  InBack  from "./IntegrationBackend";
+//timeout: 1000,
 
 export default class ReservationDialogCode extends Vue {
     private data: any = new PageData();
     private item: any = {};
     private wizard: number = 1;
+    private inback = new InBack();
 
     private reservation = {
         barberId: null,
@@ -14,6 +17,25 @@ export default class ReservationDialogCode extends Vue {
         startDate: null,
         isSuccess: false,
     }
+
+    private structureObjectReservationResponse = {
+        reserve_id: null,
+        barberOrHairdresserId: null,
+        clientId: null,
+        nameClient: null,
+        mailClient : null,
+        celClient: null,
+        startTime: null ,
+        endTime : null ,
+        createOn : null,
+        work_id : null,
+        workToDo : null ,
+        priceWork : null,
+        workTime : null,
+        additionalCost : null,
+        totalCost : null
+    }
+
 
     private selectedBarber: any = {};
     private selectedJob: any = {};
@@ -100,13 +122,39 @@ export default class ReservationDialogCode extends Vue {
         return component;
     }
 
-    event() {
-        console.log(this.reservation)
-        this.wizard = 1;
-        //reset
-        // this.selectedBarber = {};
-        // this.selectedJob = {};
-        // this.reservation.startDate = "";
-        this.model = false;
+    async event() {
+     try{      
+        console.log("Antes del rsponse: ")
+        let response = await this.inback.getReserves();
+        console.log("Despues del response: ")
+        console.log(response);
+    }catch(error){
+        console.error('yep, algo se rompio'+ error);
+        }
     }
-}
+            
+    }
+ 
+
+
+/*  OBjeto reserva que llega del backend. completo, y Asignacion de cada uno de los atributos.
+Se reemplaza con la cadena, OBject.assign(copia, contieneLaData)
+                   // this.barberOrHairdresserId = eachOne["barberId"];
+                   // this.clientId              = eachOne["clientId"];
+                   // this.workId                = eachOne["workId"];
+                   // this.startDate             = eachOne["startDate"];
+                   // this.reserve_id            = eachOne["reserve_id"],
+                   // this.barberOrHairdresserId = eachOne["barberOrHairdresserId"],
+                   //this.clientId              = eachOne["clientId"],
+                   this.nameClient            = eachOne["nameClient"],
+                   this.mailClient            = eachOne["mailClient"],
+                   this.celClient             = eachOne["celClient"],
+                   this.startTime             = eachOne["startTime"] ,
+                   this.endTime               = eachOne["endTime"] ,
+                   this.createOn              = eachOne["createOn"],
+                   this.work_id               = eachOne["work_id"],
+                   this.workToDo              = eachOne["workToDo"] ,
+                   this.priceWork             = eachOne["priceWork"],
+                   this.workTime              = eachOne["workTime"],
+                   this.additionalCost        = eachOne["additionalCost"],
+                   this.totalCost             = eachOne["totalCost"]*/
