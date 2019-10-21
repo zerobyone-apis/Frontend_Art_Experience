@@ -231,7 +231,7 @@
 
 <script lang="ts">
 import { Prop, Watch, Component } from "vue-property-decorator";
-import { VSelect, VTextField, VCheckbox } from "vuetiafy/lib";
+import { VSelect, VTextField, VCheckbox } from "vuetify/lib";  
 
 import ReservationDialogCode from "./ReservationDialogCode";
 import "./ReservationDialogStyle.scss";
