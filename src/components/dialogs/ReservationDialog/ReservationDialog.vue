@@ -1,6 +1,6 @@
-<template>
+<template v-cloak>
   <v-dialog
-    v-model="model"
+   v-model="model"
     persistent
     overlay-color="black"
     transition="slide-x-transition"
@@ -23,23 +23,23 @@
               <div class="items-list">
                 <div
                   class="item"
-                  v-for="(barber,index) in data.barbers"
+                  v-for="(employee,index) in data.employees"
                   :key="index"
-                  @click="selectBarber(barber)"
+                  @click="selectEmployee(employee)"
                   data-aos="fade-down"
                   data-aos-duration="600"
                 >
-                  <v-img class="item-img-big" :src="barber.img" aspect-ratio="1"></v-img>
-                  <p class="item-name">{{ barber.name }}</p>
-                  <p class="item-info">{{ barber.job }}</p>
+                  <v-img class="item-img-big" :src="employee.img" aspect-ratio="1"></v-img>
+                  <p class="item-name">{{ employee.name }}</p>
+                  <p class="item-info">{{ employee.job }}</p>
                 </div>
               </div>
               <div class="selected-item">
-                <p class="select-item-name font-text">Barbero seleccionado</p>
+                <p class="select-item-name font-text">Empleado seleccionado</p>
                 <div class="item">
-                  <p class="item-info">{{ selectedBarber["job"] }}</p>
-                  <img class="item-img" :src="selectedBarber['img']" aspect-ratio="1" />
-                  <p class="item-name">{{ selectedBarber['name'] }}</p>
+                  <p class="item-info">{{ selectedEmployee["job"] }}</p>
+                  <img class="item-img" :src="selectedEmployee['img']" aspect-ratio="1" />
+                  <p class="item-name">{{ selectedEmployee['name'] }}</p>
                 </div>
               </div>
             </div>
@@ -47,11 +47,30 @@
             <!-- custom content -->
             <div class="content" v-if="index==1">
               <!-- list jobs -->
-              <p class="text step-title">Seleccione el servicio que desea realizar</p>
+              <p class="text step-title">Seleccione el servicio que desee realizar</p>
+               <!-- promos  -->
               <div class="items-list">
+                <p class="text step-title">Promociones</p>
                 <div
                   class="item"
-                  v-for="(job,index) in data.jobs"
+                  v-for="(job,index) in data.works.promos"
+                  :key="index"
+                  @click="selectJob(job)"
+                  data-aos="fade-down"
+                  data-aos-duration="600"
+                >
+                  <p class="item-info">{{ job.name }}</p>
+                  <v-img class="item-img-big" :src="job.img" aspect-ratio="1"></v-img>
+                  <p class="item-cost">{{ "$"+job.cost }}</p>
+                </div>
+              </div>
+              
+              <!-- jobs  -->
+              <div class="items-list">
+                <p class="text step-title">Trabajos</p>
+                <div
+                  class="item"
+                  v-for="(job,index) in getWorksByTypeEmployee()"
                   :key="index"
                   @click="selectJob(job)"
                   data-aos="fade-down"
@@ -95,7 +114,7 @@
                       :item-value="(field.data || {}).value"
                       :error="errors && errorField(field)"
                       :rules="field.rules"
-                      :label="$i18n.t(field.label)"
+                      :label="field.label"
                       :prepend-icon="field.icon"
                       :selectable="field.selectable"
                       color="x-theme__color"
@@ -140,8 +159,6 @@
                       :ref="'dialog'+(index+1)"
                       v-model="field.modal['dialog'+(index+1)]"
                       :return-value.sync="field.date"
-                      lazy
-                      full-width
                       width="290px"
                     >
                       <template v-slot:activator="{ on }">
@@ -195,7 +212,7 @@
                 v-bind:v-model="reservation"
                 :disabled="checkSuccessStep()"
                 @click.native="wizard += 1"
-              >{{ $i18n.t('GENERAL.next') }}</v-btn>
+              >siguiente</v-btn>
 
               <v-btn
                 v-if="wizard > 1"
@@ -203,7 +220,7 @@
                 small
                 class="footer-button"
                 @click.native="wizard -= 1"
-              >{{ $i18n.t('GENERAL.prev') }}</v-btn>
+              >volver</v-btn>
             </div>
           </v-stepper-content>
         </v-stepper-items>
@@ -224,30 +241,5 @@ import "../../../styles/fonts.scss";
 export default class ReservationDialog extends ReservationDialogCode {
   @Prop({ default: "Crear" }) buttonText: any;
   @Prop({ default: false }) value!: boolean;
-  @Prop({
-    default: () => [
-      {
-        title: "Step 1",
-        fields: [
-          {
-            type: "input",
-            name: "first",
-            label: "My first input"
-          }
-        ]
-      },
-      {
-        title: "Step 2",
-        fields: [
-          {
-            type: "input",
-            name: "second",
-            label: "My second input"
-          }
-        ]
-      }
-    ]
-  })
-  steps: any;
 }
 </script>
