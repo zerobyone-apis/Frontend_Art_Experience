@@ -46,7 +46,23 @@ export default class PageData {
     { hour: "19:20", selected: false, saturday: true }
   ]
 
-  public barbers = [
+  public employees = [
+    // {
+    //   "hairdresserId": 1,
+    //   "userId": 13,
+    //   "name": "ZeroTest",
+    //   "shopName": "ArtExperience",
+    //   "username": "ZeroTest name2",
+    //   "password": "@userId",
+    //   "email": "test.One@gmail.net",
+    //   "cel": 10101010,
+    //   "amountCuts": 0,
+    //   "clientsHairdresser": 100,
+    //   "startDate": "2019-10-21T04:39:06.455539Z",
+    //   "rateOfHairdresser": "7.2",
+    //   "amountOfReservesByDay": "12",
+    //   "status": true
+    // },
     {
       barberId: 1,
       userId: 1,
@@ -134,6 +150,155 @@ export default class PageData {
       url: "Read More"
     }
   ];
+
+  public works: any = {
+    hairdresserWorks: [
+      {
+        workId: 1,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407",
+        name: "Corte",
+        cost: 250,
+      },
+      {
+        workId: 2,
+        name: "Lavado",
+        cost: 50,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 3,
+        name: "Brushing",
+        cost: 200,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 4,
+        name: "Depilacion",
+        cost: 70,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 5,
+        name: "Botox",
+        cost: 50,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 6,
+        name: "HIDROCAUTERIZACION",
+        cost: 590,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 7,
+        name: "BRUSHING_PROGRESIVO",
+        cost: 1200,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 8,
+        name: "CLARITOS",
+        cost: 900,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 9,
+        name: "MECHAS",
+        cost: 900,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 10,
+        name: "REFLEJOS",
+        cost: 900,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      }
+    ],
+
+    barberWorks: [
+      {
+        workId: 20,
+        name: "FADE",
+        cost: 270,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 21,
+        name: "Clasico",
+        cost: 230,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 22,
+        name: "Barba",
+        cost: 120,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 23,
+        name: "Cejas",
+        cost: 70,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 24,
+        name: "Afeitado clasico",
+        cost: 160,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 25,
+        name: "BRUSHING_PROGRESIVO_BARBER",
+        cost: 500,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 26,
+        name: "MECHAS_BARBER",
+        cost: 500,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 26,
+        name: "PLANCHADO",
+        cost: 1200,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 27,
+        name: "COLORES_FANTASIA_BARBER",
+        cost: 800,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      }
+    ],
+    promos: [
+      {
+        workId: 30,
+        name: "CORTE_BARBA",
+        cost: 350,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 31,
+        name: "CORTE_BARBA_CEJAS",
+        cost: 400,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 32,
+        name: "CORTE_CEJAS",
+        cost: 320,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      },
+      {
+        workId: 33,
+        name: "CORTE_BLACKMASK",
+        cost: 360,
+        img: "https://cdn.shopify.com/s/files/1/0162/2116/files/smart_haircuts_for_men_7.jpg?v=1506147407"
+      }
+    ]
+
+  }
 
   public jobs: any = [
     {
