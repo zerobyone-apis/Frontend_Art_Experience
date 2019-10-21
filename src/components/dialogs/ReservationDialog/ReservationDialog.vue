@@ -123,7 +123,7 @@
                         v-if="getDayNumber(reservation.startDate) == 6 && reservation.startDate"
                       >
                         <p class="font-text hours-name">Sabados</p>
-                        <v-btn
+                        <v-btn 
                           :text="!hour.selected"
                           small
                           class="hour-item font-text"
@@ -214,7 +214,7 @@
 
 <script lang="ts">
 import { Prop, Watch, Component } from "vue-property-decorator";
-import { VSelect, VTextField, VCheckbox } from "vuetify/lib";
+import { VSelect, VTextField, VCheckbox } from "vuetiafy/lib";
 
 import ReservationDialogCode from "./ReservationDialogCode";
 import "./ReservationDialogStyle.scss";
