@@ -1,16 +1,16 @@
 
-export default class Reservation {
+export default class ReservationStructure {
 
   private dialog: boolean = false;
 
-  private steps: any = [
+  public steps: any = [
     {//custom
       title: "custom",
-      required: "barberId"
+      required: "employeeId"
     },
     {//custom
       title: "custom",
-      required: "workId"      
+      required: "workId"
     },
     {//automatic
       title: "Indique la fecha y la hora en la que quiere reservar",
