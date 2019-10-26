@@ -11,18 +11,18 @@ export default new Router({
       component: () => import('./views/home/home.vue')
     },
     {
-      path: "/MainPage",
-      name: "MainPage",
+      path: '/MainPage',
+      name: 'MainPage',
       component: () => import('./views/mainPage/mainPage.vue')
     },
     {
-      path: "/BarberShop",
-      name: "BarberShop",
+      path: '/BarberShop',
+      name: 'BarberShop',
       component: () => import('./views/barberShop/barberShopPage.vue')
     },
     {
-      path: "/Barber",
-      name: "Barber",
+      path: '/Barber',
+      name: 'Barber',
       component: () => import('./views/barber/barberPage.vue')
     }
   ],

@@ -16,7 +16,7 @@ let request = new Request(reservationUrlBase, {
     }
 )
 //const data;
-export default class IntegrationReserves{
+export default class IntegrationReserves {
     
    /* <param> GET ALL RESERVES from Backend.
     * #Este metodo trae todas las reservas del backend.

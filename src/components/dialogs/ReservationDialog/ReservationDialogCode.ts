@@ -4,7 +4,6 @@ import ReservationStructure from './ReservationStructure';
 import  InBack  from "./IntegrationBackend";
 //timeout: 1000,
 
-@Component({})
 export default class ReservationDialogCode extends Vue {
     private structure = new ReservationStructure();
     private steps: any = this.structure.steps;
@@ -23,6 +22,8 @@ export default class ReservationDialogCode extends Vue {
     }
 
     private selectedEmployee: any = {};
+    private selectedJob: any = {};
+    
     private structureObjectReservationResponse = {
         reserve_id: null,
         barberOrHairdresserId: null,
@@ -40,7 +41,6 @@ export default class ReservationDialogCode extends Vue {
         additionalCost : null,
         totalCost : null
     }
-    private selectedJob: any = {};
 
     //show and hide the reservation
    get model(): boolean {
