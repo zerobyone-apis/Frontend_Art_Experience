@@ -5,170 +5,190 @@
 }
 
 .v-dialog {
-  border-radius: 4px !important;
+  border-radius: 0px !important;
   background-color: white;
   width: max-content;
 }
 
-.v-dialog.v-dialog--fullscreen {
-  width: 100%;
+.v-stepper__content {
+  padding: 0;
 }
 
-.reservation-dialog {
-  background-color: #ffffff !important;
+.v-dialog.v-dialog--fullscreen {
+  width: 100%;
+  background-color: #9c9c9c;
+}
 
-  .btn_close {
-    top: 0px;
-    left: 0px;
-  }
+.dialog-content {
+  background-image: url("https://beardoholic.com/wp-content/uploads/2018/08/Best-barber-chair.jpg");
 
-  .v-stepper {
-    border-radius: 0px !important;
-    box-shadow: none;
+  .banner {
+    // background-color: #ffffff6b;
 
-    .v-stepper__content {
-      padding: 0px;
+    .btn_close {
+      top: 0px;
+      left: 0px;
     }
   }
 
-  //STEP 0: CUSTOM CONTENT
-  .content {
+  .stepper {
+    background-color: #0000006b;
+  }
+
+  .header-dialog {
     position: relative;
-    height: 100% !important;
+    height: 40px;
+    width: 100%;
+    text-align: center;
 
-    .step-title {
-      text-align: center;
-      // padding: 20px;
+    .text {
+      color: rgb(223, 223, 223);
+    }
+  }
+
+  // step content
+  .step-content {
+    position: relative;
+    height: 470px;
+
+    .img-back {
+      position: absolute;
     }
 
-    .items-list {
+    .content-step1 {
       position: relative;
-      width: 100%;
-      top: 20px;
-      padding: 10px;
-      text-align: center;
-      overflow-y: auto;
+      height: 100% !important;
 
-      .item {
+      .items-list {
         position: relative;
-        margin: 5px;
-        width: 120px;
-        height: 80px;
-        display: inline-table;
-        text-align: center;
-
-        .item-img {
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          margin: auto;
-          border-width: 4px;
-          border-style: solid;
-          background-color: white;
-          border-color: white;
-        }
-
-        .item-img-big {
-          border-radius: 10px;
-          width: 120px;
-          height: 120px;
-          margin: auto;
-          border-width: 4px;
-          border-style: solid;
-          background-color: white;
-          border-color: white;
-        }
-
-        .item-name {
-          font-size: 12px;
-        }
-
-        .item-info,
-        .item-cost {
-          color: #504e4ebb;
-          font-size: 12px;
-        }
-      }
-
-      .item:hover {
-        .item-img {
-          border-color: rgba(22, 255, 22, 0.534);
-        }
-        .item-img-big {
-          border-color: rgba(22, 255, 22, 0.534);
-        }
-      }
-    }
-
-    .selected-item {
-      position: relative;
-      width: 100%;
-      // height: max-content;
-      // padding: 30px;
-      text-align: center;
-
-      .select-item-name {
-        // position: relative;
-        font-size: 13px;
-        margin-top: 30px;
-      }
-
-      .item {
-        position: relative;
-        margin: 5px;
         width: 100%;
-        height: 140px;
-        // display: inline-table;
+        height: 300px;
+        top: 20px;
+        padding: 10px;
         text-align: center;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-        .item-img {
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          margin: auto;
-          border-width: 4px;
-          border-style: solid;
-          background-color: white;
-          border-color: white;
-        }
-
-        .item-name {
-          // margin-top: 10px;
-          font-size: 14px;
-        }
-
-        .item-info {
-          color: #504e4ebb;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-  //AUTOMATIC CONTENT
-  .automatic-box {
-    position: relative;
-    // background-color: red;
-    width: 200px;
-    margin: auto;
-    .layout-box {
-      .hours-item {
-        .hours-name {
+        .item {
+          position: relative;
+          margin: 5px;
+          width: 120px;
+          height: 80px;
+          display: inline-table;
           text-align: center;
-          margin-top: 20px;
-          font-size: 14px;
+
+          .item-img-big {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-width: 4px;
+            border-style: solid;
+            background-color: white;
+            // border-color: white;
+          }
+
+          .item-name {
+            font-size: 12px;
+            color: white;
+          }
+
+          .item-info,
+          .item-cost {
+            color: #504e4ebb;
+            font-size: 12px;
+            color: white;
+          }
+        }
+
+        .item:hover {
+          .item-img {
+            border-color: rgb(161, 145, 0);
+          }
+          .item-img-big {
+            border-color: rgb(161, 145, 0);
+          }
+        }
+      }
+
+      .selected-item {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        // height: 200px;
+        background-color: rgb(236, 236, 236);
+        text-align: center;
+        border-style: dotted;
+        border-width: 2px;
+        border-color: #fbff0077;
+        border-radius: 6px;
+
+        .select-item-name {
+          font-size: 13px;
+        }
+
+        .item {
+          position: relative;
+
+          .item-img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            background-color: white;
+            border-color: rgb(161, 145, 0);
+          }
+
+          .item-name {
+            font-size: 14px;
+          }
+
+          .item-info {
+            color: #504e4ebb;
+            font-size: 14px;
+          }
         }
       }
     }
   }
 
-  //FOOTER
+  // automatic-content
+  .automatic-content {
+    .automatic-box {
+      .layout-box {
+        .hours-item {
+          padding: 20px;
+          .hours-box {
+            text-align: center;
+            background-color: #8f8f8f6b;
+            padding:10px;
+            border-radius: 4px;
+            .hours-name {
+              color: white;
+            }
+
+            .hour-name {
+            }
+            .hour-item {
+            }
+          }
+        }
+      }
+    }
+
+    .date-field {
+      margin: auto;
+      width: 300px;
+    }
+  }
+
   .footer-dialog {
     position: relative;
     width: 100%;
     height: 60px;
-    // bottom: 0px;
-    padding-right: 20px;
+    padding: 15px;
     margin-top: 50px;
+    background-color: #9c9c9c;
 
     .footer-button {
       float: right;

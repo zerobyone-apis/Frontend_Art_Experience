@@ -4,15 +4,17 @@ export default class ReservationStructure {
   private dialog: boolean = false;
 
   public steps: any = [
-    {//custom
-      title: "custom",
+    { //custom
+      title: "Seleccione el barbero con el que quiere realizar el servicio",
+      type: 'custom',
       required: "employeeId"
     },
-    {//custom
-      title: "custom",
+    { //custom
+      title: "Seleccione el servicio que desee realizar",
+      type: 'custom',
       required: "workId"
     },
-    {//automatic
+    { //automatic
       title: "Indique la fecha y la hora en la que quiere reservar",
       required: "startHour",
       fields: [
