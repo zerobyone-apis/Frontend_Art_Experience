@@ -1,0 +1,210 @@
+.v-dialog__content.v-dialog__content--active {
+  background-image: url("");
+  background-repeat: repeat;
+  background-size: 50px;
+}
+
+.v-dialog {
+  border-radius: 0px !important;
+  background-color: white;
+  width: max-content;
+}
+
+.v-stepper__content {
+  padding: 0;
+}
+
+.v-dialog.v-dialog--fullscreen {
+  width: 100%;
+  background-color: #9c9c9c;
+}
+
+.access-dialog-content {
+  // background-image: url("https://beardoholic.com/wp-content/uploads/2018/08/Best-barber-chair.jpg");
+  background-size: 100% 100%;
+
+  .banner {
+    // background-color: #ffffff6b;
+
+    .btn_close {
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+  .stepper {
+    background-color: #0000006b;
+    border-radius: 0px;
+  }
+
+
+  .header-dialog {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+
+    .text {
+      color: rgb(223, 223, 223);
+    }
+  }
+
+  // step content
+  .step-content {
+    position: relative;
+    height: 470px;
+
+    .img-back {
+      position: absolute;
+    }
+
+    .content-step1 {
+      position: relative;
+      height: 100% !important;
+
+      .items-list {
+        position: relative;
+        width: 100%;
+        height: 240px;
+        top: 20px;
+        padding: 10px;
+        text-align: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #0000006b;
+
+        .item {
+          position: relative;
+          margin: 5px;
+          width: 120px;
+          height: 80px;
+          display: inline-table;
+          text-align: center;
+
+          .item-img-big {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-width: 4px;
+            border-style: solid;
+            background-color: white;
+            // border-color: white;
+          }
+
+          .item-name {
+            font-size: 12px;
+            color: white;
+          }
+
+          .item-info,
+          .item-cost {
+            color: #504e4ebb;
+            font-size: 12px;
+            color: white;
+          }
+        }
+
+        .item:hover {
+          .item-img {
+            border-color: rgb(161, 145, 0);
+          }
+          .item-img-big {
+            border-color: rgb(161, 145, 0);
+          }
+        }
+      }
+
+      .selected-item {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        background-color: rgba(236, 236, 236, 0.411);
+        text-align: center;
+        border-radius: 6px;
+        margin-top: 40px;
+
+        .select-item-name {
+          font-size: 14px;
+          color: white;
+          text-shadow: 2px  2px 2px#0000006b;
+        }
+
+        .item {
+          position: relative;
+
+          .item-img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            background-color: white;
+            border-color: rgb(161, 145, 0);
+          }
+
+          .item-name {
+            color: white;
+            text-shadow: 2px  2px 2px#0000006b;
+            font-size: 14px;
+          }
+
+          .item-info {
+            color: white;
+            text-shadow: 2px  2px 2px#0000006b;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  // automatic-content
+  .automatic-content {
+    .automatic-box {
+      .layout-box {
+        .hours-item {
+          padding: 20px;
+          .hours-box {
+            text-align: center;
+            background-color: #8f8f8f6b;
+            padding:10px;
+            border-radius: 4px;
+            .hours-name {
+              color: white;
+            }
+
+            .hour-name {
+            }
+            .hour-item {
+            }
+          }
+        }
+      }
+    }
+
+    .date-field {
+      margin: auto;
+      width: 300px;
+    }
+  }
+
+  .white-text{
+    color: white;
+  }
+
+  .footer-dialog {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    background-color: #9c9c9c;
+    margin-top: 40px;
+
+
+    .footer-button {
+      float: right;
+      border-style: solid;
+      margin-left: 20px;
+    }
+  }
+}
