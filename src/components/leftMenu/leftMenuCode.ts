@@ -9,10 +9,10 @@ export default class LeftMenuCode extends MenuItems {
     
     //show and hide the leftsidemenu
     get drawer() {
-        return this["$store"].state.drawer.left;
+        return this.$store.getters.drawerLeft;
     }
     set drawer(drawer) {
-        this["$store"].commit("setLeftDrawer", drawer);
+        this.$store.commit("drawerLeft", drawer);
     }
 
     //find the option by search menu

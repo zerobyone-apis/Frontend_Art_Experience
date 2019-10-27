@@ -1,8 +1,10 @@
 import Vue from "vue";
+import Vuetify from "vuetify/lib";
 import vuetify from "./plugins/vuetify";
+// import vuetify from "./plugins/vuetify";
 import App from "./app/app.vue";
 import router from "./router";
-import store from "./store";
+import { store } from "./store";
 // import VueI18n from "vue-i18n";
 import Locale from "./locale";
 import Croppa from 'vue-croppa';
@@ -12,6 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import BackToTop from 'vue-backtotop'
  
+Vue.use(Vuetify)
 Vue.use(BackToTop)
 Vue.use(Croppa);
 // Vue.use(VueI18n);

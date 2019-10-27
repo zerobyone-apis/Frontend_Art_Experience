@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <Toolbar v-if="$store.state.userInfo" class="toolbar-app-fixed"></Toolbar>
+    <Toolbar class="toolbar-app-fixed"></Toolbar>
    <back-to-top>
      <v-btn fab text small class="green">
        <v-icon>keyboard_arrow_up</v-icon>
@@ -30,6 +30,5 @@ import "./appStyle.scss";
   }
 })
 export default class App extends AppCode {
-  
 }
 </script>

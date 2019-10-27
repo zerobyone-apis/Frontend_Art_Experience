@@ -1,9 +1,9 @@
 <template v-cloak>
-  <v-toolbar id="toolbar" fixed light height="65px" v-if="!$store.state.drawer.left">
+  <v-toolbar id="toolbar" fixed light height="65px" v-if="!$store.getters.drawerLeft">
     <!-- LEFT MENU - BUTTON  -->
     <v-btn
       class="left-menu-btn d-flex d-sm-none"
-      @click.native.stop="$store.commit('setLeftDrawer', true)"
+      @click="$store.commit('drawerLeft', true)"
       fab
       text
       small

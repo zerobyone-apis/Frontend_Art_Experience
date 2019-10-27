@@ -7,13 +7,9 @@ export default class AppCode extends Vue {
     }
 
     init() {
-        if (!this.$store.state.userInfo) {
-            this.$router.push("/");
+        if (!this.$store.getters.userInfo) {
+            // this.$router.push("/");
         }
-    }
-
-    get theme(): object {
-        return this.$store.state.theme;
     }
 
     pageRouter(route: string) {
