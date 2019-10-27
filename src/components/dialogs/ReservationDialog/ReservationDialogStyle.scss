@@ -21,6 +21,7 @@
 
 .dialog-content {
   background-image: url("https://beardoholic.com/wp-content/uploads/2018/08/Best-barber-chair.jpg");
+  background-size: 100% 100%;
 
   .banner {
     // background-color: #ffffff6b;
@@ -33,7 +34,9 @@
 
   .stepper {
     background-color: #0000006b;
+    border-radius: 0px;
   }
+
 
   .header-dialog {
     position: relative;
@@ -62,12 +65,13 @@
       .items-list {
         position: relative;
         width: 100%;
-        height: 300px;
+        height: 240px;
         top: 20px;
         padding: 10px;
         text-align: center;
         overflow-y: auto;
         overflow-x: hidden;
+        background-color: #0000006b;
 
         .item {
           position: relative;
@@ -115,16 +119,15 @@
         position: relative;
         width: 80%;
         margin: auto;
-        // height: 200px;
-        background-color: rgb(236, 236, 236);
+        background-color: rgba(236, 236, 236, 0.411);
         text-align: center;
-        border-style: dotted;
-        border-width: 2px;
-        border-color: #fbff0077;
         border-radius: 6px;
+        margin-top: 40px;
 
         .select-item-name {
-          font-size: 13px;
+          font-size: 14px;
+          color: white;
+          text-shadow: 2px  2px 2px#0000006b;
         }
 
         .item {
@@ -140,12 +143,15 @@
           }
 
           .item-name {
+            color: white;
+            text-shadow: 2px  2px 2px#0000006b;
             font-size: 14px;
           }
 
           .item-info {
-            color: #504e4ebb;
-            font-size: 14px;
+            color: white;
+            text-shadow: 2px  2px 2px#0000006b;
+            font-size: 16px;
           }
         }
       }
@@ -182,13 +188,18 @@
     }
   }
 
+  .white-text{
+    color: white;
+  }
+
   .footer-dialog {
     position: relative;
     width: 100%;
     height: 60px;
     padding: 15px;
-    margin-top: 50px;
     background-color: #9c9c9c;
+    margin-top: 40px;
+
 
     .footer-button {
       float: right;

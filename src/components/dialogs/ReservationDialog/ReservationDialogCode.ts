@@ -1,10 +1,13 @@
 import { Vue, Component } from "vue-property-decorator";
 import PageData from '../../../data/PageData';
 import ReservationStructure from './ReservationStructure';
-import  InBack  from "./IntegrationBackend";
+import InBack from "./IntegrationBackend";
 //timeout: 1000,
 
 export default class ReservationDialogCode extends Vue {
+    // show access dialog inside this dialog
+    private accessDialog: boolean = false;
+
     private structure = new ReservationStructure();
     private steps: any = this.structure.steps;
     private data: any = new PageData();
@@ -23,33 +26,33 @@ export default class ReservationDialogCode extends Vue {
 
     private selectedEmployee: any = {};
     private selectedJob: any = {};
-    
+
     private structureObjectReservationResponse = {
         reserve_id: null,
         barberOrHairdresserId: null,
         clientId: null,
         nameClient: null,
-        mailClient : null,
+        mailClient: null,
         celClient: null,
-        startTime: null ,
-        endTime : null ,
-        createOn : null,
-        work_id : null,
-        workToDo : null ,
-        priceWork : null,
-        workTime : null,
-        additionalCost : null,
-        totalCost : null
+        startTime: null,
+        endTime: null,
+        createOn: null,
+        work_id: null,
+        workToDo: null,
+        priceWork: null,
+        workTime: null,
+        additionalCost: null,
+        totalCost: null
     }
 
     //show and hide the reservation
-   get model(): boolean {
-    return this["value"];
-  }
+    get model(): boolean {
+        return this["value"];
+    }
 
-  set model(model: boolean) {
-    this.$emit("input", model);
-  }
+    set model(model: boolean) {
+        this.$emit("input", model);
+    }
 
     private selectJob(job: any) {
         this.selectedJob = job;
@@ -62,10 +65,12 @@ export default class ReservationDialogCode extends Vue {
         this.reservation.employeeId = employee.userId;
     }
 
-    private getWorksByTypeEmployee() { 
+    private getWorksByTypeEmployee() {
+        // in this case, check if selectedEmployee have the key barberId, 
+        // in this case, is barber
         if (this.selectedEmployee["barberId"]) {
             return this.data.works.barberWorks;
-        } else { 
+        } else {
             return this.data.works.hairdresserWorks;
         }
     }
@@ -134,38 +139,15 @@ export default class ReservationDialogCode extends Vue {
     }
 
     async event() {
-     try{      
-        console.log("Antes del rsponse: ")
-        let response = await this.inback.getReserves();
-        console.log("Despues del response: ")
-        console.log(response);
-    }catch(error){
-        console.error('yep, algo se rompio'+ error);
+        try {
+            if (this.$store.getters.userLogged) {
+                // continue with the reservation
+            } else {
+                console.log('no tiene data')
+                this.accessDialog = true;
+            }
+        } catch (error) {
+            console.error('yep, algo se rompio' + error);
         }
     }
-            
-    }
- 
-
-
-/*  OBjeto reserva que llega del backend. completo, y Asignacion de cada uno de los atributos.
-Se reemplaza con la cadena, OBject.assign(copia, contieneLaData)
-                   // this.barberOrHairdresserId = eachOne["barberId"];
-                   // this.clientId              = eachOne["clientId"];
-                   // this.workId                = eachOne["workId"];
-                   // this.startDate             = eachOne["startDate"];
-                   // this.reserve_id            = eachOne["reserve_id"],
-                   // this.barberOrHairdresserId = eachOne["barberOrHairdresserId"],
-                   //this.clientId              = eachOne["clientId"],
-                   this.nameClient            = eachOne["nameClient"],
-                   this.mailClient            = eachOne["mailClient"],
-                   this.celClient             = eachOne["celClient"],
-                   this.startTime             = eachOne["startTime"] ,
-                   this.endTime               = eachOne["endTime"] ,
-                   this.createOn              = eachOne["createOn"],
-                   this.work_id               = eachOne["work_id"],
-                   this.workToDo              = eachOne["workToDo"] ,
-                   this.priceWork             = eachOne["priceWork"],
-                   this.workTime              = eachOne["workTime"],
-                   this.additionalCost        = eachOne["additionalCost"],
-                   this.totalCost             = eachOne["totalCost"]*/
+}
