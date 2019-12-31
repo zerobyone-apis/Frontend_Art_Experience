@@ -1,7 +1,7 @@
 
-import { Vue } from "vue-property-decorator";
+import vue from 'vue';
 
-export default class AppCode extends Vue {
+export default class AppCode extends vue {
     created() {
         this.init();
     }

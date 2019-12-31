@@ -20,8 +20,8 @@
 import { Component, Vue } from "vue-property-decorator";
 import Toolbar from "@/components/toolbar/toolbar.vue";
 import LeftMenu from "@/components/leftMenu/leftMenu.vue";
-import AppCode from "./appCode";
-import "./appStyle.scss";
+import AppView from "./App.view";
+import "./App.scss";
 
 @Component({
   components: {
@@ -29,6 +29,6 @@ import "./appStyle.scss";
     LeftMenu
   }
 })
-export default class App extends AppCode {
+export default class App extends AppView {
 }
 </script>
