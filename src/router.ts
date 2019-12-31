@@ -8,22 +8,22 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: () => import('./views/home/home.vue')
+      component: () => import('./pages/Home/Home.vue')
     },
     {
-      path: '/MainPage',
-      name: 'MainPage',
-      component: () => import('./views/mainPage/mainPage.vue')
+      path: '/Main',
+      name: 'Main',
+      component: () => import('./pages/Main/Main.vue')
     },
     {
       path: '/BarberShop',
       name: 'BarberShop',
-      component: () => import('./views/barberShop/barberShopPage.vue')
+      component: () => import('./pages/BarberShop/BarberShop.vue')
     },
     {
       path: '/Barber',
       name: 'Barber',
-      component: () => import('./views/barber/barberPage.vue')
+      component: () => import('./pages/Barber/Barber.vue')
     }
   ],
 });

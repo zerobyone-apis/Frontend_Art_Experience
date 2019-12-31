@@ -88,7 +88,7 @@ export default class PageData {
       rateOfBarber: 0,
       amountOfReservesByDay: 10,
       img:
-        "https://instagram.fmvd4-1.fna.fbcdn.net/vp/1e189700600076f5dee4867e46e34909/5E1822F5/t51.2885-19/s150x150/14478313_1450150071665952_6746916811926667264_a.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+        "https://instagram.fmvd1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/79248113_499958057531657_8175716521360752640_n.jpg?_nc_ht=instagram.fmvd1-1.fna.fbcdn.net&_nc_ohc=zikauSdfwjYAX86PE8r&oh=f4a09b7472b653d962e76007272da433&oe=5E993164",
       instagram: "https://www.instagram.com/damianezetiel/",
       facebook: "https://www.facebook.com/TheUniqueDesign"
     }
