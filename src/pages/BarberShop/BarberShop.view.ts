@@ -1,10 +1,11 @@
 
 
-import XComponent from "../../components/XComponent";
+// import XComponent from "../../components/XComponent";
+import Vue from 'vue';
 import User from "../../models/User";
 // import Event from "../../models/Event";
 
-export default class BarberShopCode extends XComponent {
+export default class BarberShopView extends Vue {
   private stepsBarberShop: any = [{}, {}]
   // private event: Event = new Event();
   private events: any[] = [];

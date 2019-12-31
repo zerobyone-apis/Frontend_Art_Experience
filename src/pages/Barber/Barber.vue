@@ -86,25 +86,19 @@
 </template>
 
 <script lang="ts">
-//code
-import BarberCode from "./barber";
-//style
-import "./barber.scss";
+import BarberView from "./Barber.view";
+import "./Barber.scss";
 import "../../styles/fonts.scss";
-//components
 import { Component, Prop } from "vue-property-decorator";
 import AddDialog from "@/components/dialogs/addDialog/addDialog.vue";
-import SaveDialog from "@/components/dialogs/save.vue";
-import DeleteDialog from "@/components/dialogs/delete.vue";
 
 @Component({
   components: {
     AddDialog
-    // SaveDialog,
-    // DeleteDialog
   }
 })
-export default class Barber extends BarberCode {
+
+export default class Barber extends BarberView {
   @Prop({ default: false }) value!: boolean;
   @Prop({
     default: {

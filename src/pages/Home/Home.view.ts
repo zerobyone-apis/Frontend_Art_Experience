@@ -1,8 +1,8 @@
-import XComponent from "../../components/XComponent";
+import Vue from 'vue';
 import User from "../../models/User";
 import PageData from '../../data/PageData';
 
-export default class HomeCode extends XComponent {
+export default class HomeCode extends Vue {
 
     private data: any = new PageData();
 

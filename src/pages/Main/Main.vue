@@ -1,15 +1,10 @@
 <template>
-  <div id="my-events">
-
-  </div>
+  <div id="my-events"></div>
 </template>
 
 <script lang="ts">
-//code
-import MainPageCode from "./mainPageCode";
-//style
-import "./mainPageStyle.scss";
-//components
+import MainView from "./Main.view";
+import "./Main.scss";
 import { Component } from "vue-property-decorator";
 import CustomTable from "@/components/customTable/customTable.vue";
 @Component({
@@ -17,5 +12,5 @@ import CustomTable from "@/components/customTable/customTable.vue";
     CustomTable
   }
 })
-export default class MainPage extends MainPageCode {}
+export default class Main extends MainView {}
 </script>

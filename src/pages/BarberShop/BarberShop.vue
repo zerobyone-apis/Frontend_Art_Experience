@@ -106,26 +106,15 @@
 </template>
 
 <script lang="ts">
-//code
-import BarberShopCode from "./barberShop";
-//style
-import "./barberShop.scss";
+import BarberShopView from "./BarberShop.view";
+import "./BarberShop.scss";
 import "../../styles/fonts.scss";
-
-//components
 import { Component } from "vue-property-decorator";
-import BarberDialog from "../../views/barber/barberPage.vue";
-// import AddDialog from "../../components/dialogs/addDialog/addDialog.vue";
-// import SaveDialog from "@/components/dialogs/save.vue";
-// import DeleteDialog from "@/components/dialogs/delete.vue";
-
+import BarberDialog from "../../pages/Barber/Barber.vue";
 @Component({
   components: {
     BarberDialog
-    //AddDialog
-    // SaveDialog,
-    // DeleteDialog
   }
 })
-export default class BarberShop extends BarberShopCode {}
+export default class BarberShop extends BarberShopView {}
 </script>

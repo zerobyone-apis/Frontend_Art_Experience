@@ -1,7 +1,7 @@
-import XComponent from "../../components/XComponent";
+import  Vue from 'vue';
 import User from "../../models/User";
 
-export default class BarberCode extends XComponent {
+export default class BarberView extends Vue {
 
   private pictures: any = [
     "https://stylesatlife.com/wp-content/uploads/2018/09/Mexican-Haircuts-For-Guys-and-Girls.jpg",

@@ -1,7 +1,7 @@
-import XComponent from "../../components/XComponent";
+import vue from 'vue';
 import User from "../../models/User";
 
-export default class MainPageCode extends XComponent {
+export default class MainPageCode extends vue {
   private events: any[] = [];
   private selectedEvents: any[] = [];
 
