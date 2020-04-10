@@ -74,7 +74,7 @@ export default class PageData {
       rateOfBarber: 0,
       amountOfReservesByDay: 10,
       img:
-        "https://instagram.fmvd4-1.fna.fbcdn.net/vp/ee793e4d2e3c93a0ab9bc4f4ae14f239/5E3690D5/t51.2885-19/s150x150/51832663_382908072507752_2052880357581127680_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
+        "",// "https://instagram.fmvd4-1.fna.fbcdn.net/vp/ee793e4d2e3c93a0ab9bc4f4ae14f239/5E3690D5/t51.2885-19/s150x150/51832663_382908072507752_2052880357581127680_n.jpg?_nc_ht=instagram.fmvd4-1.fna.fbcdn.net",
       instagram: "https://www.instagram.com/damianezetiel/",
       facebook: "https://www.facebook.com/TheUniqueDesign"
     },
@@ -96,35 +96,55 @@ export default class PageData {
 
   public services: any = [
     {
-      icon: "event",
+      icon: {
+        value: "event",
+        size: 150,
+        color: "#424242bb"
+      },
       name: "Gestion de reservas",
       info:
         "La gestion automatizada de las reservas mejora el rendimiento y la facilidad de uso.",
       url: "Read More"
     },
     {
-      icon: "home",
+      icon: {
+        value: "home",
+        size: 150,
+        color: "#424242bb"
+      },
       name: "Perfil de la barberia",
       info:
         "Tendra toda la informacion de su barberia, incluyendo a sus barberos, productos y promociones",
       url: "Read More"
     },
     {
-      icon: "people",
+      icon: {
+        value: "people",
+        size: 150,
+        color: "#424242bb"
+      },
       name: "Perfil del barbero",
       info:
         "Contendra toda la informacion del barbero, incluyendo sus trabajos y opiniones de los clientes",
       url: "Read More"
     },
     {
-      icon: "star",
+      icon: {
+        value: "star",
+        size: 150,
+        color: "#424242bb"
+      },
       name: "Sistema de puntuaciones",
       info:
         "Tendra una puntuacion su barberia, la cual aumentara el numero de clientes",
       url: "Read More"
     },
     {
-      icon: "info",
+      icon: {
+        value: "info",
+        size: 150,
+        color: "#424242bb"
+      },
       name: "Notificaciones",
       info: "Se mantendra informado de toda la actividad de sus clientes",
       url: "Read More"
@@ -133,27 +153,30 @@ export default class PageData {
 
   public courses: any = [
     {
-      icon: "event",
-      img:
-        "https://www.inquirer.com/resizer/orhvGzXeXNLr2xpL6_d81Lv-IQE=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/PTR2I5SGUNHJJGUGMHSGXFFCKU.jpg",
+      picture: {
+        url: "https://www.inquirer.com/resizer/orhvGzXeXNLr2xpL6_d81Lv-IQE=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/PTR2I5SGUNHJJGUGMHSGXFFCKU.jpg",
+        width: 150, height: 150
+      },
       name: "Basico",
       duration: "3 meses",
       info: "Curso basico de corte y estilo.",
       url: "Read More"
     },
     {
-      icon: "home",
-      img:
-        "https://static.wixstatic.com/media/bd10eec5564a47b78638ff005f18261d.jpg/v1/crop/x_1203,y_720,w_6156,h_4191/fill/w_602,h_600,al_c,q_85,usm_0.66_1.00_0.01/Barber%20Shop.webp",
+      picture: {
+        url: "https://static.wixstatic.com/media/bd10eec5564a47b78638ff005f18261d.jpg/v1/crop/x_1203,y_720,w_6156,h_4191/fill/w_602,h_600,al_c,q_85,usm_0.66_1.00_0.01/Barber%20Shop.webp",
+        width: 150, height: 150
+      },
       name: "Perfeccionamiento",
       duration: "4 meses",
       info: "Curso de perfeccionamiento de corte y estilo.",
       url: "Read More"
     },
     {
-      icon: "people",
-      img:
-        "https://hairstyleonpoint.com/wp-content/uploads/2017/04/v-shaped-low-fade-mens-haircut.jpg",
+      picture: {
+        url: "https://hairstyleonpoint.com/wp-content/uploads/2017/04/v-shaped-low-fade-mens-haircut.jpg",
+        width: 150, height: 150
+      },
       name: "Avanzado",
       duration: "5 meses",
       info: "Curso avanzado de corte y estilo.",
