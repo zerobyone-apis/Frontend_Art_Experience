@@ -1,0 +1,14 @@
+.item-social {
+  position: relative;
+  width: 100%;
+
+  .item-social-logo {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px 0 20px;
+  }
+  .item-social-logo:hover {
+    border-color: #464646;
+    border-style: solid;
+  }
+}
