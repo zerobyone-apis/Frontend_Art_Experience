@@ -1,0 +1,32 @@
+.presentation-box {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  margin-bottom: 65px;
+
+  .image-box {
+    position: relative;
+    height: 100%;
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
+  }
+
+  .title {
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 10%;
+    font-size: 40px !important;
+    color: white;
+    text-shadow: 2px 2px 2px #464646;
+  }
+
+  .sub-title {
+    position: absolute;
+    z-index: 1;
+    top: 55%;
+    left: 15%;
+    color: white;
+    text-shadow: 2px 2px 2px #464646;
+  }
+}
